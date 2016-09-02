@@ -6,6 +6,7 @@
 
 .idea/
 log/
+coverage/
 
 # Ignore bundler config.
 /.bundle

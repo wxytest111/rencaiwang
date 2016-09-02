@@ -22,5 +22,17 @@ module Rencaiwang
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.time_zone = 'Asia/Shanghai'
+    config.active_record.default_timezone = :local
+
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
+
+    config.generators do |g|
+      g.template_engine :haml
+    end
   end
 end
