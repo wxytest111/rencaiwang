@@ -1,3 +1,5 @@
+require 'pp'
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -15,19 +17,20 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @regions = Region.all
   end
 
   # GET /users/1/edit
   def edit
+    @regions = Region.all
   end
 
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
+      if user_update_transaction('create')
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -41,7 +44,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      if user_update_transaction('update')
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -71,4 +74,34 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name)
     end
+
+  def region_params
+    params.require(:regions)
+  end
+
+  def user_update_transaction type
+    begin
+      User.transaction do
+        if type == 'create'
+          @user = User.new(user_params)
+          @user.save!
+        else
+          @user.update(user_params)
+        end
+        user_regions = UserRegion.where(user:@user)
+        if user_regions && user_regions.length>0
+          user_regions.each {|user_region| user_region.delete}
+        end
+        region_params.each do |key, value|
+          pp "key=#{key}, value=#{value}"
+          if value.to_i == 1
+            UserRegion.create!(user_id:@user.id, region_id: key)
+          end
+        end
+      end
+      true
+    rescue Exception => e
+      false
+    end
+  end
 end

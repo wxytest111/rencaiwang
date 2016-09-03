@@ -9,5 +9,10 @@
   .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.label :regions
+    - @regions.each do |region|
+      = f.check_box :regions, {'name' => "regions[#{region.id}]", 'checked' => (@user.regions.include? region)}
+      = f.label :regions, region.name
   .actions
     = f.submit 'Save'
