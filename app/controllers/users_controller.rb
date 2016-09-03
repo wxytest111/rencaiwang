@@ -28,7 +28,6 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-
     respond_to do |format|
       if user_update_transaction('create')
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -64,6 +63,25 @@ class UsersController < ApplicationController
     end
   end
 
+
+  def user_new
+    @user = User.new
+    @regions = Region.all
+  end
+
+  def user_create
+    @regions = Region.all
+    respond_to do |format|
+      if user_update_transaction('create')
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @user }
+      else
+        format.html { render action: 'user_new' }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -72,7 +90,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
   def region_params
@@ -82,6 +100,7 @@ class UsersController < ApplicationController
   def user_update_transaction type
     begin
       User.transaction do
+        # require 'byebug';byebug
         if type == 'create'
           @user = User.new(user_params)
           @user.save!

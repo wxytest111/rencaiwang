@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  devise_scope :users do
+    get 'users/user_new' => 'users#user_new'
+    post 'users/user_create' => 'users#user_create'
+  end
   resources :users
   resources :regions
   resources :categories
