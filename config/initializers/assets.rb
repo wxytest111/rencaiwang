@@ -12,5 +12,7 @@ Rails.application.config.assets.precompile += [
     'categories.js',
     'categories.css',
     'regions.js',
-    'regions.css'
+    'regions.css',
+    'users.js',
+    'users.css'
 ]
