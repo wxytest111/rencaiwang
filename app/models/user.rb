@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
             presence:   { presence: true, message: '请填写手机号' },
             uniqueness: { message: '已经被注册' }
 
+  has_many :articles
 end

@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903082658) do
+ActiveRecord::Schema.define(version: 20160904140421) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.string   "source",      limit: 255
+    t.text     "content",     limit: 65535
+    t.integer  "region_id",   limit: 4
+    t.integer  "user_id",     limit: 4
+    t.integer  "category_id", limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
+  add_index "articles", ["region_id"], name: "index_articles_on_region_id", using: :btree
+  add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -72,6 +87,9 @@ ActiveRecord::Schema.define(version: 20160903082658) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "articles", "categories"
+  add_foreign_key "articles", "regions"
+  add_foreign_key "articles", "users"
   add_foreign_key "user_regions", "regions"
   add_foreign_key "user_regions", "users"
 end

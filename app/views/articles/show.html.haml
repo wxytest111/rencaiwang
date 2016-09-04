@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @article.title
+%p
+  %b Source:
+  = @article.source
+%p
+  %b Content:
+  = @article.content
+%p
+  %b Region:
+  = @article.region.try(:name)
+%p
+  %b User:
+  = @article.user.try(:email)
+%p
+  %b Category:
+  = @article.category.try(:title)
+
+= link_to 'Edit', edit_article_path(@article)
+\|
+= link_to 'Back', articles_path

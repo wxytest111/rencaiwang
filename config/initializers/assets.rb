@@ -16,6 +16,8 @@ Rails.application.config.assets.precompile += [
     'regions.css',
     'users.js',
     'users.css',
+    'articles.js',
+    'articles.css',
     'templates/style_2_common.css',
     'templates/index.css',
     'templates/common.css',

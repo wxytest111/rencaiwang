@@ -8,7 +8,7 @@ class Ability
     if user.has_role? :super_admin
       can :manage, :all
     elsif user.has_role? :content_admin
-      can [:create, :read, :update, :destroy], Region
+      can [:create, :read, :update, :destroy], [Region,Article]
     else
       can :read, :all
     end
