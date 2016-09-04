@@ -12,9 +12,12 @@
     - @categories.each do |category|
       %tr
         %td= category.title
-        %td= link_to 'Show', category
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        - if can? :read, Category
+          %td= link_to 'Show', category
+        - if can? :update, Category
+          %td= link_to 'Edit', edit_category_path(category)
+        - if can? :destroy, Category
+          %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

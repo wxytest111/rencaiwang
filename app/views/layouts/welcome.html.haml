@@ -1,0 +1,1870 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title 门户 -  Powered by Discuz!
+    %meta{:content => "网站首页", :name => "keywords"}/
+    %meta{:content => "网站首页 ", :name => "description"}/
+    %meta{:content => "Discuz! X3.2", :name => "generator"}/
+    %meta{:content => "Discuz! Team and Comsenz UI Team", :name => "author"}/
+    %meta{:content => "2001-2013 Comsenz Inc.", :name => "copyright"}/
+    %meta{:content => "True", :name => "MSSmartTagsPreventParsing"}/
+    %meta{:content => "Yes", "http-equiv" => "MSThemeCompatible"}/
+    -#%base{:href => "http://demo.paopaokeji.net/chengshiv2/"}/
+    = stylesheet_link_tag 'templates/style_2_common'
+    :javascript
+      var STYLEID = '2', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 's88', charset = 'gbk', discuz_uid = '154', cookiepre = '3XBn_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread', creditnotice = '1|威望|,2|金钱|,3|贡献|', defaultstyle = '', REPORTURL = 'aHR0cDovL2RlbW8ucGFvcGFva2VqaS5uZXQvY2hlbmdzaGl2Mi9wb3J0YWwucGhw', SITEURL = 'http://demo.paopaokeji.net/chengshiv2/', JSPATH = 'static/js/', CSSPATH = 'data/cache/style_', DYNAMICURL = '';
+    = javascript_include_tag 'templates/common'
+    %meta{:content => "Discuz! Board", :name => "application-name"}/
+    %meta{:content => "Discuz! Board", :name => "msapplication-tooltip"}/
+    %meta{:content => "name=网站首页;action-uri=http://demo.paopaokeji.net/chengshiv2/portal.php;icon-uri=http://demo.paopaokeji.net/chengshiv2/static/image/common/portal.ico", :name => "msapplication-task"}/
+    %meta{:content => "name=交流社区;action-uri=http://demo.paopaokeji.net/chengshiv2/forum.php;icon-uri=http://demo.paopaokeji.net/chengshiv2/static/image/common/bbs.ico", :name => "msapplication-task"}/
+    %meta{:content => "name=群组;action-uri=http://demo.paopaokeji.net/chengshiv2/group.php;icon-uri=http://demo.paopaokeji.net/chengshiv2/static/image/common/group.ico", :name => "msapplication-task"}/
+    = javascript_include_tag 'templates/portal.js'
+    = stylesheet_link_tag 'templates/common'
+    = javascript_include_tag 'jquery.js'
+    = javascript_include_tag 'templates/jquery.SuperSlide.2.1.1'
+    :javascript
+      var jq = jQuery.noConflict();
+    = javascript_include_tag 'templates/common_extra'
+    = javascript_include_tag 'templates/ajax'
+    = stylesheet_link_tag 'templates/index'
+  %body#nv_portal.pg_index{:onkeydown => "if(event.keyCode==27) return false;"}
+    #append_parent
+    #ajaxwaitid
+    .cl.paopaokeji_toptb
+      .wp
+        .z
+          %p
+            %strong.vwmy
+              %a{:href => "home.php?mod=space&uid=154", :target => "_blank", :title => "访问我的空间"} paopaokeji
+            %a{:href => "home.php?mod=spacecp"} 设置
+            %a#pm_ntc{:href => "home.php?mod=space&do=pm"} 消息
+            %a#myprompt.a{:href => "home.php?mod=space&do=notice"} 提醒
+            %span#myprompt_check
+            %a{:href => "home.php?mod=spacecp&ac=credit&showcredit=1"} 积分: 176
+            %a{:href => "home.php?mod=spacecp&ac=usergroup"} 用户组: 注册会员
+            %a{:href => "member.php?mod=logging&action=logout&formhash=42b3084e"} 退出
+        .y
+          .topinfo
+            %ul.paopaokeji_nav_all
+              %li
+                %a.rs_dd{:href => "#", :rel => "nofollow"} 消费记录
+              %li
+                %a.rs_buy{:href => "#", :rel => "nofollow"} 购物宝
+              / 本例子代码 开始 -----------------------------------------
+              %li#m1.m.on
+                %a.am{:href => "#", :target => "_blank"} 分类导航
+                %ul.sub
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+              %li#m2.m
+                %a.am{:href => "#", :target => "_blank"} 快捷导航
+                %ul.sub
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+                  %li
+                    %a{:href => "#"} 自定内容
+              :javascript
+                jQuery(".paopaokeji_nav_all").slide({
+                type:"menu", //效果类型
+                titCell:".m", // 鼠标触发对象
+                targetCell:".sub", // 效果对象，必须被titCell包含
+                delayTime:0, // 效果时间
+                triggerTime:0, //鼠标延迟触发时间
+                returnDefault:true  //返回默认状态
+                });
+              / 本例子代码 结束 -----------------------------------------
+              %li
+                %a{:href => "#", :rel => "nofollow"} 客服中心
+    .paopaokeji_index_bg
+    .paopaokeji_index_conn_bg
+      .i_c_b_c
+    %ul#myprompt_menu.p_pop{:style => "display: none;"}
+      %li
+        %a#pm_ntc{:href => "home.php?mod=space&do=pm", :style => "background-repeat: no-repeat; background-position: 0 50%;"}
+          %em.prompt_news_0>
+          消息
+      %li
+        %a{:href => "home.php?mod=follow&do=follower"}
+          %em.prompt_follower_0>
+          新听众
+      %li.ignore_noticeli
+        %a{:href => "javascript:;", :onclick => "setcookie('ignore_notice', 1);hideMenu('myprompt_menu')", :title => "暂不提醒"}
+          %em.ignore_notice
+    %ul#myitem_menu.p_pop{:style => "display: none;"}
+      %li
+        %a{:href => "forum.php?mod=guide&view=my"} 帖子
+      %li
+        %a{:href => "home.php?mod=space&do=favorite&view=me"} 收藏
+      %li
+        %a{:href => "home.php?mod=space&do=friend"} 好友
+    #qmenu_menu.p_pop{:style => "display: none;"}
+      %ul.cl.nav
+        %li
+          %a{:href => "home.php?mod=magic", :style => "background-image:url(http://demo.paopaokeji.net/chengshiv2/static/image/feed/magic_b.png) !important"} 道具
+        %li
+          %a{:href => "home.php?mod=medal", :style => "background-image:url(http://demo.paopaokeji.net/chengshiv2/static/image/feed/medal_b.png) !important"} 勋章
+        %li
+          %a{:href => "home.php?mod=task", :style => "background-image:url(http://demo.paopaokeji.net/chengshiv2/static/image/feed/task_b.png) !important"} 任务
+      #fjump_menu.btda
+    #logoline
+      .wp.cl
+        %p.z
+          %a.pd20{:href => "./", :target => "_blank", :title => "Discuz! Board"}
+            %img{:alt => "Discuz! Board", :border => "0", :src => "template/paopaokeji_chengshiv2/images/logo.png"}/
+        .search.y
+          %form#search_form{:action => "search.php?searchsubmit=yes", :autocomplete => "off", :method => "post", :onsubmit => "searchFocus($('scbar_txt'))", :target => "_blank"}
+            %input#scbar_mod{:name => "mod", :type => "hidden", :value => "search"}/
+            %input{:name => "formhash", :type => "hidden", :value => "42b3084e"}/
+            %input{:name => "srchtype", :type => "hidden", :value => "title"}/
+            %input{:name => "srhfid", :type => "hidden", :value => "0"}/
+            %input{:name => "srhlocality", :type => "hidden", :value => "portal::index"}/
+            %input#rongbiz_kw.sear{:autocomplete => "off", :name => "srchtxt", :onfocus => "if(this.value=='请输入关键字') this.value='';this.style.color='#333333'", :size => "20", :style => "color: rgb(51, 51, 51);", :type => "text", :value => "请输入关键字", "x-webkit-speech" => ""}/
+            %button.sear_btn{:type => "submit"} 搜 索
+        :javascript
+          initSearchmenu('scbar', '');
+    #hd
+      .wp
+        .paopaokeji_nav
+          %ul
+            %li#mn_portal.current
+              %a{:hidefocus => "true", :href => "portal.php", :title => "Portal"}
+                网站首页
+                %span Portal
+            %li#mn_forum
+              %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
+                交流社区
+                %span BBS
+            %li#mn_P1
+              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/fenlei/"} 分类信息
+            %li#mn_P2
+              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/news/"} 新闻资讯
+            %li#mn_F40
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 微信收录
+            %li#mn_F42
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 最新楼盘
+            %li#mn_F43
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 口碑商家
+            %li#mn_F41
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 生活服务
+            %li#mn_F44
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 求职招聘
+            %li#mn_F46
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 房屋出租
+          .nav_r
+            %a.caigou{:href => "forum.php?mod=misc&action=nav", :onclick => "showWindow('nav', this.href, 'get', 0)", :target => "_blank"} 快速发帖
+            %a.baozh{:href => "#", :rel => "nofollow", :target => "_blank", :title => ""} 城市一卡通
+        #mn_userapp_menu.p_pop.h_pop{:style => "display: none"}
+        #mu.cl
+    #wp.wp
+
+      .wp
+        / [diy=diy1]
+        #diy1.area
+      .wp.cl
+        .paopaokeji_oneleft.z
+          .banner
+            %ul#nav
+              %li#mainCate-1.mainCate
+                %h3
+                  %span >
+                  %a{:href => "#"} 汽车沙龙
+                %p
+                  %a{:href => "#"} 汽车推荐
+                  %a{:href => "#"} 汽车保养
+                  %a{:href => "#"} 汽车图片
+                %p
+                  %a{:href => "#"} 汽车购买
+                  %a{:href => "#"} 车模展示
+                  %a{:href => "#"} 汽车资讯
+                .subCate
+                  .module.cl.xl.xl1.paopaokeji_tanchu
+                    %ul
+                      %li
+                        %em 03-27
+                        %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                      %li
+                        %em 08-05
+                        %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-I
+                      %li
+                        %em 03-27
+                        %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                      %li
+                        %em 09-09
+                        %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                      %li
+                        %em 08-05
+                        %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠
+                      %li
+                        %em 08-06
+                        %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼
+                      %li
+                        %em 08-08
+                        %a{:href => "forum.php?mod=viewthread&tid=183", :target => "_blank", :title => "寻找薰衣草恋人"} 寻找薰衣草恋人
+                  .module.cl.ml.paopaokeji_tanchu
+                    %ul
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                          %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                          %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                          %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                          %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                          %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                      %li{:style => "width: 160px;"}
+                        %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                          %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
+                        %p
+                          %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+                  / 下面这个是分类，就类似于一商城弹出的那种，如果有需要可以把注释代码删除，防止有人需要使用，我就不删除了
+                  /
+                    <ul id="sub-ul-1">
+                    <h4>品牌</h4>
+                    <li>
+                    <span><a href="#">茅台</a><a href="#">五粮液</a><a href="#">国窖1573</a><a href="#">郎酒</a><a href="#">汾酒</a></span>
+                    <span><a href="#" class="sub_width">剑南春</a><a href="#">泸州老窖</a><a href="#">水井坊</a><a href="#">洋河</a><a href="#" class="sub_width">金六福</a></span><span><a href="#">牛栏山</a><a href="#">丰谷</a><a href="#">杜康</a><a href="#">景芝</a><a href="#" class="sub_width1">河套</a><a href="#" class="sub_width">红楼梦</a></span><span><a href="#" class="sub_width1">宝丰</a><a href="#" class="sub_width">酒鬼</a><a href="#">章贡王</a><a href="#">赖世</a><a href="#">两河口</a></span><span><a href="#" class="sub_width">天佑德</a><a href="#" class="sub_width1">羽丰</a><a href="#" class="sub_width1">莲泉</a><a href="#" class="sub_width">丹江口</a><a href="#">完达山</a></span><span><a href="#">黔台</a><a href="#" class="sub_width1">朴卡</a><a href="#" class="sub_width_long">二零二会议室</a></span>
+                    </li>
+
+                    <li>
+                    <span><a href="#">古贝春</a><a href="#">宋河</a><a href="#">泰山</a><a href="#">青花瓷</a><a href="#">董酒</a></span><span><a href="#" class="sub_width">唐王宴</a><a href="#">红星</a><a href="#">皖酒</a><a href="#">古井</a><a href="#">西凤</a><a href="#" class="sub_width">伊力特</a></span><span><a href="#">天下粮仓</a><a href="#">衡水老白干</a><a href="#" class="sub_width1">武陵</a><a href="#" class="sub_width1">京都</a></span><span><a href="#">刘伶醉</a><a href="#">爱奋</a><a href="#" class="sub_width1">御匾</a><a href="#">皇家井</a><a href="#">酉水河</a></span><span><a href="#">泥坑</a><a href="#" class="sub_width1">津酒</a><a href="#">龙行天下</a><a href="#">贵雅</a><a href="#">太白酒</a></span><span><a href="#" class="sub_width">渔樵仙</a><a href="#" class="sub_width_long">谷养康纯粮原浆</a></span>
+                    </li>
+
+                    <li>
+                    <span><a href="#">小糊涂仙</a><a href="#">醉卿</a><a href="#">诗仙太白</a><a href="#">沱牌</a><a href="#" class="sub_width1">四特</a></span><span><a href="#">汾阳王	</a><a href="#">白云边</a><a href="#">珍酒</a><a href="#" class="sub_width">扳倒井</a><a href="#">金门高粱</a></span><span><a href="#">永不分梨</a><a href="#">国台</a><a href="#">孔府家</a><a href="#">舍得</a><a href="#">今世缘</a></span><span><a href="#">双沟</a><a href="#">黄鹤楼</a><a href="#" class="sub_width">老银川</a><a href="#">壹湖</a><a href="#">泰尚</a></span><span><a href="#">老泥窖</a><a href="#" class="sub_width">黄梅戏</a><a href="#">千家福</a><a href="#">大展宏图</a><a href="#">栈桥</a></span><span><a href="#" class="sub_width">藏羚羊</a><a href="#">酱鄉壹號</a><a href="#">台湾马祖</a><a href="#" class="sub_width1">更多>></a></span>
+                    </li>
+                    </ul>
+
+                    <ul id="sub-ul-2">
+                    <h4>香型</h4>
+                    <li>
+                    <span><a href="#">酱香型</a><a href="#">浓香型</a><a href="#">清香型</a><a href="#">馥郁香型</a></span><span><a href="#" class="sub_width">兼香型</a><a href="#">特香型</a><a href="#">芝麻香型</a><a href="#">豉香型</a></span><span><a href="#">董香型</a><a href="#">凤香型</a><a href="#">老白干香型</a><a href="#">復合香</a></span><span><a href="#" class="sub_width">荞香型</a><a href="#">青稞清香型</a><a href="#">米香型</a><a href="#">其他</a></span>
+                    </li>
+                    </ul>
+
+                    <ul id="sub-ul-3">
+                    <h4>产地</h4>
+                    <li>
+                    <span><a href="#">贵州</a><a href="#">四川</a><a href="#">山西</a><a href="#">北京</a><a href="#">江苏</a><a href="#">安徽</a></span><span><a href="#" class="sub_width1">湖北</a><a href="#">江西</a><a href="#">山东</a><a href="#">河南</a><a href="#">河北</a><a href="#" class="sub_width1">湖南</a></span><span><a href="#">陕西</a><a href="#">新疆</a><a href="#">内蒙古</a><a href="#">台湾</a><a href="#" class="sub_width1">吉林</a></span>
+                    </li>
+                    </ul>
+                    <ul id="sub-ul-4">
+                    <h4>价位</h4>
+                    <li>
+                    <span><a href="#">1 - 99元</a><a href="#">100 - 299元</a><a href="#">300 - 599元</a></span><span><a href="#">600 - 999元</a><a href="#">1000 - 1999元</a></span><span><a href="#" class="sub_width_long">2000 元以上</a></span>
+                    </li>
+                    </ul>
+              %li#mainCate-2.mainCate.evenLeval
+                %h3
+                  %span >
+                  %a{:href => "#"} 房产家居
+                %p
+                  %a{:href => "#"} 装修
+                  %a{:href => "#"} 买房
+                  %a{:href => "#"} 最新楼盘
+                %p
+                  %a{:href => "#"} 家具
+                  %a{:href => "#"} 装修公司
+                  %a{:href => "#"} 装修日记
+                .subCate
+                  %div
+                    .module.cl.xl.xl1.paopaokeji_tanchu
+                      %ul
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-I
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                        %li
+                          %em 09-09
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠
+                        %li
+                          %em 08-06
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=183", :target => "_blank", :title => "寻找薰衣草恋人"} 寻找薰衣草恋人
+                    .module.cl.ml.paopaokeji_tanchu
+                      %ul
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                            %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                            %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                            %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                            %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                            %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                            %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+              %li#mainCate-3.mainCate
+                %h3
+                  %span >
+                  %a{:href => "#"} 食全食美
+                %p
+                  %a{:href => "#"} 美食推荐
+                  %a{:href => "#"} 龙虾节
+                  %a{:href => "#"} 吃货
+                %p
+                  %a{:href => "#"} 美食商家
+                  %a{:href => "#"} 聚餐
+                  %a{:href => "#"} 团购
+                  %a{:href => "#"} 免费吃
+                .subCate
+                  %div
+                    .module.cl.xl.xl1.paopaokeji_tanchu
+                      %ul
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-I
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                        %li
+                          %em 09-09
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠
+                        %li
+                          %em 08-06
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=183", :target => "_blank", :title => "寻找薰衣草恋人"} 寻找薰衣草恋人
+                    .module.cl.ml.paopaokeji_tanchu
+                      %ul
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                            %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                            %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                            %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                            %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                            %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                            %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+              %li#mainCate-4.mainCate.evenLeval
+                %h3
+                  %span >
+                  %a{:href => "#"} 同城交友
+                %p
+                  %a{:href => "#"} 找男朋友
+                  %a{:href => "#"} 单身狗
+                  %a{:href => "#"} 高富帅
+                  %a{:href => "#"} 帅哥
+                %p
+                  %a{:href => "#"} 找女朋友
+                  %a{:href => "#"} 单身公主
+                  %a{:href => "#"} 白富美
+                  %a{:href => "#"} 美女
+                .subCate
+                  %div
+                    .module.cl.xl.xl1.paopaokeji_tanchu
+                      %ul
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-I
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                        %li
+                          %em 09-09
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠
+                        %li
+                          %em 08-06
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=183", :target => "_blank", :title => "寻找薰衣草恋人"} 寻找薰衣草恋人
+                    .module.cl.ml.paopaokeji_tanchu
+                      %ul
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                            %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                            %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                            %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                            %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                            %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                            %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+              %li#mainCate-5.mainCate
+                %h3
+                  %span >
+                  %a{:href => "#"} 求职/
+                  %a{:href => "#"} 招聘
+                %p
+                  %a{:href => "#"} 找工作
+                  %a{:href => "#"} 个人简历
+                  %a{:href => "#"} 企业招聘
+                %p
+                  %a{:href => "#"} 最新职位
+                  %a{:href => "#"} 最新简历
+                  %a{:href => "#"} 招聘会
+                .subCate
+                  %div
+                    .module.cl.xl.xl1.paopaokeji_tanchu
+                      %ul
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-I
+                        %li
+                          %em 03-27
+                          %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                        %li
+                          %em 09-09
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li
+                          %em 08-05
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠
+                        %li
+                          %em 08-06
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼
+                        %li
+                          %em 08-08
+                          %a{:href => "forum.php?mod=viewthread&tid=183", :target => "_blank", :title => "寻找薰衣草恋人"} 寻找薰衣草恋人
+                    .module.cl.ml.paopaokeji_tanchu
+                      %ul
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                            %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                            %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                            %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                            %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                            %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                        %li{:style => "width: 160px;"}
+                          %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                            %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
+                          %p
+                            %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+          :javascript
+            jQuery("#nav").slide({
+            type:"menu", //效果类型
+            titCell:".mainCate", // 鼠标触发对象
+            targetCell:".subCate", // 效果对象，必须被titCell包含
+            delayTime:0, // 效果时间
+            triggerTime:0, //鼠标延迟触发时间
+            defaultPlay:false,//默认执行
+            returnDefault:true//返回默认
+            });
+          .paopaokeji_oneleft.z
+            / [diy=diy3]
+            #diy3.area
+              #frameTfZbvX.frame.move-span.cl.frame-1.moving
+                #frameTfZbvX_left.column.frame-1-c
+                  #frameTfZbvX_left_temp.move-span.temp
+              #frameyvk2S3.frame.move-span.cl.frame-1
+                #frameyvk2S3_left.column.frame-1-c
+                  #frameyvk2S3_left_temp.move-span.temp
+                  #portal_block_56.block.move-span
+                    #portal_block_56_content.dxb_bc
+                      .portal_block_summary
+                        %img{:height => "130", :src => "template/paopaokeji_chengshiv2/images/ad/250x130.jpg", :width => "100%"}/
+            / [/diy]
+        .paopaokeji_onecenter.z
+          / [diy=diy12]
+          #diy12.area
+            #frametU4opY.frame.move-span.cl.frame-1
+              #frametU4opY_left.column.frame-1-c
+                #frametU4opY_left_temp.move-span.temp
+                #portal_block_61.block.move-span
+                  #portal_block_61_content.dxb_bc
+                    #iFocus{:style => "margin:0 auto"}
+                      .tempWrap{:style => "overflow:hidden; position:relative; width:640px"}
+                        %ul{:style => "width: 3200px; left: -2560px; position: relative; overflow: hidden; padding: 0px; margin: 0px;"}
+                          %li{:style => "float: left; width: 640px;"}
+                            %a{:href => "forum.php?mod=viewthread&tid=161", :target => "_blank"}
+                              %img{:height => "240", :src => "data/attachment/portal/201508/09/163544y65rnca8rn1n9ea8.jpg", :width => "640"}/
+                          %li{:style => "float: left; width: 640px;"}
+                            %a{:href => "forum.php?mod=viewthread&tid=164", :target => "_blank"}
+                              %img{:height => "240", :src => "data/attachment/portal/201508/09/162409jeovgjy6zvavbag0.jpg", :width => "640"}/
+                          %li{:style => "float: left; width: 640px;"}
+                            %a{:href => "forum.php?mod=viewthread&tid=163", :target => "_blank"}
+                              %img{:height => "240", :src => "data/attachment/portal/201508/09/163308p5m2ca54k5a21223.jpg", :width => "640"}/
+                          %li{:style => "float: left; width: 640px;"}
+                            %a{:href => "forum.php?mod=viewthread&tid=162", :target => "_blank"}
+                              %img{:height => "240", :src => "data/attachment/portal/201508/09/163536hlecnll7l696kgk8.jpg", :width => "640"}/
+                          %li{:style => "float: left; width: 640px;"}
+                            %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank"}
+                              %img{:height => "240", :src => "data/attachment/portal/201508/09/162145sgdlz05suj91dzld.jpg", :width => "640"}/
+                      .btn
+                        %span 1
+                        %span 2
+                        %span 3
+                        %span 4
+                        %span.on 5
+          / [/diy]
+          :javascript
+            jQuery("#iFocus li a").hover(function(){ $(this).css("opacity",1).siblings().css("opacity",0.7) },function(){ $(this).css("opacity",1).siblings().css("opacity",1) });//鼠标移到图片上时聚焦效果
+            jQuery("#iFocus").slide({ titCell:".btn span", mainCell:"ul",effect:"left", autoPlay:true});
+          / [diy=diy2]
+          #diy2.area
+            #framezB3dQU.frame.move-span.cl.frame-1
+              #framezB3dQU_left.column.frame-1-c
+                #framezB3dQU_left_temp.move-span.temp
+                #portal_block_52.paopaokeji_toutiao.block.move-span
+                  #portal_block_52_content.dxb_bc
+                    .bm.bw0
+                      %dl.cl.xld
+                        %dt
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                        %dd
+                          　　[汽车之家 新车上市]  近日，上汽2015款荣威550 PLUG-IN正式上市。该车有两款车型可选，售价分别为豪华版24.88万元、旗舰版25.98万元。消费者购买2015版荣威550PLUG-IN可享受国家（3.15万元
+                          %span
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                              详细>>
+                              %span
+                        %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                      %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                        %hr.da/
+                        %ul.xl.xl2.cl
+                #frame1181N7.paopaokeji_box.frame.move-span.cl.frame-1-1
+                  #frame1181N7_left.column.frame-1-1-l
+                    #frame1181N7_left_temp.move-span.temp
+                    #portal_block_53.paopaokeji_box2.block.move-span
+                      #portal_block_53_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                          %ul
+                            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "年内推出 吉利新SUV NL-3最新谍照曝光"} 年内推出 吉利新SUV NL-3最新谍照曝光
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=23", :target => "_blank", :title => "2018年前亮相 曝丰田新一代Supra效果图"} 2018年前亮相 曝丰田新一代Supra效果图
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=22", :target => "_blank", :title => "奔驰GLE Coupe将于9月在国内正式上市"} 奔驰GLE Coupe将于9月在国内正式上市
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=21", :target => "_blank", :title => "趋近赛车化 曝宝马M车型方向盘设计图"} 趋近赛车化 曝宝马M车型方向盘设计图
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=19", :target => "_blank", :title => "售92.7万元 宝马M4双门轿跑车增MT车型"} 售92.7万元 宝马M4双门轿跑车增MT车型
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=18", :target => "_blank", :title => "传:雷克萨斯或三年后国产/最快年内确定"} 传:雷克萨斯或三年后国产/最快年内确定
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=16", :target => "_blank", :title => "市值或达菲亚特一半 法拉利递IPO申请"} 市值或达菲亚特一半 法拉利递IPO申请
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=15", :target => "_blank", :title => "代号HCD-16 现代全新概念车8月11日发布"} 代号HCD-16 现代全新概念车8月11日发布
+                  #frame1181N7_center.column.frame-1-1-r
+                    #frame1181N7_center_temp.move-span.temp
+                    #portal_block_54.block.move-span
+                      #portal_block_54_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠微西里
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感新娘
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=186", :target => "_blank", :title => "中国新娘的古典嫁衣—旗袍"} 中国新娘的古典嫁衣—旗袍
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼服
+          / [/diy]
+        .paopaokeji_oneright.y
+          %p#login14
+            %a{:href => "member.php?mod=logging&action=login", :rel => "nofollow", :target => "_blank", :title => "登录"} 登录
+            %a{:href => "member.php?mod=register", :rel => "nofollow", :target => "_blank", :title => "注册"} 注册
+            %a.last{:href => "#", :rel => "nofollow", :target => "_blank", :title => "立即签到"} 立即签到
+          .helpnew
+            / [diy=diy11]
+            #diy11.area
+              #frameQh6JSG.frame.move-span.cl.frame-1
+                #frameQh6JSG_left.column.frame-1-c
+                  #frameQh6JSG_left_temp.move-span.temp
+                  #portal_block_57.block.move-span
+                    #portal_block_57_content.dxb_bc
+                      .portal_block_summary
+                        %p.joinbg
+                          %a{:href => "#", :rel => "nofollow", :target => "_blank"} 泡泡科技是DISCUZX第三方技术支持团队，如果您有这方面的需要可以联系我们
+                  #portal_block_58.block.move-span
+                    #portal_block_58_content.dxb_bc
+                      .portal_block_summary
+                        %img{:height => "160", :src => "template/paopaokeji_chengshiv2/images/ad/201404join.jpg", :width => "100%"}/
+                  #portal_block_59.block.move-span
+                    #portal_block_59_content.dxb_bc
+                      .portal_block_summary
+                        %img{:height => "50", :src => "template/paopaokeji_chengshiv2/images/ad/201404company.jpg", :width => "100%"}/
+                  #portal_block_60.block.move-span
+                    #portal_block_60_content.dxb_bc
+                      .portal_block_summary
+                        %ul.kj_nav
+                          %li
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "最新楼盘"}
+                              %img{:height => "32", :src => "template/paopaokeji_chengshiv2/images/index1.gif", :width => "37"}/
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "最新楼盘"} 最新楼盘
+                          %li
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "泡泡科技全网营销订制我的应用"}
+                              %img{:height => "32", :src => "template/paopaokeji_chengshiv2/images/index2.gif", :width => "37"}/
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "泡泡科技全网营销订制我的应用"} 定制应用
+                          %li
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "微电商"}
+                              %img{:height => "32", :src => "template/paopaokeji_chengshiv2/images/index3.gif", :width => "37"}/
+                            %a{:href => "#", :target => "_blank", :title => "微电商"} 微电商
+                          %li
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "青岛最大的网络与网站建设、优化、制作、推广网站优化的公司——青岛泡泡科技网络有限公司"}
+                              %img{:height => "32", :src => "template/paopaokeji_chengshiv2/images/index4.gif", :width => "37"}/
+                            %a{:href => "#", :rel => "nofollow", :target => "_blank", :title => "青岛最大的网络与网站建设、优化、制作、推广网站优化的公司——青岛泡泡科技网络有限公司"} 品牌建站
+          .paopaokeji_tworight.y
+            .paopaokeji_twotop
+              .hd
+                %h5 推荐商家
+              #diy4.area
+                #frameZ5VVE3.frame.move-span.cl.frame-1
+                  #frameZ5VVE3_left.column.frame-1-c
+                    #frameZ5VVE3_left_temp.move-span.temp
+                    #portal_block_5.block.move-span
+                      #portal_block_5_content.dxb_bc
+                        .bd
+                          .tempWrap{:style => "overflow:hidden; position:relative; height:96px"}
+                            %ul.infoList{:style => "top: 0px; position: relative; padding: 0px; margin: 0px;"}
+                              %li{:style => "height: 24px;"}
+                                %span.date 03-27
+                                %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank"} 最有价值的投资居住小区
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-05
+                                %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"} 售24.88万起 新款荣威550 PLUG-IN上市
+                              %li{:style => "height: 24px;"}
+                                %span.date 03-27
+                                %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank"} 测试文件
+                              %li{:style => "height: 24px;"}
+                                %span.date 09-09
+                                %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"} 青岛旅行社
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-05
+                                %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"} 公主坟万寿路翠微路玉渊潭南路翠微西里
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-06
+                                %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"} 百合公馆
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-08
+                                %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-08
+                                %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank"} 深圳流行婚纱的元素有哪些呢？
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-08
+                                %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank"} 别样的苏州婚纱让你瞬间成为性感新娘
+                              %li{:style => "height: 24px;"}
+                                %span.date 08-08
+                                %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank"} 闺蜜婚纱照大盘点
+            :javascript
+              jQuery(".paopaokeji_twotop").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,vis:4});
+      #diy6.area
+        #frameKKN5Qj.paopaokeji_box.frame.move-span.cl.frame-1
+          .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+            %span.titletext{:style => "font-size:16px;"}
+              %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 资讯推荐
+            %span.subtitle{:style => "float:right;"} 自定内容
+            %span.subtitle{:style => "float:right;margin-right:10px;"} 自定内容
+          #frameKKN5Qj_left.column.frame-1-c
+            #frameKKN5Qj_left_temp.move-span.temp
+            #frame64ly1g.frame.move-span.cl.frame-3-1
+              #frame64ly1g_left.column.frame-3-1-l
+                #frame64ly1g_left_temp.move-span.temp
+                #framejqps72.frame.move-span.cl.frame-1-1
+                  #framejqps72_left.column.frame-1-1-l
+                    #framejqps72_left_temp.move-span.temp
+                    #framepC3xjz.paopaokeji_box2.frame.move-span.cl.frame-1
+                      .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                        %span.titletext{:style => "font-size:15px;"} 新闻动态
+                        %span.subtitle{:style => "float:right;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"} 自定内容
+                      #framepC3xjz_left.column.frame-1-c
+                        #framepC3xjz_left_temp.move-span.temp
+                        #portal_block_23.block.move-span
+                          #portal_block_23_content.dxb_bc
+                            .module.cl.xld
+                              %dl.cl
+                                %dd.m
+                                  %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                                    %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/8f/8f8ec13864ed2936ccfe9fee61c0ff0d.jpg", :width => "130"}/
+                                %dt
+                                  %em.y.xg1.xw0
+                                    %a{:href => "home.php?mod=space&uid=1", :target => "_blank"} admin
+                                  %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                                %dd
+                                  近日，上汽2015款荣威550 PLUG-IN正式上市。该车有两款车型可选，售价分别为豪华版24.88万元、旗舰版25.98万元。消费者购买2015版荣威
+                        #portal_block_18.block.move-span
+                          #portal_block_18_content.dxb_bc
+                            .module.cl.xl.xl1
+                              %ul
+                                %li
+                                  %em 03-27
+                                  %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"}
+                                    %span> 汽车沙龙 |
+                                    最有价值的投资居住小区
+                                %li
+                                  %em 08-05
+                                  %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"}
+                                    %span> 汽车沙龙 |
+                                    售24.88万起 新款荣威550 PLUG-I
+                                %li
+                                  %em 08-05
+                                  %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "年内推出 吉利新SUV NL-3最新谍照曝光"}
+                                    %span> 汽车沙龙 |
+                                    年内推出 吉利新SUV NL-3最新谍
+                        #frame83mLtR.frame.move-span.cl.frame-1
+                          .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                            %span.titletext{:style => "font-size:15px;"}
+                              %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 关注民生
+                            %span.subtitle{:style => "float:right;"}
+                              %a{:href => "http://localhost/chengshiv2/#", :style => "color: !important;", :target => "_blank"} 自定内容
+                            %span.subtitle{:style => "float:right;margin-right:10px;"}
+                              %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 关注民生
+                            %span.subtitle{:style => "float:right;margin-right:10px;"}
+                              %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                            %span.subtitle{:style => "float:right;margin-right:10px;"}
+                              %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                          #frame83mLtR_left.column.frame-1-c
+                            #frame83mLtR_left_temp.move-span.temp
+                            #portal_block_24.block.move-span
+                              #portal_block_24_content.dxb_bc
+                                .module.cl.xld
+                                  %dl.cl
+                                    %dd.m
+                                      %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank"}
+                                        %img{:alt => "【全洲桃源中秋赏月会，不见不散】超", :height => "100", :src => "data/attachment/block/d9/d962bbadac09469848c7bf67a8c7c325.jpg", :width => "130"}/
+                                    %dt
+                                      %em.y.xg1.xw0
+                                        %a{:href => "home.php?mod=space&uid=1", :target => "_blank"} admin
+                                      %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank", :title => "【全洲桃源中秋赏月会，不见不散】超"} 【全洲桃源中秋赏月会，不见不散】超
+                                    %dd
+                                      满城尽是中秋月
+                                      超大月饼免费吃  实景现房享特惠
+                                      9月7日晚，全洲桃源中秋赏月会，不见不散
+                                      旅游怕辛苦，宅家怕无聊……
+                                      全洲桃源，懂你的心思，系列活动，有
+                            #portal_block_25.block.move-span
+                              #portal_block_25_content.dxb_bc
+                                .module.cl.xl.xl1
+                                  %ul
+                                    %li
+                                      %em 03-27
+                                      %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"}
+                                        %span> 家居装饰 |
+                                        测试文件
+                                    %li
+                                      %em 08-06
+                                      %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank", :title => "【全洲桃源中秋赏月会，不见不散】超大月饼免费吃  实景现房享特惠"}
+                                        %span> 家居装饰 |
+                                        【全洲桃源中秋赏月会，不见不散】超大月饼
+                                    %li
+                                      %em 08-06
+                                      %a{:href => "forum.php?mod=viewthread&tid=140", :target => "_blank", :title => "国五条细则满月 多地房价不降反升"}
+                                        %span> 家居装饰 |
+                                        国五条细则满月 多地房价不降反升
+                  #framejqps72_center.column.frame-1-1-r
+                    #framejqps72_center_temp.move-span.temp
+                    #frameMMT1RT.paopaokeji_box2.frame.move-span.cl.frame-1
+                      .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                        %span.titletext{:style => "font-size:15px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 最新时事
+                        %span.subtitle{:style => "float:right;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                      #frameMMT1RT_left.column.frame-1-c
+                        #frameMMT1RT_left_temp.move-span.temp
+                    #portal_block_19.block.move-span
+                      #portal_block_19_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank", :title => "国内著名市场策划专家考察南方国际商城项目并指导工作"}
+                                %span> 房产置业 |
+                                国内著名市场策划专家考察南方国际商城项目
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank", :title => "巴黎印象  炎炎夏日里的那一丝清凉"}
+                                %span> 房产置业 |
+                                巴黎印象  炎炎夏日里的那一丝清凉
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=108", :target => "_blank", :title => "精彩不散，最美的时刻在这里……"}
+                                %span> 房产置业 |
+                                精彩不散，最美的时刻在这里……
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=107", :target => "_blank", :title => "大禹传奇——繁华优居地，畅享法式风情住区"}
+                                %span> 房产置业 |
+                                大禹传奇——繁华优居地，畅享法式风情住区
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=106", :target => "_blank", :title => "乾坤豪府7月28日工程进度"}
+                                %span> 房产置业 |
+                                乾坤豪府7月28日工程进度
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=105", :target => "_blank", :title => "翰林学府样板间工程进度"}
+                                %span> 房产置业 |
+                                翰林学府样板间工程进度
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=104", :target => "_blank", :title => "华厦龙成用三年，见证一场伟大的实现！"}
+                                %span> 房产置业 |
+                                华厦龙成用三年，见证一场伟大的实现！
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=103", :target => "_blank", :title => "城市中央广场，一个城市最璀璨的未来"}
+                                %span> 房产置业 |
+                                城市中央广场，一个城市最璀璨的未来
+                    #frame8778tn.paopaokeji_box2.frame.move-span.cl.frame-1
+                      .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                        %span.titletext{:style => "font-size:15px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 我来爆料
+                        %span.subtitle{:style => "float:right;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                        %span.subtitle{:style => "float:right;margin-right:10px;"}
+                          %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                      #frame8778tn_left.column.frame-1-c
+                        #frame8778tn_left_temp.move-span.temp
+                        #portal_block_26.block.move-span
+                          #portal_block_26_content.dxb_bc
+                            .module.cl.xl.xl1
+                              %ul
+                                %li
+                                  %em 03-27
+                                  %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"}
+                                    %span> 汽车沙龙 |
+                                    最有价值的投资居住小区
+                                %li
+                                  %em 08-05
+                                  %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"}
+                                    %span> 汽车沙龙 |
+                                    售24.88万起 新款荣威550 PLUG-IN上市
+                                %li
+                                  %em 03-27
+                                  %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"}
+                                    %span> 家居装饰 |
+                                    测试文件
+                                %li
+                                  %em 09-09
+                                  %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"}
+                                    %span> 口碑商家 |
+                                    青岛旅行社
+                                %li
+                                  %em 08-05
+                                  %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"}
+                                    %span> 房屋出租 |
+                                    公主坟万寿路翠微路玉渊潭南路翠微西里
+                                %li
+                                  %em 08-06
+                                  %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"}
+                                    %span> 最新楼盘 |
+                                    百合公馆
+                                %li
+                                  %em 08-08
+                                  %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"}
+                                    %span> 谈婚论嫁 |
+                                    苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                                %li
+                                  %em 08-08
+                                  %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"}
+                                    %span> 谈婚论嫁 |
+                                    深圳流行婚纱的元素有哪些呢？
+              #frame64ly1g_center.column.frame-3-1-r
+                #frame64ly1g_center_temp.move-span.temp
+                #frameyWlYol.paopaokeji_box2.frame.move-span.cl.frame-1
+                  .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                    %span.titletext{:style => "font-size:16px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 推荐图文
+                  #frameyWlYol_left.column.frame-1-c
+                    #frameyWlYol_left_temp.move-span.temp
+                    #portal_block_21.block.move-span
+                      #portal_block_21_content.dxb_bc{:style => "position: relative;"}
+                        .module.cl.slidebox{:id => "0.264416574313018", :style => "display: block;"}
+                          %ul.slideshow
+                            %li{:style => "width: 285px; height: 150px; display: none;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                                %img{:height => "150", :src => "data/attachment/block/7f/7feee6cdad02f0eccf0a9a18929a0b74.jpg", :width => "285"}/
+                              %span.title 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li{:style => "width: 285px; height: 150px; display: block;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
+                                %img{:height => "150", :src => "data/attachment/block/6c/6cc6aaa9292a088efb5bea302a943023.jpg", :width => "285"}/
+                              %span.title 青岛旅行社
+                            %li{:style => "width: 285px; height: 150px; display: none;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
+                                %img{:height => "150", :src => "data/attachment/block/fd/fdf9e36da097e9ae14afe230f4d61eb5.jpg", :width => "285"}/
+                              %span.title 公主坟万寿路翠微路玉渊潭南路翠微西里
+                        :javascript
+                          runslideshow();
+                        .slidebar{:style => "position: absolute; top: 5px; left: 4px;"}
+                          %ul
+                            %li{:onmouseover => "slideshow.entities[0.264416574313018].xactive(0); return false;"} 1
+                            %li.on{:onmouseover => "slideshow.entities[0.264416574313018].xactive(1); return false;"} 2
+                            %li{:onmouseover => "slideshow.entities[0.264416574313018].xactive(2); return false;"} 3
+                    #portal_block_20.paopaokeji_threefont.block.move-span
+                      #portal_block_20_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠微西里
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
+                            %li
+                              %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                    #frameFQZXyY.paopaokeji_huiyuan.frame.move-span.cl.frame-1
+                      #frameFQZXyY_left.column.frame-1-c
+                        #frameFQZXyY_left_temp.move-span.temp
+                        #portal_block_27.block.move-span
+                          #portal_block_27_content.dxb_bc
+                            .module.cl.ml.mls
+                              %ul
+                                %li
+                                  %a{:c => "1", :href => "home.php?mod=space&uid=1", :mid => "card_8597", :target => "_blank"}
+                                    %img{:alt => "admin", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=1&size=small", :width => "48"}/
+                                  %p
+                                    %a{:href => "home.php?mod=space&uid=1", :target => "_blank", :title => "admin"} admin
+                                %li
+                                  %a{:c => "1", :href => "home.php?mod=space&uid=154", :mid => "card_6456", :target => "_blank"}
+                                    %img{:alt => "paopaokeji", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=154&size=small", :width => "48"}/
+                                  %p
+                                    %a{:href => "home.php?mod=space&uid=154", :target => "_blank", :title => "paopaokeji"} paopaokeji
+                                %li
+                                  %a{:c => "1", :href => "home.php?mod=space&uid=170", :mid => "card_7493", :target => "_blank"}
+                                    %img{:alt => "常务管理员", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=170&size=small", :width => "48"}/
+                                  %p
+                                    %a{:href => "home.php?mod=space&uid=170", :target => "_blank", :title => "常务管理员"} 常务管理员
+        #framel782wv.frame.move-span.cl.frame-1
+          #framel782wv_left.column.frame-1-c
+            #framel782wv_left_temp.move-span.temp
+            #frame2R4t3F.frame.move-span.cl.frame-1
+              #frame2R4t3F_left.column.frame-1-c
+                #frame2R4t3F_left_temp.move-span.temp
+                #portal_block_28.block.move-span
+                  #portal_block_28_content.dxb_bc
+                    .portal_block_summary
+                      .paopaokeji_left
+                        .bd.cl
+                          %a.next
+                          .tempWrap{:style => "overflow:hidden; position:relative; width:1078px"}
+                            %ul.picList{:style => "width: 2618px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -898px;"}
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=79", :target => "_blank"}
+                                  %img{:alt => "首创·禧瑞墅", :src => "forum.php?mod=image&aid=654&size=120x120&key=2e3a271afd7c3d45"}/
+                                  %span 首创·禧瑞墅
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                                  %img{:alt => "百合公馆", :src => "forum.php?mod=image&aid=759&size=120x120&key=9159af3330c5063a"}/
+                                  %span 百合公馆
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=116", :target => "_blank"}
+                                  %img{:alt => "和成璟园", :src => "forum.php?mod=image&aid=755&size=120x120&key=51e94ff1320b6859"}/
+                                  %span 和成璟园
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=115", :target => "_blank"}
+                                  %img{:alt => "江南山水", :src => "forum.php?mod=image&aid=751&size=120x120&key=01512b6f11b4512e"}/
+                                  %span 江南山水
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=114", :target => "_blank"}
+                                  %img{:alt => "首开万科城市之光", :src => "forum.php?mod=image&aid=747&size=120x120&key=73d38077c180a4a2"}/
+                                  %span 首开万科城市之光
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=113", :target => "_blank"}
+                                  %img{:alt => "通州富力中心", :src => "forum.php?mod=image&aid=743&size=120x120&key=a4f31e267ef26813"}/
+                                  %span 通州富力中心
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=112", :target => "_blank"}
+                                  %img{:alt => "紫御长安", :src => "forum.php?mod=image&aid=739&size=120x120&key=8859ddb044099c62"}/
+                                  %span 紫御长安
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=111", :target => "_blank"}
+                                  %img{:alt => "首开常青藤", :src => "forum.php?mod=image&aid=763&size=120x120&key=9bfaca778f1750bb"}/
+                                  %span 首开常青藤
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=80", :target => "_blank"}
+                                  %img{:alt => "首城汇景湾", :src => "forum.php?mod=image&aid=658&size=120x120&key=2bd92372966915d0"}/
+                                  %span 首城汇景湾
+                                  %i
+                              %li{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=79", :target => "_blank"}
+                                  %img{:alt => "首创·禧瑞墅", :src => "forum.php?mod=image&aid=654&size=120x120&key=2e3a271afd7c3d45"}/
+                                  %span 首创·禧瑞墅
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
+                                  %img{:alt => "百合公馆", :src => "forum.php?mod=image&aid=759&size=120x120&key=9159af3330c5063a"}/
+                                  %span 百合公馆
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=116", :target => "_blank"}
+                                  %img{:alt => "和成璟园", :src => "forum.php?mod=image&aid=755&size=120x120&key=51e94ff1320b6859"}/
+                                  %span 和成璟园
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=115", :target => "_blank"}
+                                  %img{:alt => "江南山水", :src => "forum.php?mod=image&aid=751&size=120x120&key=01512b6f11b4512e"}/
+                                  %span 江南山水
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=114", :target => "_blank"}
+                                  %img{:alt => "首开万科城市之光", :src => "forum.php?mod=image&aid=747&size=120x120&key=73d38077c180a4a2"}/
+                                  %span 首开万科城市之光
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=113", :target => "_blank"}
+                                  %img{:alt => "通州富力中心", :src => "forum.php?mod=image&aid=743&size=120x120&key=a4f31e267ef26813"}/
+                                  %span 通州富力中心
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=112", :target => "_blank"}
+                                  %img{:alt => "紫御长安", :src => "forum.php?mod=image&aid=739&size=120x120&key=8859ddb044099c62"}/
+                                  %span 紫御长安
+                                  %i
+                              %li.clone{:style => "float: left; width: 138px;"}
+                                %a{:href => "forum.php?mod=viewthread&tid=111", :target => "_blank"}
+                                  %img{:alt => "首开常青藤", :src => "forum.php?mod=image&aid=763&size=120x120&key=9bfaca778f1750bb"}/
+                                  %span 首开常青藤
+                                  %i
+                          %a.prev
+      / [/diy]
+      / 第二屏图片滚动开始
+      .wp
+        / [diy=diy7]
+        #diy7.area
+        / [/diy]
+        :javascript
+          jQuery(".paopaokeji_left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:7,interTime:50,trigger:"click"});
+      / 第二屏图片滚动结束
+      / [diy=diy8]
+      #diy8.area
+        #frameM437or.frame.move-span.cl.frame-1-1
+          #frameM437or_left.column.frame-1-1-l
+            #frameM437or_left_temp.move-span.temp
+            #frameQRxuoS.frame.move-span.cl.frame-1
+              .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                %span.titletext{:style => "font-size:16px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 汽车沙龙
+                %span.subtitle{:style => "float:right;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+              #frameQRxuoS_left.column.frame-1-c
+                #frameQRxuoS_left_temp.move-span.temp
+            #framep3ctkJ.paopaokeji_pf.frame.move-span.cl.frame-1
+              #framep3ctkJ_left.column.frame-1-c
+                #framep3ctkJ_left_temp.move-span.temp
+                #frameOUQ8HU.frame.move-span.cl.frame-1-2
+                  #frameOUQ8HU_left.column.frame-1-2-l
+                    #frameOUQ8HU_left_temp.move-span.temp
+                    #portal_block_29.paopaokeji_tuwen.block.move-span
+                      #portal_block_29_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                                %img{:alt => "售24.88万起 新款荣威550 PLUG", :height => "100", :src => "data/attachment/block/77/77638bc2f0849beb124a023ac9acc4bf.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG"} 售24.88万起 新款荣威550 PLUG
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank"}
+                                %img{:alt => "年内推出 吉利新SUV NL-3最新", :height => "100", :src => "data/attachment/block/f9/f92c2631b306b05bf9ed370e0fc5606a.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "年内推出 吉利新SUV NL-3最新"} 年内推出 吉利新SUV NL-3最新
+                  #frameOUQ8HU_center.column.frame-1-2-r
+                    #frameOUQ8HU_center_temp.move-span.temp
+                    #portal_block_30.block.move-span
+                      #portal_block_30_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "年内推出 吉利新SUV NL-3最新谍照曝光"} 年内推出 吉利新SUV NL-3最新谍照曝光
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=23", :target => "_blank", :title => "2018年前亮相 曝丰田新一代Supra效果图"} 2018年前亮相 曝丰田新一代Supra效果图
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=22", :target => "_blank", :title => "奔驰GLE Coupe将于9月在国内正式上市"} 奔驰GLE Coupe将于9月在国内正式上市
+                    #portal_block_31.block.move-span
+                      #portal_block_31_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "年内推出 吉利新SUV NL-3最新谍照曝光"} 年内推出 吉利新SUV NL-3最新谍照曝光
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=23", :target => "_blank", :title => "2018年前亮相 曝丰田新一代Supra效果图"} 2018年前亮相 曝丰田新一代Supra效果图
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=22", :target => "_blank", :title => "奔驰GLE Coupe将于9月在国内正式上市"} 奔驰GLE Coupe将于9月在国内正式上市
+          #frameM437or_center.column.frame-1-1-r
+            #frameM437or_center_temp.move-span.temp
+            #frame415KwH.frame.move-span.cl.frame-1
+              .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                %span.titletext{:style => "font-size:16px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 房产置业
+                %span.subtitle{:style => "float:right;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                %span.subtitle{:style => "float:right;margin-right:10px;"}
+                  %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+              #frame415KwH_left.column.frame-1-c
+                #frame415KwH_left_temp.move-span.temp
+            #frameO2C8nk.paopaokeji_pf.frame.move-span.cl.frame-1
+              #frameO2C8nk_left.column.frame-1-c
+                #frameO2C8nk_left_temp.move-span.temp
+                #frameN1T3SH.frame.move-span.cl.frame-1-2
+                  #frameN1T3SH_left.column.frame-1-2-l
+                    #frameN1T3SH_left_temp.move-span.temp
+                    #portal_block_32.paopaokeji_tuwen.block.move-span
+                      #portal_block_32_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank"}
+                                %img{:alt => "国内著名市场策划专家考察南方", :height => "100", :src => "data/attachment/block/47/47d9292d7126d7c4491b5db509d9039c.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank", :title => "国内著名市场策划专家考察南方"} 国内著名市场策划专家考察南方
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank"}
+                                %img{:alt => "巴黎印象  炎炎夏日里的那一丝", :height => "100", :src => "data/attachment/block/32/3210a65fc2695a3cf763928d01b33c23.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank", :title => "巴黎印象  炎炎夏日里的那一丝"} 巴黎印象  炎炎夏日里的那一丝
+                  #frameN1T3SH_center.column.frame-1-2-r
+                    #frameN1T3SH_center_temp.move-span.temp
+                    #portal_block_33.block.move-span
+                      #portal_block_33_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank", :title => "国内著名市场策划专家考察南方国际商城项目并指导工作"} 国内著名市场策划专家考察南方国际商城项目
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank", :title => "巴黎印象  炎炎夏日里的那一丝清凉"} 巴黎印象  炎炎夏日里的那一丝清凉
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=108", :target => "_blank", :title => "精彩不散，最美的时刻在这里……"} 精彩不散，最美的时刻在这里……
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=107", :target => "_blank", :title => "大禹传奇——繁华优居地，畅享法式风情住区"} 大禹传奇——繁华优居地，畅享法式风情住区
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=106", :target => "_blank", :title => "乾坤豪府7月28日工程进度"} 乾坤豪府7月28日工程进度
+                    #portal_block_34.block.move-span
+                      #portal_block_34_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank", :title => "国内著名市场策划专家考察南方国际商城项目并指导工作"} 国内著名市场策划专家考察南方国际商城项目
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank", :title => "巴黎印象  炎炎夏日里的那一丝清凉"} 巴黎印象  炎炎夏日里的那一丝清凉
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=108", :target => "_blank", :title => "精彩不散，最美的时刻在这里……"} 精彩不散，最美的时刻在这里……
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=107", :target => "_blank", :title => "大禹传奇——繁华优居地，畅享法式风情住区"} 大禹传奇——繁华优居地，畅享法式风情住区
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=106", :target => "_blank", :title => "乾坤豪府7月28日工程进度"} 乾坤豪府7月28日工程进度
+        #frameP6F6p6.frame.move-span.cl.frame-1
+          #frameP6F6p6_left.column.frame-1-c
+            #frameP6F6p6_left_temp.move-span.temp
+            #frame567fwy.frame.move-span.cl.frame-1-1
+              #frame567fwy_left.column.frame-1-1-l
+                #frame567fwy_left_temp.move-span.temp
+                #framevty3Jz.frame.move-span.cl.frame-1
+                  .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                    %span.titletext{:style => "font-size:16px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 家居装饰
+                    %span.subtitle{:style => "float:right;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                  #framevty3Jz_left.column.frame-1-c
+                    #framevty3Jz_left_temp.move-span.temp
+                #frameLY4f3n.paopaokeji_pf.frame.move-span.cl.frame-1-2
+                  #frameLY4f3n_left.column.frame-1-2-l
+                    #frameLY4f3n_left_temp.move-span.temp
+                    #portal_block_35.paopaokeji_tuwen.block.move-span
+                      #portal_block_35_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank"}
+                                %img{:alt => "【全洲桃源中秋赏月会，不见不", :height => "100", :src => "data/attachment/block/60/603c49a94805760e8a9ebad5759de01f.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank", :title => "【全洲桃源中秋赏月会，不见不"} 【全洲桃源中秋赏月会，不见不
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=138", :target => "_blank"}
+                                %img{:alt => "协丰·温哥华8月项目进度", :height => "100", :src => "data/attachment/block/e4/e46d1c9b3cad9a7ee8e235d58196e002.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=138", :target => "_blank", :title => "协丰·温哥华8月项目进度"} 协丰·温哥华8月项目进度
+                  #frameLY4f3n_center.column.frame-1-2-r
+                    #frameLY4f3n_center_temp.move-span.temp
+                    #portal_block_37.block.move-span
+                      #portal_block_37_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank", :title => "【全洲桃源中秋赏月会，不见不散】超大月饼免费吃  实景现房享特惠"} 【全洲桃源中秋赏月会，不见不散】超大月饼
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=140", :target => "_blank", :title => "国五条细则满月 多地房价不降反升"} 国五条细则满月 多地房价不降反升
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=139", :target => "_blank", :title => "孝感楼盘5月5日销售12套 均价7123.63元㎡"} 孝感楼盘5月5日销售12套 均价7123.63元㎡
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=138", :target => "_blank", :title => "协丰·温哥华8月项目进度"} 协丰·温哥华8月项目进度
+                    #portal_block_38.block.move-span
+                      #portal_block_38_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=141", :target => "_blank", :title => "【全洲桃源中秋赏月会，不见不散】超大月饼免费吃  实景现房享特惠"} 【全洲桃源中秋赏月会，不见不散】超大月饼
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=140", :target => "_blank", :title => "国五条细则满月 多地房价不降反升"} 国五条细则满月 多地房价不降反升
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=139", :target => "_blank", :title => "孝感楼盘5月5日销售12套 均价7123.63元㎡"} 孝感楼盘5月5日销售12套 均价7123.63元㎡
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=138", :target => "_blank", :title => "协丰·温哥华8月项目进度"} 协丰·温哥华8月项目进度
+              #frame567fwy_center.column.frame-1-1-r
+                #frame567fwy_center_temp.move-span.temp
+                #frame6WYMRk.frame.move-span.cl.frame-1
+                  .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                    %span.titletext{:style => "font-size:16px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 食全食美
+                    %span.subtitle{:style => "float:right;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                  #frame6WYMRk_left.column.frame-1-c
+                    #frame6WYMRk_left_temp.move-span.temp
+                #frameHOejyr.paopaokeji_pf.frame.move-span.cl.frame-1-2
+                  #frameHOejyr_left.column.frame-1-2-l
+                    #frameHOejyr_left_temp.move-span.temp
+                    #portal_block_36.paopaokeji_tuwen.block.move-span
+                      #portal_block_36_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=76", :target => "_blank"}
+                                %img{:alt => "【图文】烤鸡腿的做法_烤鸡腿的家常做法_烤鸡腿怎么做好吃_做法步骤,视频_海贼王路飞 ...", :height => "100", :src => "data/attachment/block/9f/9ff83835a076f31775ec54b978c52a4a.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=76", :target => "_blank", :title => "【图文】烤鸡腿的做法_烤鸡腿的家常做法_烤鸡腿怎么做好吃_做法步骤,视频_海贼王路飞 ..."} 【图文】烤鸡腿的做法_烤鸡腿
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=75", :target => "_blank"}
+                                %img{:alt => "【图文】菇香奶酪虾肉盏的做法", :height => "100", :src => "data/attachment/block/69/6913a898e7a424477eadb0e237b44697.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=75", :target => "_blank", :title => "【图文】菇香奶酪虾肉盏的做法"} 【图文】菇香奶酪虾肉盏的做法
+                  #frameHOejyr_center.column.frame-1-2-r
+                    #frameHOejyr_center_temp.move-span.temp
+                    #portal_block_39.block.move-span
+                      #portal_block_39_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=110", :target => "_blank", :title => "国内著名市场策划专家考察南方国际商城项目并指导工作"} 国内著名市场策划专家考察南方国际商城项目
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=109", :target => "_blank", :title => "巴黎印象  炎炎夏日里的那一丝清凉"} 巴黎印象  炎炎夏日里的那一丝清凉
+                            %li
+                              %em 08-06
+                              %a{:href => "forum.php?mod=viewthread&tid=108", :target => "_blank", :title => "精彩不散，最美的时刻在这里……"} 精彩不散，最美的时刻在这里……
+                    #portal_block_40.block.move-span
+                      #portal_block_40_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank", :title => "最有价值的投资居住小区"} 最有价值的投资居住小区
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威550 PLUG-IN上市
+                            %li
+                              %em 03-27
+                              %a{:href => "forum.php?mod=viewthread&tid=367", :target => "_blank", :title => "测试文件"} 测试文件
+                            %li
+                              %em 09-09
+                              %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
+                            %li
+                              %em 08-05
+                              %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉渊潭南路翠微西里
+        #frames6ZLjF.frame.move-span.cl.frame-1
+          #frames6ZLjF_left.column.frame-1-c
+            #frames6ZLjF_left_temp.move-span.temp
+            #frame8xdTF4.frame.move-span.cl.frame-1-1
+              #frame8xdTF4_left.column.frame-1-1-l
+                #frame8xdTF4_left_temp.move-span.temp
+                #framed53Zt3.frame.move-span.cl.frame-1
+                  .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                    %span.titletext{:style => "font-size:16px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 谈婚论嫁
+                    %span.subtitle{:style => "float:right;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                  #framed53Zt3_left.column.frame-1-c
+                    #framed53Zt3_left_temp.move-span.temp
+                #frameebP99H.paopaokeji_pf.frame.move-span.cl.frame-1-2
+                  #frameebP99H_left.column.frame-1-2-l
+                    #frameebP99H_left_temp.move-span.temp
+                    #portal_block_41.paopaokeji_tuwen.block.move-span
+                      #portal_block_41_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
+                                %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/29/2943cd3f8a41b09bc0e281612f2990e9.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
+                                %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/16/16a1255f2513004707bac53e70cd0308.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍摄点
+                  #frameebP99H_center.column.frame-1-2-r
+                    #frameebP99H_center_temp.move-span.temp
+                    #portal_block_42.block.move-span
+                      #portal_block_42_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感新娘
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+                    #portal_block_43.block.move-span
+                      #portal_block_43_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=190", :target => "_blank", :title => "深圳流行婚纱的元素有哪些呢？"} 深圳流行婚纱的元素有哪些呢？
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=189", :target => "_blank", :title => "别样的苏州婚纱让你瞬间成为性感新娘"} 别样的苏州婚纱让你瞬间成为性感新娘
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=188", :target => "_blank", :title => "闺蜜婚纱照大盘点"} 闺蜜婚纱照大盘点
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=187", :target => "_blank", :title => "新人在拍婚纱照前应该怎么做"} 新人在拍婚纱照前应该怎么做
+              #frame8xdTF4_center.column.frame-1-1-r
+                #frame8xdTF4_center_temp.move-span.temp
+                #frameP37u75.frame.move-span.cl.frame-1
+                  .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+                    %span.titletext{:style => "font-size:16px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 亲子母婴
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                    %span.subtitle{:style => "float:right;margin-right:10px;"}
+                      %a{:href => "http://localhost/chengshiv2/#", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} 自定内容
+                  #frameP37u75_left.column.frame-1-c
+                    #frameP37u75_left_temp.move-span.temp
+                #frame37G9U6.paopaokeji_pf.frame.move-span.cl.frame-1-2
+                  #frame37G9U6_left.column.frame-1-2-l
+                    #frame37G9U6_left_temp.move-span.temp
+                    #portal_block_44.paopaokeji_tuwen.block.move-span
+                      #portal_block_44_content.dxb_bc
+                        .module.cl.ml
+                          %ul
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank"}
+                                %img{:alt => "研究：生理偏好影响 男婴爱洋娃娃更胜玩具车", :height => "100", :src => "data/attachment/block/cf/cf9e3362d9bbe389af01dfaad4c829f3.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank", :title => "研究：生理偏好影响 男婴爱洋娃娃更胜玩具车"} 研究：生理偏好影响 男婴爱洋
+                            %li{:style => "width: 183px;"}
+                              %a{:href => "forum.php?mod=viewthread&tid=155", :target => "_blank"}
+                                %img{:alt => "深圳明年建成弃婴岛 称“我们", :height => "100", :src => "data/attachment/block/66/660cdbf8e7d26cb3ad114a6d4b246373.jpg", :width => "183"}/
+                              %p
+                                %a{:href => "forum.php?mod=viewthread&tid=155", :target => "_blank", :title => "深圳明年建成弃婴岛 称“我们"} 深圳明年建成弃婴岛 称“我们
+                  #frame37G9U6_center.column.frame-1-2-r
+                    #frame37G9U6_center_temp.move-span.temp
+                    #portal_block_45.block.move-span
+                      #portal_block_45_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank", :title => "研究：生理偏好影响 男婴爱洋娃娃更胜玩具车"} 研究：生理偏好影响 男婴爱洋娃娃更胜玩具
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=165", :target => "_blank", :title => "北京拟明年3月实施“单独二孩”政策"} 北京拟明年3月实施“单独二孩”政策
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=164", :target => "_blank", :title => "17岁吸毒少女查出宫外孕 称打掉就行别影响聚会"} 17岁吸毒少女查出宫外孕 称打掉就行别影响
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=163", :target => "_blank", :title => "河北超生女婴被抱走18年案判决 驳回信息公开请求(组图)"} 河北超生女婴被抱走18年案判决 驳回信息公
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=162", :target => "_blank", :title => "英国王室家族过圣诞 凯特王妃被指怀二胎盼女儿"} 英国王室家族过圣诞 凯特王妃被指怀二胎盼
+                    #portal_block_46.block.move-span
+                      #portal_block_46_content.dxb_bc
+                        .module.cl.xl.xl1
+                          %ul
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank", :title => "研究：生理偏好影响 男婴爱洋娃娃更胜玩具车"} 研究：生理偏好影响 男婴爱洋娃娃更胜玩具
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=165", :target => "_blank", :title => "北京拟明年3月实施“单独二孩”政策"} 北京拟明年3月实施“单独二孩”政策
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=164", :target => "_blank", :title => "17岁吸毒少女查出宫外孕 称打掉就行别影响聚会"} 17岁吸毒少女查出宫外孕 称打掉就行别影响
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=163", :target => "_blank", :title => "河北超生女婴被抱走18年案判决 驳回信息公开请求(组图)"} 河北超生女婴被抱走18年案判决 驳回信息公
+                            %li
+                              %em 08-08
+                              %a{:href => "forum.php?mod=viewthread&tid=162", :target => "_blank", :title => "英国王室家族过圣诞 凯特王妃被指怀二胎盼女儿"} 英国王室家族过圣诞 凯特王妃被指怀二胎盼
+        #frame6szK6y.frame.move-span.cl.frame-1
+          #frame6szK6y_left.column.frame-1-c
+            #frame6szK6y_left_temp.move-span.temp
+            #portal_block_22.block.move-span
+              #portal_block_22_content.dxb_bc
+                .portal_block_summary
+                  %img{:src => "template/paopaokeji_chengshiv2/images/ad/ad1.jpg", :width => "100%"}/
+      .wp.cl
+        / [diy=diy10]
+        #diy10.area
+          #framez3XRhi.frame.move-span.cl.frame-1
+            .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+              %span.titletext{:style => "font-size:16px;color:rgb(11, 66, 150);"} 友情链接
+            #framez3XRhi_left.column.frame-1-c
+              #framez3XRhi_left_temp.move-span.temp
+          #frameRFIULH.paopaokeji_link.frame.move-span.cl.frame-1
+            #frameRFIULH_left.column.frame-1-c
+              #frameRFIULH_left_temp.move-span.temp
+              #portal_block_50.block.move-span
+                #portal_block_50_content.dxb_bc
+                  .x.cl
+                    %ul.cl.mbm
+                      %li
+                        %a{:href => "http://www.discuz.net", :target => "_blank"} 官方论坛
+          #frame69711W.frame.move-span.cl.frame-1
+            #frame69711W_left.column.frame-1-c
+              #frame69711W_left_temp.move-span.temp
+    :javascript
+      function rightcopy(){
+      	showWindow('qzom_rightcopy','plugin.php?id=qzom_rightcopy:rightcopy');
+      }
+      document.oncontextmenu= function(){rightcopy();return false;};
+    #ft.footer
+      .wp
+        %p
+          %a{:href => "#", :target => "_blank"} 网站首页
+          |
+          %a{:href => "#", :target => "_blank"} 关于我们
+        %p
+          Powered by
+          %strong
+            %a{:href => "http://www.discuz.net", :target => "_blank"} TBNB
+          %em V6
+        %p
+          %a{:href => "#", :target => "_blank"}
+            %img{:src => "template/paopaokeji_chengshiv2/images/footer_ico_01.jpg"}/
+          %a{:href => "#", :target => "_blank"}
+            %img{:src => "template/paopaokeji_chengshiv2/images/footer_ico_02.jpg"}/
+          %a{:href => "#", :target => "_blank"}
+            %img{:src => "template/paopaokeji_chengshiv2/images/footer_ico_03.jpg"}/
+          %a{:href => "#", :target => "_blank"}
+            %img{:src => "template/paopaokeji_chengshiv2/images/footer_ico_04.jpg"}/
+          %a{:href => "#", :target => "_blank"}
+            %img{:src => "template/paopaokeji_chengshiv2/images/footer_ico_05.jpg"}/
+    %script{:src => "home.php?mod=spacecp&ac=pm&op=checknewpm&rand=1472978788", :type => "text/javascript"}
+    %script{:src => "home.php?mod=spacecp&ac=follow&op=checkfeed&rand=1472978788", :type => "text/javascript"}
+    %script{:src => "home.php?mod=misc&ac=sendmail&rand=1472978788", :type => "text/javascript"}
+    #ip_notice.focus.plugin
+    :javascript
+      ipNotice();
+    #scrolltop
+      %span{:hidefocus => "true"}
+        %a.scrolltopa{:onclick => "window.scrollTo('0','0')", :title => "返回顶部"}
+          %b 返回顶部
+    :javascript
+      _attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();
+    #discuz_tips{:style => "display:none;"}
+    :javascript
+      var tipsinfo = '|X3.2|0.6||0||154|11|1472978788||2';
+    %script{:charset => "UTF-8", :src => "http://discuz.gtimg.cn/cloud/scripts/discuz_tips.js?v=1", :type => "text/javascript"}

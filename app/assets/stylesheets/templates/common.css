@@ -1,0 +1,25 @@
+
+/*底部图片背景*/
+.paopaokeji_index_bg {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 888px;
+    z-index: -1111;
+    min-width: 1240px;
+    background: url(indexbg.jpg) top center;
+}
+.paopaokeji_index_conn_bg {
+    position:absolute;
+    top:175px;
+    left:0;
+    width:100%;
+    z-index:-1;
+}
+.paopaokeji_index_conn_bg .i_c_b_c {
+    margin:0 auto;
+    width:1240px;
+    height:635px;
+    background-color:#ffffff;
+}

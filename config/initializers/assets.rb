@@ -9,10 +9,20 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += [
+    'jquery.js',
     'categories.js',
     'categories.css',
     'regions.js',
     'regions.css',
     'users.js',
-    'users.css'
+    'users.css',
+    'templates/style_2_common.css',
+    'templates/index.css',
+    'templates/common.css',
+    'templates/ajax.js',
+    'templates/common.js',
+    'templates/common_extra.js',
+    'templates/discuz_tips.js',
+    'templates/portal.js',
+    'templates/jquery.SuperSlide.2.1.1.js'
 ]

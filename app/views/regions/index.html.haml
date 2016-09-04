@@ -12,9 +12,12 @@
     - @regions.each do |region|
       %tr
         %td= region.name
-        %td= link_to 'Show', region
-        %td= link_to 'Edit', edit_region_path(region)
-        %td= link_to 'Destroy', region, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        - if can? :read, Region
+          %td= link_to 'Show', region
+        - if can? :update, Region
+          %td= link_to 'Edit', edit_region_path(region)
+        - if can? :destroy, Region
+          %td= link_to 'Destroy', region, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

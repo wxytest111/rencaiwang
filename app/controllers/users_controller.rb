@@ -1,6 +1,6 @@
 require 'pp'
 
-class UsersController < ApplicationController
+class UsersController < RoleAuthenticationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -97,6 +97,10 @@ class UsersController < ApplicationController
     params.require(:regions)
   end
 
+  def roles_param
+    params.require(:roles)
+  end
+
   def user_update_transaction type
     begin
       User.transaction do
@@ -111,6 +115,12 @@ class UsersController < ApplicationController
         if user_regions && user_regions.length>0
           user_regions.each {|user_region| user_region.delete}
         end
+
+        roles_param.each do |role_name, checked|
+          @user.add_role(role_name) if checked == '1' && !@user.has_role?(role_name)
+          @user.remove_role(role_name) if checked == '0' && @user.has_role?(role_name)
+        end
+
         region_params.each do |key, value|
           pp "key=#{key}, value=#{value}"
           if value.to_i == 1

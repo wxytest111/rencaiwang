@@ -2,6 +2,9 @@
 %html
   = render :partial => 'layouts/header'
   %body
+    - if current_user
+      %h1
+        =current_user.email
     -#= render :partial => 'layouts/banner'
     .container
       -#=render :partial => 'layouts/menu'

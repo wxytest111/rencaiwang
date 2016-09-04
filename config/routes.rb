@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   devise_for :users
 
   devise_scope :users do
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
   resources :users
   resources :regions
   resources :categories
+
+  match ':controller/:action/', :via => [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
