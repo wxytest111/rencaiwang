@@ -29,80 +29,23 @@
     = javascript_include_tag 'templates/common_extra'
     = javascript_include_tag 'templates/ajax'
     = stylesheet_link_tag 'templates/index'
-  %body#nv_portal.pg_index{:onkeydown => "if(event.keyCode==27) return false;"}
+  %body#nv_portal.pg_index
     #append_parent
     #ajaxwaitid
     .cl.paopaokeji_toptb
       .wp
-        .z
-          %p
-            %strong.vwmy
-              %a{:href => "home.php?mod=space&uid=154", :target => "_blank", :title => "访问我的空间"} paopaokeji
-            %a{:href => "home.php?mod=spacecp"} 设置
-            %a#pm_ntc{:href => "home.php?mod=space&do=pm"} 消息
-            %a#myprompt.a{:href => "home.php?mod=space&do=notice"} 提醒
-            %span#myprompt_check
-            %a{:href => "home.php?mod=spacecp&ac=credit&showcredit=1"} 积分: 176
-            %a{:href => "home.php?mod=spacecp&ac=usergroup"} 用户组: 注册会员
-            %a{:href => "member.php?mod=logging&action=logout&formhash=42b3084e"} 退出
         .y
-          .topinfo
-            %ul.paopaokeji_nav_all
-              %li
-                %a.rs_dd{:href => "#", :rel => "nofollow"} 消费记录
-              %li
-                %a.rs_buy{:href => "#", :rel => "nofollow"} 购物宝
-              / 本例子代码 开始 -----------------------------------------
-              %li#m1.m.on
-                %a.am{:href => "#", :target => "_blank"} 分类导航
-                %ul.sub
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-              %li#m2.m
-                %a.am{:href => "#", :target => "_blank"} 快捷导航
-                %ul.sub
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-                  %li
-                    %a{:href => "#"} 自定内容
-              :javascript
-                jQuery(".paopaokeji_nav_all").slide({
-                type:"menu", //效果类型
-                titCell:".m", // 鼠标触发对象
-                targetCell:".sub", // 效果对象，必须被titCell包含
-                delayTime:0, // 效果时间
-                triggerTime:0, //鼠标延迟触发时间
-                returnDefault:true  //返回默认状态
-                });
-              / 本例子代码 结束 -----------------------------------------
-              %li
-                %a{:href => "#", :rel => "nofollow"} 客服中心
+          - if current_user
+            %p
+              %strong.vwmy
+                %a{:href => "home.php?mod=space&uid=154", :target => "_blank", :title => "访问我的空间"} TBNB
+              -#%a{:href => "home.php?mod=spacecp"} 设置
+              =link_to '退出', destroy_user_session_path
+          - else
+            .topwel
+              欢迎来到陕西人才网！
+              = link_to '请登陆', new_user_session_path, class:'rs_dl'
+              %a{:href => "member.php?mod=logging&action=login&viewlostpw=1", :rel => "nofollow"} 忘记密码?
     .paopaokeji_index_bg
     .paopaokeji_index_conn_bg
       .i_c_b_c
@@ -137,8 +80,8 @@
     #logoline
       .wp.cl
         %p.z
-          %a.pd20{:href => "./", :target => "_blank", :title => "Discuz! Board"}
-            %img{:alt => "Discuz! Board", :border => "0", :src => "template/paopaokeji_chengshiv2/images/logo.png"}/
+          %a.pd20{:href => "./", :target => "_blank", :title => "TBNB"}
+            =image_tag 'templates/logo.png'
         .search.y
           %form#search_form{:action => "search.php?searchsubmit=yes", :autocomplete => "off", :method => "post", :onsubmit => "searchFocus($('scbar_txt'))", :target => "_blank"}
             %input#scbar_mod{:name => "mod", :type => "hidden", :value => "search"}/
@@ -157,36 +100,32 @@
             %li#mn_portal.current
               %a{:hidefocus => "true", :href => "portal.php", :title => "Portal"}
                 网站首页
-                %span Portal
             %li#mn_forum
               %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
-                交流社区
-                %span BBS
+                新闻中心
             %li#mn_P1
-              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/fenlei/"} 分类信息
+              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/fenlei/"} 领导讲话
             %li#mn_P2
-              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/news/"} 新闻资讯
+              %a{:hidefocus => "true", :href => "http://demo.paopaokeji.net/chengshiv2/news/"} 宏观指导
             %li#mn_F40
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 微信收录
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 政策文件
             %li#mn_F42
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 最新楼盘
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 体制机制
             %li#mn_F43
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 口碑商家
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 院士工作
             %li#mn_F41
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 生活服务
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 科技企业家
             %li#mn_F44
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 求职招聘
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 产学研人才
             %li#mn_F46
-              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 房屋出租
+              %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 区域人才
           .nav_r
             %a.caigou{:href => "forum.php?mod=misc&action=nav", :onclick => "showWindow('nav', this.href, 'get', 0)", :target => "_blank"} 快速发帖
-            %a.baozh{:href => "#", :rel => "nofollow", :target => "_blank", :title => ""} 城市一卡通
+            %a.baozh{:href => "#", :rel => "nofollow", :target => "_blank", :title => ""} 典型事迹
         #mn_userapp_menu.p_pop.h_pop{:style => "display: none"}
         #mu.cl
     #wp.wp
-
       .wp
-        / [diy=diy1]
         #diy1.area
       .wp.cl
         .paopaokeji_oneleft.z
@@ -195,15 +134,14 @@
               %li#mainCate-1.mainCate
                 %h3
                   %span >
-                  %a{:href => "#"} 汽车沙龙
+                  %a{:href => "#"} 新闻中心
                 %p
-                  %a{:href => "#"} 汽车推荐
-                  %a{:href => "#"} 汽车保养
-                  %a{:href => "#"} 汽车图片
+                  %a{:href => "#"} 全国
+                  %a{:href => "#"} 外省
+                  %a{:href => "#"} 陕西
                 %p
-                  %a{:href => "#"} 汽车购买
-                  %a{:href => "#"} 车模展示
-                  %a{:href => "#"} 汽车资讯
+                  %a{:href => "#"} 地市
+                  %a{:href => "#"} 区县
                 .subCate
                   .module.cl.xl.xl1.paopaokeji_tanchu
                     %ul
@@ -284,43 +222,6 @@
                           %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
                         %p
                           %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
-                  / 下面这个是分类，就类似于一商城弹出的那种，如果有需要可以把注释代码删除，防止有人需要使用，我就不删除了
-                  /
-                    <ul id="sub-ul-1">
-                    <h4>品牌</h4>
-                    <li>
-                    <span><a href="#">茅台</a><a href="#">五粮液</a><a href="#">国窖1573</a><a href="#">郎酒</a><a href="#">汾酒</a></span>
-                    <span><a href="#" class="sub_width">剑南春</a><a href="#">泸州老窖</a><a href="#">水井坊</a><a href="#">洋河</a><a href="#" class="sub_width">金六福</a></span><span><a href="#">牛栏山</a><a href="#">丰谷</a><a href="#">杜康</a><a href="#">景芝</a><a href="#" class="sub_width1">河套</a><a href="#" class="sub_width">红楼梦</a></span><span><a href="#" class="sub_width1">宝丰</a><a href="#" class="sub_width">酒鬼</a><a href="#">章贡王</a><a href="#">赖世</a><a href="#">两河口</a></span><span><a href="#" class="sub_width">天佑德</a><a href="#" class="sub_width1">羽丰</a><a href="#" class="sub_width1">莲泉</a><a href="#" class="sub_width">丹江口</a><a href="#">完达山</a></span><span><a href="#">黔台</a><a href="#" class="sub_width1">朴卡</a><a href="#" class="sub_width_long">二零二会议室</a></span>
-                    </li>
-
-                    <li>
-                    <span><a href="#">古贝春</a><a href="#">宋河</a><a href="#">泰山</a><a href="#">青花瓷</a><a href="#">董酒</a></span><span><a href="#" class="sub_width">唐王宴</a><a href="#">红星</a><a href="#">皖酒</a><a href="#">古井</a><a href="#">西凤</a><a href="#" class="sub_width">伊力特</a></span><span><a href="#">天下粮仓</a><a href="#">衡水老白干</a><a href="#" class="sub_width1">武陵</a><a href="#" class="sub_width1">京都</a></span><span><a href="#">刘伶醉</a><a href="#">爱奋</a><a href="#" class="sub_width1">御匾</a><a href="#">皇家井</a><a href="#">酉水河</a></span><span><a href="#">泥坑</a><a href="#" class="sub_width1">津酒</a><a href="#">龙行天下</a><a href="#">贵雅</a><a href="#">太白酒</a></span><span><a href="#" class="sub_width">渔樵仙</a><a href="#" class="sub_width_long">谷养康纯粮原浆</a></span>
-                    </li>
-
-                    <li>
-                    <span><a href="#">小糊涂仙</a><a href="#">醉卿</a><a href="#">诗仙太白</a><a href="#">沱牌</a><a href="#" class="sub_width1">四特</a></span><span><a href="#">汾阳王	</a><a href="#">白云边</a><a href="#">珍酒</a><a href="#" class="sub_width">扳倒井</a><a href="#">金门高粱</a></span><span><a href="#">永不分梨</a><a href="#">国台</a><a href="#">孔府家</a><a href="#">舍得</a><a href="#">今世缘</a></span><span><a href="#">双沟</a><a href="#">黄鹤楼</a><a href="#" class="sub_width">老银川</a><a href="#">壹湖</a><a href="#">泰尚</a></span><span><a href="#">老泥窖</a><a href="#" class="sub_width">黄梅戏</a><a href="#">千家福</a><a href="#">大展宏图</a><a href="#">栈桥</a></span><span><a href="#" class="sub_width">藏羚羊</a><a href="#">酱鄉壹號</a><a href="#">台湾马祖</a><a href="#" class="sub_width1">更多>></a></span>
-                    </li>
-                    </ul>
-
-                    <ul id="sub-ul-2">
-                    <h4>香型</h4>
-                    <li>
-                    <span><a href="#">酱香型</a><a href="#">浓香型</a><a href="#">清香型</a><a href="#">馥郁香型</a></span><span><a href="#" class="sub_width">兼香型</a><a href="#">特香型</a><a href="#">芝麻香型</a><a href="#">豉香型</a></span><span><a href="#">董香型</a><a href="#">凤香型</a><a href="#">老白干香型</a><a href="#">復合香</a></span><span><a href="#" class="sub_width">荞香型</a><a href="#">青稞清香型</a><a href="#">米香型</a><a href="#">其他</a></span>
-                    </li>
-                    </ul>
-
-                    <ul id="sub-ul-3">
-                    <h4>产地</h4>
-                    <li>
-                    <span><a href="#">贵州</a><a href="#">四川</a><a href="#">山西</a><a href="#">北京</a><a href="#">江苏</a><a href="#">安徽</a></span><span><a href="#" class="sub_width1">湖北</a><a href="#">江西</a><a href="#">山东</a><a href="#">河南</a><a href="#">河北</a><a href="#" class="sub_width1">湖南</a></span><span><a href="#">陕西</a><a href="#">新疆</a><a href="#">内蒙古</a><a href="#">台湾</a><a href="#" class="sub_width1">吉林</a></span>
-                    </li>
-                    </ul>
-                    <ul id="sub-ul-4">
-                    <h4>价位</h4>
-                    <li>
-                    <span><a href="#">1 - 99元</a><a href="#">100 - 299元</a><a href="#">300 - 599元</a></span><span><a href="#">600 - 999元</a><a href="#">1000 - 1999元</a></span><span><a href="#" class="sub_width_long">2000 元以上</a></span>
-                    </li>
-                    </ul>
               %li#mainCate-2.mainCate.evenLeval
                 %h3
                   %span >
@@ -708,7 +609,6 @@
             returnDefault:true//返回默认
             });
           .paopaokeji_oneleft.z
-            / [diy=diy3]
             #diy3.area
               #frameTfZbvX.frame.move-span.cl.frame-1.moving
                 #frameTfZbvX_left.column.frame-1-c
@@ -720,9 +620,7 @@
                     #portal_block_56_content.dxb_bc
                       .portal_block_summary
                         %img{:height => "130", :src => "template/paopaokeji_chengshiv2/images/ad/250x130.jpg", :width => "100%"}/
-            / [/diy]
         .paopaokeji_onecenter.z
-          / [diy=diy12]
           #diy12.area
             #frametU4opY.frame.move-span.cl.frame-1
               #frametU4opY_left.column.frame-1-c
@@ -753,11 +651,9 @@
                         %span 3
                         %span 4
                         %span.on 5
-          / [/diy]
           :javascript
             jQuery("#iFocus li a").hover(function(){ $(this).css("opacity",1).siblings().css("opacity",0.7) },function(){ $(this).css("opacity",1).siblings().css("opacity",1) });//鼠标移到图片上时聚焦效果
             jQuery("#iFocus").slide({ titCell:".btn span", mainCell:"ul",effect:"left", autoPlay:true});
-          / [diy=diy2]
           #diy2.area
             #framezB3dQU.frame.move-span.cl.frame-1
               #framezB3dQU_left.column.frame-1-c
@@ -834,14 +730,12 @@
                               %a{:href => "forum.php?mod=viewthread&tid=185", :target => "_blank", :title => "新人们喜欢怎样的婚鞋"} 新人们喜欢怎样的婚鞋
                             %li
                               %a{:href => "forum.php?mod=viewthread&tid=184", :target => "_blank", :title => "武汉新娘在结婚时应怎样穿旗袍礼服"} 武汉新娘在结婚时应怎样穿旗袍礼服
-          / [/diy]
         .paopaokeji_oneright.y
           %p#login14
             %a{:href => "member.php?mod=logging&action=login", :rel => "nofollow", :target => "_blank", :title => "登录"} 登录
             %a{:href => "member.php?mod=register", :rel => "nofollow", :target => "_blank", :title => "注册"} 注册
             %a.last{:href => "#", :rel => "nofollow", :target => "_blank", :title => "立即签到"} 立即签到
           .helpnew
-            / [diy=diy11]
             #diy11.area
               #frameQh6JSG.frame.move-span.cl.frame-1
                 #frameQh6JSG_left.column.frame-1-c
@@ -850,7 +744,7 @@
                     #portal_block_57_content.dxb_bc
                       .portal_block_summary
                         %p.joinbg
-                          %a{:href => "#", :rel => "nofollow", :target => "_blank"} 泡泡科技是DISCUZX第三方技术支持团队，如果您有这方面的需要可以联系我们
+                          %a{:href => "#", :rel => "nofollow", :target => "_blank"} TBNB是一个专门致力于人才信息服务的团队，有需求可以随时联系我们
                   #portal_block_58.block.move-span
                     #portal_block_58_content.dxb_bc
                       .portal_block_summary
@@ -1200,28 +1094,6 @@
                               %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
                             %li
                               %a{:href => "forum.php?mod=viewthread&tid=191", :target => "_blank", :title => "苏州摄影工作室告诉你拍摄婚纱照的姿势有哪些"} 苏州摄影工作室告诉你拍摄婚纱照的姿势有哪
-                    #frameFQZXyY.paopaokeji_huiyuan.frame.move-span.cl.frame-1
-                      #frameFQZXyY_left.column.frame-1-c
-                        #frameFQZXyY_left_temp.move-span.temp
-                        #portal_block_27.block.move-span
-                          #portal_block_27_content.dxb_bc
-                            .module.cl.ml.mls
-                              %ul
-                                %li
-                                  %a{:c => "1", :href => "home.php?mod=space&uid=1", :mid => "card_8597", :target => "_blank"}
-                                    %img{:alt => "admin", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=1&size=small", :width => "48"}/
-                                  %p
-                                    %a{:href => "home.php?mod=space&uid=1", :target => "_blank", :title => "admin"} admin
-                                %li
-                                  %a{:c => "1", :href => "home.php?mod=space&uid=154", :mid => "card_6456", :target => "_blank"}
-                                    %img{:alt => "paopaokeji", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=154&size=small", :width => "48"}/
-                                  %p
-                                    %a{:href => "home.php?mod=space&uid=154", :target => "_blank", :title => "paopaokeji"} paopaokeji
-                                %li
-                                  %a{:c => "1", :href => "home.php?mod=space&uid=170", :mid => "card_7493", :target => "_blank"}
-                                    %img{:alt => "常务管理员", :height => "48", :src => "http://demo.paopaokeji.net/chengshiv2/uc_server/avatar.php?uid=170&size=small", :width => "48"}/
-                                  %p
-                                    %a{:href => "home.php?mod=space&uid=170", :target => "_blank", :title => "常务管理员"} 常务管理员
         #framel782wv.frame.move-span.cl.frame-1
           #framel782wv_left.column.frame-1-c
             #framel782wv_left_temp.move-span.temp
@@ -1322,16 +1194,12 @@
                                   %span 首开常青藤
                                   %i
                           %a.prev
-      / [/diy]
       / 第二屏图片滚动开始
       .wp
-        / [diy=diy7]
         #diy7.area
-        / [/diy]
         :javascript
           jQuery(".paopaokeji_left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:7,interTime:50,trigger:"click"});
       / 第二屏图片滚动结束
-      / [diy=diy8]
       #diy8.area
         #frameM437or.frame.move-span.cl.frame-1-1
           #frameM437or_left.column.frame-1-1-l
@@ -1825,11 +1693,11 @@
           #frame69711W.frame.move-span.cl.frame-1
             #frame69711W_left.column.frame-1-c
               #frame69711W_left_temp.move-span.temp
-    :javascript
-      function rightcopy(){
-      	showWindow('qzom_rightcopy','plugin.php?id=qzom_rightcopy:rightcopy');
-      }
-      document.oncontextmenu= function(){rightcopy();return false;};
+    //:javascript
+    //  function rightcopy(){
+    //  	showWindow('qzom_rightcopy','plugin.php?id=qzom_rightcopy:rightcopy');
+    //  }
+    //  document.oncontextmenu= function(){rightcopy();return false;};
     #ft.footer
       .wp
         %p
@@ -1867,4 +1735,4 @@
     #discuz_tips{:style => "display:none;"}
     :javascript
       var tipsinfo = '|X3.2|0.6||0||154|11|1472978788||2';
-    %script{:charset => "UTF-8", :src => "http://discuz.gtimg.cn/cloud/scripts/discuz_tips.js?v=1", :type => "text/javascript"}
+    =javascript_include_tag 'templates/discuz_tips'

@@ -1,0 +1,31 @@
+#hd
+  .wp
+    .paopaokeji_nav
+      %ul
+        %li#mn_portal
+          %a{:hidefocus => "true", :href => "portal.php", :title => "Portal"}
+            网站首页
+        %li#mn_forum
+          %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
+            新闻中心
+        %li#mn_P1
+          %a{:hidefocus => "true", :href => "fenlei/"} 领导讲话
+        %li#mn_P2
+          %a{:hidefocus => "true", :href => "/news/"} 宏观指导
+        %li#mn_F40
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 政策文件
+        %li#mn_F42
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 体制机制
+        %li#mn_F43
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 院士工作
+        %li#mn_F41
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 科技企业家
+        %li#mn_F44
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 产学研人才
+        %li#mn_F46
+          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 区域人才
+      .nav_r
+        -if can? :create, Article
+          = link_to '发表新文章', new_article_path, class:'caigou'
+    #mn_userapp_menu.p_pop.h_pop{:style => "display: none"}
+    #mu.cl
