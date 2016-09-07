@@ -14,7 +14,7 @@
     = f.text_field :source
   .field
     = f.label :content
-    = f.text_area :content
+    = f.cktext_area :content, ckeditor: { language: 'zh-CN'}
   .field
     = f.label :region_id, '所属区域'
     = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'', selected: (@article.region.id if @article.region)}
@@ -23,3 +23,5 @@
     = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'', selected: (@article.category.id if @article.category)}
   .actions
     = f.submit 'Save'
+
+= javascript_include_tag Ckeditor.cdn_url

@@ -8,6 +8,7 @@
 .idea/
 log/
 coverage/
+public/ckeditor_assets/
 
 # Ignore bundler config.
 /.bundle

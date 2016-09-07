@@ -35,6 +35,9 @@ gem 'rolify'
 # Use Unicorn as the app server
 gem 'unicorn'
 
+gem 'ckeditor'
+gem 'paperclip'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -8,7 +8,7 @@
   = @article.source
 %p
   %b Content:
-  = @article.content
+  = raw @article.content
 %p
   %b Region:
   = @article.region.try(:name)

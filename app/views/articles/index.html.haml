@@ -5,7 +5,7 @@
     %tr
       %th Title
       %th Source
-      %th Content
+      -#%th Content
       %th Region
       %th User
       %th Category
@@ -18,7 +18,7 @@
       %tr
         %td= article.title
         %td= article.source
-        %td= article.content
+        -#%td= article.content
         %td= article.region.try(:name)
         %td= article.user.try(:email)
         %td= article.category.try(:title)

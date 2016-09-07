@@ -1,0 +1,24 @@
+common: &common
+  :picture:
+    :styles:
+      :thumb: "118x100#"
+      :content: "800>"
+    :url: "/ckeditor_assets/pictures/:id/:style_:basename.:extension"
+    :path: ":rails_root/public/ckeditor_assets/pictures/:id/:style_:basename.:extension"
+  :attachment_file:
+    :url: "/ckeditor_assets/attachments/:id/:id_:filename"
+    :path: ":rails_root/public/ckeditor_assets/attachments/:id/:id_:filename"
+
+
+
+
+development:
+  <<: *common
+
+production:
+  <<: *common
+  :url: "/original/:style/:basename.:extension"
+  :path: "/opt/images/original/:style/:basename.:extension"
+
+test:
+  <<: *common
