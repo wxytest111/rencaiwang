@@ -2,27 +2,27 @@
   .wp
     .tebieniubi_nav
       %ul
-        %li#mn_portal
+        %li
           %a{:hidefocus => "true", :href => "portal.php", :title => "Portal"}
             网站首页
-        %li#mn_forum
+        %li
           %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
             新闻中心
-        %li#mn_P1
+        %li
           %a{:hidefocus => "true", :href => "fenlei/"} 领导讲话
-        %li#mn_P2
+        %li
           %a{:hidefocus => "true", :href => "/news/"} 宏观指导
-        %li#mn_F40
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 政策文件
-        %li#mn_F42
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 体制机制
-        %li#mn_F43
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 院士工作
-        %li#mn_F41
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 科技企业家
-        %li#mn_F44
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 产学研人才
-        %li#mn_F46
+        %li
           %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 区域人才
       .nav_r
         -if can? :create, Article
