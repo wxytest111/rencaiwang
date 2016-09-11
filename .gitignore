@@ -10,6 +10,7 @@
 log/
 coverage/
 public/ckeditor_assets/
+public/assets/
 
 # Ignore bundler config.
 /.bundle
