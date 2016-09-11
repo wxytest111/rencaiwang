@@ -9,6 +9,7 @@
 .idea/
 log/
 coverage/
+public/editor_assets
 public/ckeditor_assets/
 public/assets/
 
