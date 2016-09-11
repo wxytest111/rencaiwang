@@ -4,8 +4,8 @@ common: &common
       :thumb: "118x100#"
       :content: "800>"
       :slide: "640x240#"
-    :url: "/ckeditor_assets/pictures/:id/:style_:basename.:extension"
-    :path: ":rails_root/public/ckeditor_assets/pictures/:id/:style_:basename.:extension"
+    :url: "/ckeditor_assets/pictures/:id/:style.:extension"
+    :path: ":rails_root/public/ckeditor_assets/pictures/:id/:style.:extension"
   :attachment_file:
     :url: "/ckeditor_assets/attachments/:id/:id_:filename"
     :path: ":rails_root/public/ckeditor_assets/attachments/:id/:id_:filename"
@@ -22,8 +22,9 @@ production:
       :thumb: "118x100#"
       :content: "800>"
       :slide: "640x240#"
-    :url: "/ckeditor_assets/pictures/:id/:style_:basename.:extension"
-    :path: "/opt/works/ckeditor_assets/pictures/:id/:style_:basename.:extension"
+      :cover: "183x100#"
+    :url: "/ckeditor_assets/pictures/:id/:style.:extension"
+    :path: "/opt/works/ckeditor_assets/pictures/:id/:style.:extension"
   :attachment_file:
     :url: "/ckeditor_assets/attachments/:id/:id_:filename"
     :path: "/opt/works/ckeditor_assets/attachments/:id/:id_:filename"

@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Name
+      %th 优先级
       %th
       %th
       %th
@@ -12,6 +13,7 @@
     - @regions.each do |region|
       %tr
         %td= region.name
+        %td= region.priority
         - if can? :read, Region
           %td= link_to 'Show', region
         - if can? :update, Region

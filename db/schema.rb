@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911071301) do
+ActiveRecord::Schema.define(version: 20160911163025) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160911071301) do
     t.datetime "updated_at",                            null: false
     t.integer  "number",      limit: 4,     default: 0, null: false
     t.integer  "is_picture",  limit: 4,     default: 0, null: false
+    t.string   "cover_url",   limit: 255
   end
 
   add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
@@ -57,8 +58,9 @@ ActiveRecord::Schema.define(version: 20160911071301) do
 
   create_table "regions", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "priority",   limit: 4,   default: 0, null: false
   end
 
   create_table "roles", force: :cascade do |t|

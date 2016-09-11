@@ -15,4 +15,10 @@ class WelcomeController < ApplicationController
       @bulletins = []
     end
   end
+
+  def get_all_categories
+    @regions = Region.all
+    @categoires = Category.includes([articles:[]]).where("status!=#{Category.statuses[:offline]}")
+  end
+
 end

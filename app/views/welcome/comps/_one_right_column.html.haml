@@ -63,10 +63,8 @@
                       -#%li{:style => "height: 24px;"}
                       -#  %span.date 03-27
                       -#  %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank"} 最有价值的投资居住小区
-    :javascript
-      jQuery(".tebieniubi_twotop").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,vis:4});
 
   %script#bulletin-template{type:'text/template'}
-    %li
+    %li{:style => "height: 24px;"}
       %span.date ${date}
       %a{:href => "${url}", :target => "_blank"} ${title}

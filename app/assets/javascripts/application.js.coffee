@@ -13,22 +13,4 @@ jq(->
       )
     )
 
-  if(jq('#frameZ5VVE3').length>0)
-    jq.ajax({
-      url: '/welcome/get_bulletins'
-      dataType: 'json'
-    }).done((res)->
-      console.log res
-      _.each(res, (bulletin)->
-        console.log bulletin
-        jq.tmpl(jq('#bulletin-template').html(), bulletin).appendTo(jq('#frameZ5VVE3 .infoList'))
-      )
-    )
-
-#  if(jq('.picList').length>0)
-#    console.log '-------'
-#    for i in [1..25]
-#      console.log i
-#      jq.tmpl(jq('#gundong-template').html(),{}).appendTo(jq('.picList'))
-
 )

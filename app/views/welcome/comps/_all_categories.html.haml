@@ -1,0 +1,68 @@
+#diy8.area
+  #frameM437or.frame.move-span.cl.frame-1-1
+
+  #frame6szK6y.frame.move-span.cl.frame-1
+    #frame6szK6y_left.column.frame-1-c
+      #frame6szK6y_left_temp.move-span.temp
+      #portal_block_22.block.move-span
+        #portal_block_22_content.dxb_bc
+          .portal_block_summary
+            =image_tag 'templates/ad1.png'
+
+%script#all-categories-tmpl{type:'text/javascript'}
+  #frameM437or_left.column.frame-1-1-l
+    #frameM437or_left_temp.move-span.temp
+    #frameQRxuoS.frame.move-span.cl.frame-1
+      .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
+        %span.titletext{:style => "font-size:16px;"}
+          %a{:href => "${url}", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} ${title}
+        {{each regions}}
+        %span.subtitle{:style => "float:right;margin-right:10px;"}
+          %a{:href => "${$value.url}", :style => "color:rgb(0, 0, 0) !important;", :target => "_blank"} ${$value.name}
+        {{/each}}
+      #frameQRxuoS_left.column.frame-1-c
+        #frameQRxuoS_left_temp.move-span.temp
+    #framep3ctkJ.tebieniubi_pf.frame.move-span.cl.frame-1
+      #framep3ctkJ_left.column.frame-1-c
+        #framep3ctkJ_left_temp.move-span.temp
+        #frameOUQ8HU.frame.move-span.cl.frame-1-2
+          #frameOUQ8HU_left.column.frame-1-2-l
+            #frameOUQ8HU_left_temp.move-span.temp
+            #portal_block_29.tebieniubi_tuwen.block.move-span
+              #portal_block_29_content.dxb_bc
+                .module.cl.ml
+                  %ul
+                    %li{:style => "width: 183px;"}
+                      %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
+                        %img{:alt => "这里是测试文章", :height => "100", :src => "data/attachment/block/77/77638bc2f0849beb124a023ac9acc4bf.jpg", :width => "183"}/
+                      %p
+                        %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "这里是测试文章"} 这里是测试文章
+                    %li{:style => "width: 183px;"}
+                      %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank"}
+                        %img{:alt => "有一个测试文章", :height => "100", :src => "data/attachment/block/f9/f92c2631b306b05bf9ed370e0fc5606a.jpg", :width => "183"}/
+                      %p
+                        %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "有一个测试文章"} 有一个测试文章
+          #frameOUQ8HU_center.column.frame-1-2-r
+            #frameOUQ8HU_center_temp.move-span.temp
+            #portal_block_30.block.move-span
+              #portal_block_30_content.dxb_bc
+                .module.cl.xl.xl1
+                  %ul
+                    {{each(i, article) articles}}
+                    {{if i<5}}
+                    %li
+                      %em ${article.date}
+                      %a{:href => "${article.url}", :target => "_blank", :title => "${article.title}"} ${article.title}
+                    {{/if}}
+                    {{/each}}
+            #portal_block_31.block.move-span
+              #portal_block_31_content.dxb_bc
+                .module.cl.xl.xl1
+                  %ul
+                    {{each(i, article) articles}}
+                    {{if i>=5 && i<10}}
+                    %li
+                      %em ${article.date}
+                      %a{:href => "${article.url}", :target => "_blank", :title => "${article.title}"} ${article.title}
+                    {{/if}}
+                    {{/each}}
