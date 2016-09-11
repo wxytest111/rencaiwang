@@ -23,10 +23,10 @@ production:
       :content: "800>"
       :slide: "640x240#"
     :url: "/ckeditor_assets/pictures/:id/:style_:basename.:extension"
-    :path: "/opt/works/editor_assets/pictures/:id/:style_:basename.:extension"
+    :path: ":rails_root/public/ckeditor_assets/pictures/:id/:style_:basename.:extension"
   :attachment_file:
     :url: "/ckeditor_assets/attachments/:id/:id_:filename"
-    :path: "/opt/works/editor_assets/attachments/:id/:id_:filename"
+    :path: ":rails_root/public/ckeditor_assets/attachments/:id/:id_:filename"
 
 test:
   <<: *common
