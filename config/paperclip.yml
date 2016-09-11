@@ -22,10 +22,10 @@ production:
       :thumb: "118x100#"
       :content: "800>"
       :slide: "640x240#"
-    :url: "/editor_assets/pictures/:id/:style_:basename.:extension"
+    :url: "/ckeditor_assets/pictures/:id/:style_:basename.:extension"
     :path: "/opt/works/editor_assets/pictures/:id/:style_:basename.:extension"
   :attachment_file:
-    :url: "/editor_assets/attachments/:id/:id_:filename"
+    :url: "/ckeditor_assets/attachments/:id/:id_:filename"
     :path: "/opt/works/editor_assets/attachments/:id/:id_:filename"
 
 test:

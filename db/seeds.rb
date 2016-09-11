@@ -44,6 +44,7 @@ content_admin.save!
 random = Random.new
 (1..200).to_a.each do |n|
   article = Article.new({title: "文章#{n}的标题", content:"文章#{n}的内容"})
+  article.user = super_admin
   article.region = regions[random.rand(regions.length)]
   article.category = categories[random.rand(categories.length)]
   article.save!
