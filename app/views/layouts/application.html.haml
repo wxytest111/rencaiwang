@@ -4,8 +4,6 @@
   %body#nv_portal.pg_index
     = render :partial => 'layouts/banner'
     = render :partial => 'layouts/horizontal_menu'
-    -#= render :partial => 'layouts/content'
-    #wp.wp
-      = yield
-    = render :partial=>'layouts/footer'
+    = render :partial => 'layouts/content'
+    = render :partial=> 'layouts/footer'
   = render :partial => 'layouts/scripts'

@@ -21,6 +21,8 @@ Rails.application.config.assets.precompile += [
     'articles.css',
     'sessions.css',
     'sessions.js',
+    'welcome.js',
+    'welcome.css',
     'member/style.css',
     'member/public.css',
     'templates/style_2_common.css',

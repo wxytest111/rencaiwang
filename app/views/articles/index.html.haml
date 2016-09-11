@@ -7,7 +7,7 @@
   .mn
     #listcontenttop.area
     .bm
-      .bm_h.cl.paopaokeji_xs2
+      .bm_h.cl.tebieniubi_xs2
         %h2.xs2
           %i.news
           = @category.try(:title) || '全部新闻'
@@ -25,14 +25,14 @@
           全部
       - @articles.each do |article|
         - nokog_html = Nokogiri::HTML(article.content)
-        .paopaokeji_news
-          .paopaokeji_newspic
+        .tebieniubi_news
+          .tebieniubi_newspic
             %a{href:"/article/#{article.id}"}
               - if nokog_html.css('img').length < 1
                 = image_tag 'templates/zanwutupian.png', class: 'tn'
               - else
                 = image_tag nokog_html.css('img').first.attr('src'), class: 'tn'
-          .paopaokeji_newsright
+          .tebieniubi_newsright
             %h1
               =link_to article.title, article
             %p
@@ -53,7 +53,7 @@
                 = link_to '删除', article, :method => :delete, :data => { :confirm => "确定要删除【#{article.title}】吗？" }, class: 'xi2'
 
   .sd.pph
-    .bm.paopaokeji_list
+    .bm.tebieniubi_list
       .bm_h
         %h2
           %i.zxdp
@@ -61,7 +61,7 @@
       .bm_c
         .t2_n
           #diypaopaokeji2.area
-            #frametbH44S.paopaokeji_gg.frame.move-span.cl.frame-1
+            #frametbH44S.tebieniubi_gg.frame.move-span.cl.frame-1
               #frametbH44S_left.column.frame-1-c
                 #portal_block_15.block.move-span
                   #portal_block_15_content.dxb_bc

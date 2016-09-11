@@ -5,6 +5,8 @@
   = @category.title
   %b 状态
   = category_status @category.status
+  %b 是否显示在首页左侧导航
+  = @category.on_left
 
 = link_to 'Edit', edit_category_path(@category)
 \|

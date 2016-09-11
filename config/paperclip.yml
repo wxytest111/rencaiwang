@@ -16,9 +16,15 @@ development:
   <<: *common
 
 production:
-  <<: *common
-  :url: "/original/:style/:basename.:extension"
-  :path: "/opt/images/original/:style/:basename.:extension"
+  :picture:
+    :styles:
+      :thumb: "118x100#"
+      :content: "800>"
+    :url: "/editor_assets/pictures/:id/:style_:basename.:extension"
+    :path: ":rails_root/public/editor_assets/pictures/:id/:style_:basename.:extension"
+  :attachment_file:
+    :url: "/editor_assets/attachments/:id/:id_:filename"
+    :path: ":rails_root/public/editor_assets/attachments/:id/:id_:filename"
 
 test:
   <<: *common

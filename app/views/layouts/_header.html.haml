@@ -4,17 +4,17 @@
 
   -#%base{:href => "http://demo.tebieniubi.net/chengshiv2/"}/
   = stylesheet_link_tag 'templates/style_2_common'
-  = stylesheet_link_tag 'templates/common'
-  = stylesheet_link_tag 'templates/index'
-  = stylesheet_link_tag  'application', media: 'all'
-  = stylesheet_link_tag  "#{controller.controller_name}"
   :javascript
     var STYLEID = '2', STATICURL = 'static/', IMGDIR = 'static/image/common', VERHASH = 's88', charset = 'gbk', discuz_uid = '154', cookiepre = '3XBn_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread', creditnotice = '1|威望|,2|金钱|,3|贡献|', defaultstyle = '', REPORTURL = 'aHR0cDovL2RlbW8ucGFvcGFva2VqaS5uZXQvY2hlbmdzaGl2Mi9wb3J0YWwucGhw', SITEURL = 'http://demo.tebieniubi.net/chengshiv2/', JSPATH = 'static/js/', CSSPATH = 'data/cache/style_', DYNAMICURL = '';
   = javascript_include_tag 'templates/common'
   = javascript_include_tag 'templates/portal.js'
+  = stylesheet_link_tag 'templates/common'
   = javascript_include_tag 'jquery.js'
   = javascript_include_tag 'templates/jquery.SuperSlide.2.1.1'
   :javascript
     var jq = jQuery.noConflict();
   = javascript_include_tag 'templates/common_extra'
   = javascript_include_tag 'templates/ajax'
+  = stylesheet_link_tag 'templates/index'
+  = stylesheet_link_tag  'application', media: 'all'
+  = stylesheet_link_tag  "#{controller.controller_name}"

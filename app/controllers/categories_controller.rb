@@ -70,6 +70,6 @@ class CategoriesController < RoleAuthenticationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:title, :status)
+      params.require(:category).permit(:title, :status, :on_left)
     end
 end

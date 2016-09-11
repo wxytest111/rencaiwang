@@ -12,5 +12,8 @@
   .field
     = f.label '状态'
     = select_tag 'category[status]', options_for_select(show_status, @category.status)
+  .field
+    = f.check_box :on_left
+    = f.label '是否在首页左侧导航显示'
   .actions
     = f.submit 'Save'

@@ -5,6 +5,7 @@
     %tr
       %th 标题
       %th 状态
+      %th 是否显示在首页左侧导航
       %th
       %th
       %th
@@ -14,6 +15,7 @@
       %tr
         %td= category.title
         %td= category_status category.status
+        %td= category.on_left
         - if can? :read, Category
           %td= link_to 'Show', category
         - if can? :update, Category
