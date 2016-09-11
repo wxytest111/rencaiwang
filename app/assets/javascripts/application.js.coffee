@@ -14,7 +14,6 @@ jq(->
     )
 
   if(jq('#frameZ5VVE3').length>0)
-    alert(1)
     jq.ajax({
       url: '/welcome/get_bulletins'
       dataType: 'json'
@@ -23,7 +22,13 @@ jq(->
       _.each(res, (bulletin)->
         console.log bulletin
         jq.tmpl(jq('#bulletin-template').html(), bulletin).appendTo(jq('#frameZ5VVE3 .infoList'))
-#        jq('.tebieniubi_nav ul').append("<li><a hidefocus='true' href='/articles?category_id=#{menu.id}'>#{menu.title}</a></li>")
       )
     )
+
+#  if(jq('.picList').length>0)
+#    console.log '-------'
+#    for i in [1..25]
+#      console.log i
+#      jq.tmpl(jq('#gundong-template').html(),{}).appendTo(jq('.picList'))
+
 )
