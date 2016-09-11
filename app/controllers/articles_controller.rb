@@ -1,15 +1,28 @@
 class ArticlesController < ApplicationController
-  #before_action :set_article, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  before_action :set_bulletins, only: [:index, :show]
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    category_id = params[:category_id] || 0
+    @category = Category.find_by_id(category_id)
+    region_id = params[:region_id] || 0
+    @region = Region.find_by_id(region_id)
+    if @category
+      @articles = Article.where(category: @category)
+    else
+      @articles = Article.all
+    end
+    @articles = @articles.order('updated_at desc')
+    @articles = @articles - @bulletins
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article.number = @article.number+1
+    @article.save!
+    set_bulletins
   end
 
   # GET /articles/new
@@ -66,13 +79,22 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def article_params
-      params.require(:article).permit(:title, :source, :content, :region_id, :user_id, :category_id)
+  def set_bulletins
+    bulletin_category = Category.find_by_title('公告栏')
+    if bulletin_category
+      @bulletins = Article.where(category: bulletin_category).order('updated_at desc').limit(30)
+    else
+      @bulletins = []
     end
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def article_params
+    params.require(:article).permit(:title, :source, :content, :region_id, :user_id, :category_id, :is_picture)
+  end
 end

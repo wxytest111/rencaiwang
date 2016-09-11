@@ -34,5 +34,10 @@ module Rencaiwang
     config.generators do |g|
       g.template_engine :haml
     end
+
+
+    config.to_prepare do
+      Devise::SessionsController.layout 'sessions'
+    end
   end
 end

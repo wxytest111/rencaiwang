@@ -5,25 +5,66 @@
     %em >
     显示文章
 
-%p
-  %b Title:
-  = @article.title
-%p
-  %b Source:
-  = @article.source
-%p
-  %b Content:
-  = raw @article.content
-%p
-  %b Region:
-  = @article.region.try(:name)
-%p
-  %b User:
-  = @article.user.try(:email)
-%p
-  %b Category:
-  = @article.category.try(:title)
-
-= link_to 'Edit', edit_article_path(@article)
-\|
-= link_to 'Back', articles_path
+#ct.ct2.wp.cl
+  .mn
+    .bm.vw
+      .h.hm
+        %h1.ph
+          = @article.title
+        %p.xg1
+          = @article.updated_at.strftime('%Y-%m-%d')
+          %span.pipe
+            |
+          来源:
+          =@article.source
+          %span.pipe
+            |
+          发布者:
+          =@article.user.try(:name)
+          %span.pipe
+            |
+          区域:
+          = @article.region.try(:name)
+          %span.pipe
+            |
+          分类:
+          = @article.category.try(:title)
+          %span.pipe
+            |
+          阅读量:
+          =@article.number
+          - if (can? :update, Article)&& @article.user == current_user
+            %span.pipe
+              |
+            = link_to '编辑', edit_article_path(@article), class: 'xi2'
+          - if (can? :destroy, Article) && @article.user == current_user
+            %span.pipe
+              |
+            = link_to '删除', @article, :method => :delete, :data => { :confirm => "确定要删除【#{@article.title}】吗？" }, class: 'xi2'
+      .s
+        %div
+          %strong 摘要:
+          = Nokogiri::HTML(@article.content).text.gsub(/\r\n/,'')[0,115]
+      .d
+        = raw @article.content
+      .o.cl.ptm.pbm
+  .sd.pph
+    .bm.paopaokeji_list
+      .bm_h
+        %h2
+          %i.zxdp
+          公告栏
+      .bm_c
+        .t2_n
+          #diypaopaokeji2.area
+            #frametbH44S.paopaokeji_gg.frame.move-span.cl.frame-1
+              #frametbH44S_left.column.frame-1-c
+                #portal_block_15.block.move-span
+                  #portal_block_15_content.dxb_bc
+                    .module.cl.xl.xl1
+                      %ul
+                        - @bulletins.each do |bulletin|
+                          %li
+                            %em
+                              = bulletin.updated_at.strftime('%m-%d')
+                            =link_to bulletin.title[0,18], bulletin, target: '_blank'

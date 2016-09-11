@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907194546) do
+ActiveRecord::Schema.define(version: 20160910224503) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20160907194546) do
     t.integer  "region_id",   limit: 4
     t.integer  "user_id",     limit: 4
     t.integer  "category_id", limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "number",      limit: 4,     default: 0, null: false
+    t.integer  "is_picture",  limit: 4,     default: 0, null: false
   end
 
   add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
@@ -30,8 +32,9 @@ ActiveRecord::Schema.define(version: 20160907194546) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "title",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "status",     limit: 4,   default: 0, null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

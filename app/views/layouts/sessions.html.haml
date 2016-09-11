@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%html
+  = render :partial => 'layouts/meta_data'
+  = stylesheet_link_tag  "#{controller.controller_name}"
+  %body#nv_member.pg_logging
+    #append_parent
+      #loginfield_LBrRJ_ctrl_menu.sltm{:style => "display: none; width: 45px;"}
+        %ul
+          %li.current 用户名
+          %li Email
+    #ajaxwaitid
+    #qmenu_menu.p_pop.blk{:style => "display: none;"}
+      .ptm.pbw.hm
+        请
+        %a.xi2{:href => "javascript:;", :onclick => "lsSubmit()"}
+          %strong 登录
+        后使用快捷导航
+        %br>/
+        没有帐号？
+        %a.xi2.xw1{:href => "member.php?mod=register"} 立即注册
+      #fjump_menu.btda
+    / 头部内容开始
+    .sub_nav
+      .subwd
+        %a.pic.lt{:href => "./", :title => "TBNB"}
+          %img{:alt => "TBNB", :border => "0", :src => "template/logo.png"}/
+        .rt
+          %p.lt
+            = link_to '登陆', new_user_session_path
+            |
+            = succeed "|" do
+              = link_to '注册', new_user_registration_path
+            -#%a{:href => "member.php?mod=logging&action=login&viewlostpw=1"} 忘记密码
+          %p.lt.sub_nav_prt
+            |
+            %span 服务热线：400-000-0000
+        .cl
+    = yield
+    = render :partial => 'layouts/footer'

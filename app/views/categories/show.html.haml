@@ -3,6 +3,8 @@
 %p
   %b Title:
   = @category.title
+  %b 状态
+  = category_status @category.status
 
 = link_to 'Edit', edit_category_path(@category)
 \|

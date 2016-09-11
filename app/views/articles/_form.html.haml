@@ -7,17 +7,27 @@
           - @article.errors.full_messages.each do |msg|
             %li= msg
     .pbt.cl
-      .ftid
-        = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'选择所属区域', selected: (@article.region.id if @article.region)}
-      .ftid
-        = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'选择投放栏目', selected: (@article.category.id if @article.category)}
       .z
-        = f.text_field :title, placeholder: '请输入标题'
+        = f.text_field :title, placeholder: '请输入标题', style:'width:25em'
         = f.text_field :source, placeholder: '文章来源'
     .edt.simpleedt
       -#= f.label :content
       = f.cktext_area :content, ckeditor: { language: 'zh-CN', height: 500}
+    #post_extra.ptm.cl
+      .ftid
+        = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'选择所属区域', selected: (@article.region.id if @article.region)}
+      .ftid
+        = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'选择投放栏目', selected: (@article.category.id if @article.category)}
+      #adddynamicspan
+        %label
+          = f.check_box :is_picture
+          是否推荐到首页图文区域
     .mtm.mbm.pnpost
       = f.submit ' 保存发表 ',class:'pn pnc'
+      %button.pn
+        %em
+          = link_to '取消编辑',articles_path
+
+
 
 = javascript_include_tag Ckeditor.cdn_url

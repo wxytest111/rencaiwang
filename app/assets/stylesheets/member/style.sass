@@ -1,0 +1,5615 @@
+/*绿色1200px头部样式开始
+
+.top_nav
+  height: 32px
+  border-bottom: 1px solid #e0e0e0
+  line-height: 32px
+  width: 100%
+  color: #bbb
+  a
+    margin: 0px 5px
+
+.login_ico
+  background: url(login_ico.png) no-repeat
+  vertical-align: middle
+  display: inline-block
+
+.denglu_ico
+  width: 20px
+  height: 18px
+  background-position: 0px 0px
+
+.shipCar_ico
+  width: 20px
+  height: 18px
+  background-position: 0px -22px
+
+.con_ico
+  width: 15px
+  height: 13px
+  background-position: 0px -42px
+  margin-left: 2px
+
+.con_ico_over
+  width: 15px
+  height: 13px
+  background-position: 0px -54px
+  margin-left: 2px
+
+.top_nav font.tp_contactus
+  margin-left: 0px
+  z-index: 30
+  position: relative
+  display: inline-block
+  height: 28px
+  line-height: 26px
+  vertical-align: middle
+  a
+    &.over
+      display: inline-block
+      z-index: 20
+      margin: 0px
+      padding: 0px 8px
+      border-width: 1px 1px 0px 1px
+      border-color: #f3f3f3
+      border-style: solid
+    &.on
+      background: #fff
+      border-color: #ccc
+
+.tp_contactus_box
+  z-index: -1
+  display: none
+  color: #444
+  position: absolute
+  width: 210px
+  padding: 5px
+  background: #fff
+  border-width: 1px
+  border-color: #ccc
+  border-style: solid
+  top: 26px
+  right: 0px
+  .tpService
+    height: 60px
+    margin-top: 5px
+    li
+      float: left
+      width: 60px
+      margin: 3px 5px 0px 5px
+      text-align: center
+      a
+        padding: 0px
+  p.tel
+    padding-left: 5px
+    line-height: 35px
+    font-size: 14px
+    border-bottom: 1px dotted #ccc
+  .tpService li span
+    &.tpSer1
+      width: 25px
+      height: 25px
+      background-position: 0px -148px
+    &.tpSer2
+      width: 25px
+      height: 25px
+      background-position: 0px -73px
+    &.tpSer3
+      width: 25px
+      height: 25px
+      background-position: 0px -113px
+  img.cont_ewm
+    width: 120px
+    height: 120px
+    margin-top: 5px
+  .cont_bt
+    text-align: center
+    border-top: 1px dotted #ccc
+  p.bt
+    width: 75px
+    margin-top: 40px
+
+.top_nav_login li .in_t_s_ico
+  width: 20px
+  height: 20px
+  background-position: 0px -177px
+
+.top_nav .in_t_tel_ico, .sub_nav .in_t_tel_ico
+  width: 20px
+  height: 20px
+  background-position: -20px -178px
+
+.top_nav font
+  color: #555
+  margin-left: 5px
+  &.fontcl1
+    color: #02B980
+    margin: 0px
+  &.fontcl2
+    color: #fe7902
+    margin: 0px
+
+.top_nav_login
+  li
+    float: left
+    position: relative
+    border-left: 1px solid #f3f3f3
+    border-right: 1px solid #f3f3f3
+    a
+      display: block
+      text-align: left
+      padding: 0px 8px
+      margin: 0px
+      small
+        color: #bbb
+        margin-left: 5px
+    &:hover
+      background: #fff
+      border-left: 1px solid #e0e0e0
+      border-right: 1px solid #e0e0e0
+  .top_nav_login_son
+    position: absolute
+    left: -1px
+    top: 32px
+    border: 1px solid #e0e0e0
+    z-index: 20
+    border-top: 1px solid #fff
+    display: none
+    min-width: 100px
+    a
+      background: #fff
+      line-height: 32px
+      margin-top: -1px
+      min-width: 60px
+      &:hover
+        background: #f8f8f8
+
+span.login_litico
+  width: 6px
+  height: 5px
+  background-position: -350px -97px
+  margin-left: 4px
+  padding: 0px !important
+
+.top_bottom
+  margin: 25px auto
+  height: 70px
+  .logo
+    img.logo
+      width: 200px
+      height: 70px
+      margin-right: 20px
+    p
+      margin-top: 22px
+      margin-left: 10px
+      font
+        font-size: 16px
+        font-weight: bold
+        max-width: 80px
+        overflow: hidden
+        height: 28px
+        img
+          vertical-align: middle
+          margin-right: 5px
+
+.search_box
+  margin: 15px 0px 0px 100px
+  border: 2px solid #02B980
+  width: 420px
+  height: 36px
+  line-height: 36px
+  a:hover
+    text-decoration: none
+
+.search_cont
+  /*position:relative; z-index:99;
+  a
+    background: #f8f8f8
+    border-right: 1px solid #e0e0e0
+    width: 74px
+    text-align: center
+
+.search_ico
+  background-position: 0px 0px
+  width: 7px
+  height: 4px
+
+.search_cont_list
+  position: absolute
+  z-index: 100
+  width: 75px
+  left: -2px
+  top: 36px
+  border: 2px solid #02B980
+  border-top: none
+  a
+    float: left
+    &:hover
+      background: #fff
+
+.search_box input
+  border: none
+  height: 36px
+  &.text
+    width: 250px
+    height: 30px
+  &.btn
+    width: 80px
+    background: #02B980
+    color: #fff
+    font-size: 16px
+    font-weight: bold
+    border-radius: 0px
+
+.site_commitment
+  margin-top: 15px
+  ul
+    li
+      float: left
+      margin-left: 10px
+    span
+      width: 120px
+      height: 34px
+      &.ico1
+        background-position: -15px 0px
+      &.ico2
+        background-position: -140px 0px
+
+.main_nav
+  width: 100%
+  height: 50px
+  background: #02B980
+  line-height: 50px
+  min-width: 1200px
+  ul li
+    float: left
+    background: url(navline.png) right center no-repeat
+    position: relative
+    margin-right: -2px
+    &.last
+      background: none
+    &:hover
+      background: #00A270
+    a
+      display: block
+      color: #FFFFFF
+      font-size: 18px
+      letter-spacing: 1px
+      width: 120px
+      text-align: center
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.55)
+      z-index: 999
+      &.current
+        background: #00A270
+    .main_nav_son
+      position: absolute
+      left: 0px
+      top: 38px
+
+ul.main_nav_son
+  width: 118px
+  z-index: 100
+  li a
+    background: #00A270
+    padding-left: 20px
+    width: 100px
+    text-align: left
+    font-size: 14px
+    line-height: 35px
+    height: 35px
+    &:hover
+      background: #02B980
+
+/*绿色1200px头部样式结束
+
+/*黑色1200px底部样式开始
+
+.main_nav .mainwd
+  .h_mianfei
+    background: url("h_small.png") no-repeat scroll -26px 0px
+    height: 20px
+    position: absolute
+    right: 13px
+    top: -6px
+    width: 32px
+  .h_koubei
+    background: url("h_koubei.png") no-repeat scroll -26px 0px
+    height: 20px
+    position: absolute
+    right: 13px
+    top: -6px
+    width: 32px
+  .h_hot
+    background: url("hot.gif") no-repeat scroll 0 0
+    height: 22px
+    position: absolute
+    right: 17px
+    top: 0px
+    width: 26px
+    z-index: 999
+
+.main_footer
+  min-width: 1200px
+  a, p
+    color: #ccc
+
+.main_footer_top
+  background: #424242
+  padding: 20px 0px
+  text-align: center
+  overflow: hidden
+  ul
+    padding: 0px 30px
+    float: left
+    border-right: 1px #5f5f5f dashed
+    li
+      text-align: left
+      line-height: 30px
+      span
+        color: #fff
+        font-size: 14px
+    .dowload_ico
+      width: 130px
+      height: 51px
+      background-position: -275px 0px
+  .main_footer_rexian
+    border: none
+    .li1
+      color: #FFF
+      font-size: 16px
+      font-weight: 600
+    .li2
+      color: #FA567A
+      font-size: 30px
+    .li3
+      text-align: right
+      font-size: 14px
+      color: #AFACAC
+    .li4
+      float: left
+      line-height: 20px
+  ul.main_footer_weixin
+    li
+      text-align: center
+    img
+      margin-top: 10px
+
+.main_footer_bottom
+  text-align: center
+  background: #363636
+  padding: 10px 0px 90px 0px
+  p
+    line-height: 26px
+  a
+    margin: 0px 5px
+  .main_footer_bm_ico
+    width: 165px
+    height: 25px
+    background-position: -15px -35px
+
+/*黑色1200px底部样式结束
+
+/*灰色1000px头部样式开始
+
+.sub_nav
+  background: #0e4594
+  box-shadow: 1px 1px 3px #ccc
+  height: 40px
+  line-height: 40px
+  width: 100%
+  min-width: 1100px
+  a
+    color: #FFF
+    &:hover
+      color: #FFF
+    &.pic
+      padding: 0px
+      img
+        width: 82px
+        height: 34px
+        margin: 3px 20px 0px 0px
+    padding: 0px 10px
+  span
+    padding: 0px 10px
+    padding-right: 0px
+    color: #FFF
+  div p
+    color: #bbb
+
+.sub_nav_login
+  padding: 0px
+
+.top_nav_login .sub_nav_login_son
+  top: 40px
+  a
+    padding-right: 10px
+    line-height: 32px
+
+p.sub_nav_prt
+  line-height: 40px
+
+/*灰色1000px头部样式结束
+
+/*灰色1000px底部样式开始
+
+.sub_footer
+  text-align: center
+  overflow: hidden
+  background: #f5f5f5
+  border-top: 1px solid #e0e0e0
+  padding: 10px 0px
+  p
+    line-height: 32px
+    a
+      margin: 0px 5px
+  .main_footer_bm_ico
+    width: 165px
+    height: 25px
+    background-position: -15px -35px
+
+/*灰色1000px底部样式结束
+
+/*右侧导航样式开始
+
+.rightNav
+  position: fixed
+  right: 0px
+  bottom: 100px
+  width: auto
+  height: auto
+  z-index: 99
+  li
+    margin-bottom: 1px
+    width: auto
+    height: auto
+    cursor: pointer
+    position: relative
+    .show
+      width: 72px
+      background: #02B980
+      span
+        &.ico
+          display: block
+          width: 72px
+          height: 42px
+          background: url(rightNav.png) no-repeat
+        &.icoQq
+          background-position: 0px -11px
+        &.icoWx
+          background-position: 0px -76px
+        &.icoTel
+          background-position: 0px -153px
+        &.icoTop
+          background-position: 0px -232px
+      p
+        height: 30px
+        line-height: 30px
+        text-align: center
+        color: #fff
+        font-size: 14px
+      &.current
+        background: #919191
+    .hidden
+      position: absolute
+      right: 80px
+      top: 5px
+      text-align: center
+      border: 1px solid #ddd
+      padding: 5px
+      background: #fff
+      display: none
+      box-shadow: 0px 0px 3px #ccc
+      .hidden_cont
+        p.title
+          font-size: 14px
+          color: #333
+          font-weight: bold
+        position: relative
+        min-width: 80px
+        span.span_ab
+          display: inline-block
+          width: 9px
+          height: 9px
+          position: absolute
+          top: 0px
+          right: -13px
+          background: url(rightNav_ab.png) no-repeat
+      .hiddenQq a
+        display: block
+        margin: 8px 1px
+        text-align: center
+      .hiddenTel
+        font-size: 18px
+        display: block
+        min-width: 150px
+      .hiddenWx img
+        width: 120px
+        height: 120px
+
+/*右侧导航样式结束
+
+/*---------------------------------------------------首页样式开始---------------------------------------------------
+
+.index_ico
+  display: inline-block
+  background: url(ico1.png) no-repeat
+  vertical-align: middle
+  margin: 0px 3px
+
+.index_area
+  background: #FDFDFD
+  border: 1px solid #EFEFEF
+
+/*banner样式开始
+
+.index_banner
+  margin-top: 10px
+
+.index_banner_lt
+  width: 602px
+  height: 294px
+  border: 3px solid #fe7902
+  position: relative
+  z-index: 0
+  .banner_mf_ico
+    position: absolute
+    width: 69px
+    height: 62px
+    background-position: -407px 0px
+    right: 0px
+    top: 0px
+    margin: 0px
+    z-index: 99
+  p.index_banner_tit
+    background: #f0f0f0
+    line-height: 36px
+    border-bottom: 1px solid #ccc
+    height: 36px
+    a
+      &.first
+        border-left: none
+      &.last
+        border-right: none
+      display: inline-block
+      font-size: 14px
+      padding: 0px 9px
+      position: relative
+      margin-bottom: -1px
+      &.current
+        background: #fff
+        border-left: 1px solid #e0e0e0
+        border-right: 1px solid #e0e0e0
+        border-bottom: 1px solid #fff
+        color: #333
+        font-weight: bold
+
+.head_sq_ico
+  width: 10px
+  height: 15px
+  background-position: 0px -189px
+
+.menu_list_bottom
+  position: absolute
+  bottom: 0px
+  left: 0px
+  padding: 3px 8px
+  height: 46px
+
+.menu_list_ok_top
+  margin: 20px auto
+  width: 300px
+  position: relative
+  height: 95px
+
+.menu_list_ok_tenders
+  width: 350px
+  margin: 20px auto 0px auto
+  padding: 0px
+  position: relative
+  .s1_hd_sub, h1
+    margin-bottom: 10px
+  .service_img
+    position: absolute
+    left: -5px
+    top: 110px
+    img
+      width: 140px
+      height: 140px
+  p.colorbg
+    height: 40px
+    line-height: 40px
+    text-align: center
+    margin: 10px 0px
+    padding: 0px 10px
+    a
+      font-size: 16px
+      color: #fd0202
+
+.menu_list_ok_top
+  .erweima_box
+    position: absolute
+    right: -100px
+    top: -10px
+    text-align: center
+    img
+      width: 85px
+      height: 85px
+    p
+      font-size: 12px
+      margin: 0px
+  span.index_ico
+    width: 40px
+    height: 42px
+    background-position: 0px -110px
+    margin-right: 5px
+
+.menu_list_ok_tenders span.index_ico
+  width: 40px
+  height: 42px
+  background-position: 0px -110px
+  margin-right: 5px
+
+.menu_list_ok_top
+  h1
+    margin-bottom: 10px
+  p
+    font-size: 14px
+    margin-left: 15px
+
+.menu_list_ok_bottom
+  border-top: 1px solid #e0e0e0
+  ul li
+    float: left
+    width: 300px
+    height: 110px
+    padding-top: 10px
+    &.first
+      background: url(main_menu1.jpg) no-repeat
+      border-right: 1px solid #e0e0e0
+    &.last
+      background: url(main_menu2.jpg) no-repeat
+    a.btn
+      margin: 75px 0px 0px 120px
+
+.menu_list_top
+  form
+    padding-left: 15px
+  p.tp
+    border-bottom: 1px solid #ddd
+    overflow: hidden
+    i.tit
+      color: #555
+      font-size: 16px
+      font-style: normal
+  dt
+    width: 36px
+    height: 36px
+    background: #FAEAE7
+    border-right: 1px solid #fedfd9
+    float: left
+    margin: 6px 0px 10px
+  dd
+    float: left
+    margin: 6px 0px 10px
+  dt span
+    &.index_ico
+      width: 23px
+      height: 23px
+      margin: 6px
+    &.ico_tel
+      background-position: -185px -35px
+    &.ico_name
+      background-position: -211px -35px
+    &.ico_yz
+      background-position: -235px -35px
+  dd
+    margin-right: 20px
+    input.text
+      width: 210px
+      height: 28px
+      background: #fff
+      color: #555
+      border: 1px solid #FAEAE7
+      border-left: none
+  .menu_list_ep div.rt
+    margin-top: 20px
+  div.text
+    font-size: 14px
+    margin: 8px 0px
+  .menu_list_ep
+    .index_ico
+      width: 22px
+      height: 23px
+    span
+      margin-left: 20px
+      font-size: 14px
+      &.ico_tit
+        background-position: -15px -60px
+      &.ico_text
+        background-position: -15px -83px
+    p
+      line-height: 32px
+
+.banner_lunz
+  width: 900px
+  height: 300px
+  float: right
+  overflow: hidden
+
+/*banner样式结束
+
+/*1F装修公司样式开始
+
+.index_anli
+  width: 1178px
+  float: left
+
+.index_lt
+  width: 888px
+  float: left
+
+.index_rt
+  width: 260px
+  float: right
+
+.index_1floor
+  height: 335px
+
+h2
+  &.index_tit
+    border-bottom: 1px solid #e0e0e0
+    overflow: hidden
+    a
+      display: inline-block
+      font-size: 12px
+      margin-top: 12px
+      line-height: 22px
+      span
+        background-position: 0px -5px
+        width: 11px
+        height: 12px
+  &.index_tit1
+    border-bottom: 1px solid #e0e0e0
+    overflow: hidden
+    em
+      float: left
+      color: #999
+      height: 14px
+      margin: 13px 0 0 10px
+      display: inline
+      font-style: normal
+      font-size: 12px
+      line-height: 14px
+    a
+      display: inline-block
+      font-size: 12px
+      line-height: 22px
+      span
+        background-position: 0px -5px
+        width: 11px
+        height: 12px
+
+ul.index_company li
+  img
+    width: 166px
+    height: 83px
+    border: 1px solid #e0e0e0
+    &:hover
+      box-shadow: 0px 0px 5px #333
+  float: left
+  margin: 12px 5px 2px 4px
+  &.first
+    margin-left: 0px
+
+/*1F装修公司样式结束
+
+/*1F装修公司右侧排行样式开始
+
+.index_1floor_rt
+  height: 220px
+
+.index_paih p.tit
+  background: #f8f8f8
+  border-bottom: 1px solid #e0e0e0
+  a
+    padding: 5px 10px
+    display: inline-block
+    position: relative
+    margin-bottom: -1px
+    &.current, &:hover
+      background: #fff
+      border-bottom: 1px solid #fff
+      border-left: 1px solid #e0e0e0
+      border-right: 1px solid #e0e0e0
+      color: #333
+      text-decoration: none
+    &.first
+      border-left: none
+
+/*1F装修公司右侧排行样式结束
+
+/*2F找我家设计方案样式开始
+
+ul.index_home li
+  float: left
+  margin: 10px 0px 5px 10px
+  text-align: center
+  &.first
+    margin-left: 0px
+  img
+    width: 160px
+    height: 120px
+
+/*2F找我家设计方案样式结束
+
+/*2F找我家设计方案右侧工具样式开始
+
+.index_rt_all
+  width: 280px
+  height: 377px
+
+.index_tool
+  h2
+    background: #02B980
+    color: #fff
+    padding: 5px 10px
+  ul li
+    float: left
+    text-align: center
+    margin: 9px 15px
+    span
+      display: inline-block
+      width: 50px
+      height: 50px
+      background: url(tool_img.jpg) no-repeat
+      &.tl_ico2
+        background-position: -50px 0px
+      &.tl_ico3
+        background-position: -100px 0px
+      &.tl_ico4
+        background-position: 0px -50px
+      &.tl_ico5
+        background-position: -50px -50px
+      &.tl_ico6
+        background-position: -100px -50px
+
+/*2F找我家设计方案右侧工具样式结束
+
+/*3F团装活动样式开始
+
+ul.index_tuanz li
+  float: left
+  margin: 10px 0px 5px 7px
+  width: 220px
+  &.first
+    margin-left: 0px
+  img
+    width: 220px
+    height: 165px
+  .index_tuanz_btm p
+    overflow: hidden
+    padding: 0px 5px
+  p
+    &.colorbg
+      padding: 5px
+    b
+      font-size: 18px
+
+.index_tuanz span.time_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -16px
+
+/*3F团装活动样式结束
+
+/*4F热门案例样式开始
+
+h2.index_tit span.tit_list
+  margin-left: 30px
+  a
+    display: inline-block
+    margin: 0px 10px 0px 10px
+    line-height: 25px
+    padding: 0px 10px 3px 10px
+    font-size: 14px
+    &.current
+      border-bottom: 2px solid #02B980
+      background: url(hover_ico.png) center bottom no-repeat
+
+ul.index_case_list
+  display: none
+  li
+    margin: 10px 0px 0px 10px
+    float: left
+    &.first
+      width: 470px
+      margin-left: 0px
+      img
+        width: 470px
+        height: 360px
+    img
+      width: 226px
+      height: 175px
+    p
+      display: none
+
+.like_ico
+  width: 14px
+  height: 15px
+  background-position: 0px -33px
+
+/*4F热门案例样式结束
+
+/*4F右侧最新订单样式开始
+
+.index_new_order
+  h2.index_tit
+    padding: 5px
+  span.long
+    width: 33%
+  p
+    &.new_order_tit
+      background: #eee
+      line-height: 40px
+    span
+      display: inline-block
+      width: 33%
+      color: #333
+      text-align: center
+
+.index_nwod_box
+  width: 280px
+  height: 270px
+  overflow: hidden
+
+ul.index_nwod_list li
+  border-bottom: 1px dashed #e0e0e0
+  line-height: 40px
+  span
+    width: 33%
+    text-align: center
+    display: inline-block
+  &:hover
+    background: #fff
+  &.last
+    border: none
+
+.index_paihang ul.paihang li
+  line-height: 32px
+
+/*4F右侧最新订单样式结束
+
+/*5F设计师样式开始
+
+ul
+  &.index_designer li
+    text-align: center
+    float: left
+    margin: 10px 0px 10px 8px
+    img
+      width: 115px
+      height: 115px
+    &.first
+      margin-left: 0px
+  &.index_shop li
+    img
+      width: 170px
+      height: 85px
+    margin: 10px 0px 3px 5px
+
+/*5F设计师样式结束
+
+/*6F建材商城样式开始
+
+.shop_rt_ad
+  width: 280px
+  height: 250px
+  overflow: hidden
+
+/*6F建材商城样式结束
+
+/*7F在建工地样式开始
+
+ul.index_site
+  height: 257px
+  li
+    padding: 5px 0px
+    border-bottom: 1px dashed #e0e0e0
+    &:hover
+      background: #fff
+    span
+      display: inline-block
+      width: 250px
+    .index_site_mid
+      width: 750px
+
+.index_site_hover
+  display: none
+  a
+    &.btn
+      margin-top: 5px
+    img
+      width: 120px
+      height: 90px
+
+.bar
+  background: url(progressbar.png) no-repeat
+  display: inline-block
+
+.site_step
+  margin-top: 15px
+  p
+    line-height: 32px
+    &.step
+      width: 630px
+      height: 12px
+      background-position: 0px -13px
+      position: relative
+    span.step
+      display: inline-block
+      text-align: center
+      width: 90px
+  .step_color
+    width: 630px
+    height: 12px
+    background-position: 0px 0px
+    position: absolute
+    left: 0px
+    top: 0px
+  span
+    &.step0
+      width: 0%
+      overflow: hidden
+    &.step1
+      width: 14%
+      overflow: hidden
+    &.step2
+      width: 30%
+      overflow: hidden
+    &.step3
+      width: 44%
+      overflow: hidden
+    &.step4
+      width: 58%
+      overflow: hidden
+    &.step5
+      width: 71%
+      overflow: hidden
+    &.step6
+      width: 86%
+      overflow: hidden
+    &.step7
+      width: 100%
+      overflow: hidden
+
+/*7F在建工地样式结束
+
+/*7F右侧申请参观样式开始
+
+.index_apply_box
+  background: #fdd3ad
+  h2
+    text-align: center
+    color: #ff4100
+
+form.index_apply_form
+  background: #fff
+  border: 3px solid #cb3f0e
+  border-radius: 3px
+  p
+    background: #f8f8f8
+    line-height: 36px
+    border: 2px solid #e0e0e0
+    border-radius: 3px
+    margin-bottom: 14px
+    span
+      width: 14px
+      height: 14px
+      &.ico_name
+        background-position: 0px -65px
+      &.ico_tel
+        background-position: 0px -79px
+      &.ico_add
+        background-position: 0px -93px
+  input.text
+    border: none
+    background: none
+    width: 190px
+
+/*7F右侧申请参观样式结束
+
+/*8F装修学堂样式开始
+
+.index_study
+  margin: 10px 0px
+
+.index_study_ad
+  width: 350px
+  height: 210px
+  overflow: hidden
+  margin-top: 5px
+
+.index_study_news
+  width: 380px
+  margin-left: 20px
+
+.index_study_news_top
+  border-bottom: 1px solid #e0e0e0
+  h3 a
+    color: #333
+    font-weight: bold
+
+.index_study_news ul
+  margin-top: 5px
+
+.index_news_list
+  ul li
+    margin-bottom: 5px
+    img
+      width: 150px
+      height: 100px
+  width: 390px
+
+.index_news_list_text
+  width: 220px
+
+/*8F装修学堂样式结束
+
+.yq_link li
+  float: left
+  margin: 5px 15px 5px 5px
+
+.youqLinkBox
+  border-top: 1px solid #ddd
+  border-bottom: 1px solid #ddd
+  background: #f8f8f8
+
+/*---------------------------------------------------首页样式结束---------------------------------------------------
+
+/*---------------------------------------------------我要装修页面样式开始---------------------------------------------------
+
+.tenders_header
+  width: 100%
+  height: 50px
+  background: #f8f8f8
+  line-height: 50px
+  box-shadow: 1px 1px 3px #ccc
+  span
+    line-height: 50px
+  h3 font.fontcl2
+    font-size: 20px
+
+/*招标切换样式开始
+
+ul.tenders_zb_list li
+  cursor: pointer
+  border: 1px solid #e0e0e0
+  background: #f8f8f8
+  width: 110px
+  height: 40px
+  text-align: center
+  line-height: 40px
+  font-size: 18px
+  color: #333
+  float: left
+  margin-right: 10px
+  a
+    color: #333
+    &:hover
+      text-decoration: none
+  &.current
+    background: #02B980
+    color: #fff
+    border: 1px solid #019c25
+
+.tenders_zb_box
+  padding: 30px 20px
+  background: #fff
+  border: 1px solid #e0e0e0
+  margin-top: -1px
+
+.tenders_zb_form
+  background: #f8f8f8
+  border: 2px solid #02B980
+  width: 560px
+  h3
+    border-bottom: 1px solid #e0e0e0
+  table
+    width: 100%
+    font-size: 14px
+    tr td
+      height: 45px
+      max-width: 480px
+      &.title
+        text-align: right
+        padding-right: 5px
+        min-width: 65px
+  input.text, select.text
+    box-shadow: 0px 0px 3px #eee inset
+  input
+    &.long
+      width: 190px
+    &.all
+      width: 465px
+  select
+    &.text
+      height: 32px
+    &.long
+      width: 197px
+    &.short
+      width: 155px
+  textarea
+    width: 465px
+    height: 50px
+    margin-bottom: 5px
+  p.pro
+    font-size: 12px
+    color: #999
+  span.tel
+    margin-left: 10px
+    font-size: 16px
+  label
+    width: 110px
+    font-size: 12px
+    display: inline-block
+
+.tenders_company
+  h2
+    overflow: hidden
+    label
+      font-size: 12px
+  ul
+    overflow: hidden
+    border: 1px solid #e0e0e0
+    li
+      text-align: center
+      padding: 5px 6px
+      border-right: 1px solid #e0e0e0
+      border-bottom: 1px solid #e0e0e0
+      float: left
+      margin-right: -1px
+      margin-bottom: -1px
+      &:hover
+        background: #f3f3f3
+      &.last
+        padding: 5px 8px
+      label
+        font-size: 14px
+      img
+        width: 180px
+        height: 90px
+
+/*招标切换样式结束
+
+/*5步招标样式开始
+
+.tenders_step
+  height: 125px
+  background: url(tenders_step.jpg) no-repeat
+  ul
+    margin-left: 230px
+    li
+      float: left
+      margin: 0px 27px
+      text-align: center
+      width: 140px
+      line-height: 20px
+      h3
+        margin-top: 50px
+      &.last
+        p.tel
+          color: #fff
+          text-align: right
+          margin-right: 5px
+          width: 130px
+          margin-top: 12px
+        h3
+          margin-top: 16px
+
+/*5步招标样式结束
+
+/*装修小贴士样式开始
+
+h1.zb_ten_Tit
+  border-bottom: 1px solid #bbb
+  height: 30px
+  text-align: center
+  margin-bottom: 20px
+  font-size: 24px
+  font-weight: bold
+  span
+    display: inline-block
+    position: relative
+    top: 10px
+    background: #fff
+    padding: 0px 20px
+
+.ten_tieshi
+  margin-bottom: 40px
+  overflow: hidden
+  li
+    margin: 20px 0px 0px 0px
+    img
+      width: 180px
+      height: 180px
+
+.tieshi_text
+  margin-left: 20px
+  width: 380px
+  height: 165px
+  overflow: hidden
+  margin-top: 10px
+  h3
+    font-size: 24px
+    color: #333
+    line-height: 40px
+    span.ts
+      display: inline-block
+      padding: 0px 15px
+      background: #00ad28
+      border-radius: 20px
+      color: #fff
+      margin-right: 5px
+
+ul.zb_ten_mn li
+  float: left
+  width: 346px
+  margin: 10px 0px 10px 20px
+  background: #e5f4fb
+  padding: 10px 20px
+  height: 140px
+  overflow: hidden
+  line-height: 27px
+  &.first
+    margin-left: 0px
+  h3
+    text-align: center
+    color: #ff4400
+    font-size: 18px
+    line-height: 35px
+
+/*装修小贴士样式结束
+
+/*最新装修订单样式开始
+
+.tenders_order
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+
+.tenders_order_tit
+  background: #424242
+  height: 45px
+  line-height: 45px
+  span
+    color: #fff
+
+.tenders_order
+  ul span.fontcl2
+    text-decoration: underline
+  .tenders_order_tit span
+    display: inline-block
+    width: 15%
+    text-align: center
+
+.tenders_order_box ul li span
+  display: inline-block
+  width: 15%
+  text-align: center
+
+.tenders_order .tenders_order_tit span.long
+  width: 24%
+
+.tenders_order_box
+  ul li
+    span.long
+      width: 24%
+    line-height: 45px
+    border-bottom: 1px dashed #e0e0e0
+    &:hover
+      background: #fff
+  width: 100%
+  height: 450px
+  overflow: hidden
+
+/*最新装修订单样式结束
+/*---------------------------------------------------我要装修页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------找装修公司列表页面样式开始---------------------------------------------------
+
+.ico_list
+  display: inline-block
+  background: url(asset_path('templates/icolist.png')) no-repeat
+  margin: 0px 2px
+  vertical-align: middle
+
+.main_topnav
+  width: 100%
+  height: 32px
+  background: #f8f8f8
+  line-height: 32px
+  box-shadow: 1px 1px 2px #ccc
+
+span.breadna
+  width: 10px
+  height: 15px
+  background-position: 0px 0px
+
+/*筛选框样式开始
+
+.main_content
+  width: 930px
+
+.choose_option
+  table
+    width: 100%
+  td
+    vertical-align: top
+    border-bottom: 1px dashed #e0e0e0
+    padding-bottom: 5px
+    padding-top: 2px
+    &.tit
+      width: 50px
+
+/*筛选框样式结束
+
+/*装修公司列表开始
+
+.main_list a.pic img
+  padding: 3px
+  border: 1px solid #e0e0e0
+  background: #fff
+
+.main_list_rt div.lt
+  width: 70%
+  overflow: hidden
+  p
+    line-height: 30px
+    height: 30px
+    overflow: hidden
+
+.main_company a.pic
+  img
+    width: 150px
+    height: 150px
+  position: relative
+  .qijian_ico
+    position: absolute
+    top: -6px
+    left: -9px
+    width: 71px
+    height: 72px
+    background-position: -170px 0px
+
+.main_com_rt
+  width: 80%
+
+.main_list_rt h3
+  color: #666
+  border-bottom: 1px dashed #e0e0e0
+  width: 100%
+  overflow: hidden
+  line-height: 35px
+
+.com_rz_ico
+  width: 40px
+  height: 20px
+  background-position: -51px 0px
+
+.ps_rz_ico
+  width: 40px
+  height: 20px
+  background-position: -51px -21px
+
+.tuiguang_ico
+  width: 40px
+  height: 20px
+  background-position: -51px -42px
+
+.bz_metals
+  display: inline-block
+  border: 1px solid #03bb98
+  color: #03bb98
+  font-size: 12px
+  line-height: 18px
+  height: 18px
+  background: #fff
+  padding-left: 2px
+  margin-left: 8px
+  font
+    width: 18px
+    height: 20px
+    background-position: -51px -63px
+    margin-right: 0px
+
+.qq_ico
+  width: 77px
+  height: 22px
+  background-position: -92px 0px
+
+.main_list_rt a.qq_ico
+  margin-top: 8px
+
+.xinyu_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -15px
+
+.telephone_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -30px
+
+.address_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -45px
+
+.main_com_rt p.sp_list span
+  margin-right: 20px
+  display: inline-block
+
+.pingfen_bar span
+  &.probar_gray
+    width: 100px
+    height: 6px
+    background-position: 0px -33px
+    margin: 0px 5px
+    position: relative
+  &.probar_color
+    width: 100px
+    height: 6px
+    background-position: 0px -26px
+    position: absolute
+    left: 0px
+    top: 0px
+
+/*装修公司列表结束
+
+/*右边招标样式开始
+
+.sub_content
+  width: 730px
+
+.side_content
+  width: 250px
+
+.zbform
+  background: #eeeeee
+  border: 2px solid #fe7902
+  padding: 10px
+  text-align: center
+  h1
+    padding-bottom: 5px
+    border-bottom: 1px dashed #d0d0d0
+  form
+    border-top: 1px dashed #fff
+  input, select
+    margin: 6px 0px
+    border: 1px solid #c7c7c7
+  input
+    &.full
+      width: 98%
+    &.btn
+      border: 1px solid #d36501
+  select.short
+    width: 32%
+  input.short
+    width: 40%
+  img.yz_pic
+    margin-top: 6px
+    height: 34px
+  select.half
+    width: 49%
+  .btn
+    margin-top: 10px
+  p.ico_btn
+    position: relative
+  span.ico_list
+    width: 21px
+    height: 20px
+    background-position: -30px 0px
+    position: absolute
+    left: 50px
+    top: 17px
+
+/*右边招标样式结束
+
+/*右边装修公司排行样式开始
+
+.side_tit
+  background: #f5f5f5
+  border-bottom: 1px solid #e0e0e0
+  line-height: 36px
+  font-weight: bold
+  overflow: hidden
+  padding: 0px 10px
+
+ul.paihang li
+  border-bottom: 1px dashed #e0e0e0
+  overflow: hidden
+  line-height: 35px
+  height: 35px
+  .paihang_num
+    display: inline-block
+    width: 18px
+    height: 18px
+    text-align: center
+    line-height: 18px
+    border-radius: 3px
+    margin-right: 3px
+    color: #fff
+    background: #888888
+  .ph_num_cl
+    background: #02B980
+
+.side_tit a
+  font-size: 12px
+  margin-top: 5px
+  height: 20px
+
+/*右边装修公司排行样式结束
+/*---------------------------------------------------找装修公司列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------找设计师列表页面样式开始---------------------------------------------------
+
+.love_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -60px
+
+.jiuzhi_ico
+  width: 15px
+  height: 15px
+  background-position: -15px 0px
+
+.case_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -15px
+
+.zhuanchang_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -30px
+
+.linian_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -45px
+
+.main_designer_rt h3 p.lt span
+  margin-left: 20px
+  font-size: 14px
+
+/*列表页头部排序样式开始
+
+.sort_box
+  border: 1px solid #e0e0e0
+  background: #f8f8f8
+  overflow: hidden
+  height: 32px
+  line-height: 32px
+  margin-bottom: -1px
+
+.sort_list a
+  display: inline-block
+  padding: 0px 5px 0px 10px
+  height: 32px
+  line-height: 32px
+  span
+    &.sort_ico
+      width: 10px
+      height: 16px
+      background-position: -40px -21px
+    &.sort_on_ico
+      width: 10px
+      height: 16px
+      background-position: -30px -21px
+
+/*列表页头部排序样式结束
+
+/*找设计师列表页ul样式开始
+
+.main_designer_rt
+  width: 80%
+
+.main_designer a.pic
+  position: relative
+  img
+    width: 150px
+    height: 150px
+  .love_span
+    display: none
+    position: absolute
+    top: 10px
+    left: 10px
+    border-radius: 2px
+    width: 40px
+    height: 20px
+    background: #27af47
+    color: #fff
+    line-height: 20px
+
+/*找设计师列表页ul样式结束
+/*---------------------------------------------------找设计师列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------小区楼盘列表页面样式开始---------------------------------------------------
+
+ul.main_tuanz li
+  margin: 10px 0px 5px 6px
+
+.main_home a.pic img
+  width: 200px
+  height: 150px
+
+.main_home_rt
+  width: 75%
+
+.price_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -60px
+
+.time_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -75px
+
+.main_home_rt
+  p.sp_list a
+    margin-right: 20px
+    display: inline-block
+    text-decoration: underline
+    &:hover
+      color: #02B980
+  h3 span.rt
+    font-size: 12px
+
+.qqun_ico
+  width: 77px
+  height: 23px
+  background-position: -92px -23px
+
+.main_home_rt div.rt .qqun_ico
+  margin: 10px 0px 30px 0px
+
+.loupan_zbform
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+  h2 font
+    font-size: 20px
+  form
+    border: none
+    p.bottom
+      line-height: 20px
+      text-align: left
+
+/*---------------------------------------------------小区楼盘列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------在建工地列表页面样式开始---------------------------------------------------
+
+.main_site a.pic img
+  width: 200px
+  height: 150px
+
+.main_site_rt
+  width: 75%
+
+.main_site_rt_top a.btn
+  margin-top: 20px
+
+.fengge_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -75px
+
+.company_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -90px
+
+/*---------------------------------------------------在建工地列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------找工长列表页面样式开始---------------------------------------------------
+
+.main_foreman_rt
+  width: 80%
+
+.main_foreman a.pic img
+  width: 150px
+  height: 150px
+
+.gongdi_ico
+  width: 15px
+  height: 15px
+  background-position: -15px -90px
+
+/*---------------------------------------------------找工长列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------找工人列表页面样式开始---------------------------------------------------
+/*本月排行榜样式开始
+
+.worker_paihang li
+  text-align: center
+  span
+    width: 33%
+    display: inline-block
+  &.title
+    background: #f9f9f9
+    font-size: 14px
+    color: #333
+    border-bottom: 1px solid #e0e0e0
+  &:hover
+    background: #f8f8f8
+  a
+    text-decoration: underline
+    &:hover
+      color: #fe7902
+
+/*本月排行榜样式结束
+
+/*工人列表页样式开始
+
+ul.main_worker_ul
+  overflow: hidden
+  li
+    float: left
+    border-left: 1px solid #e0e0e0
+    padding: 10px 18px
+    width: 148px
+    height: 200px
+    overflow: hidden
+    p
+      height: 30px
+      overflow: hidden
+      span.lt
+        min-width: 65px
+    img
+      width: 140px
+      height: 140px
+    &.first
+      border-left: none
+      padding: 10px 20px
+
+/*工人列表页样式结束
+/*---------------------------------------------------找工人列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------活动列表页面样式开始---------------------------------------------------
+/*活动列表头部样式开始
+
+.main_activity_choose
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+  height: 40px
+  line-height: 40px
+  a
+    display: inline-block
+    text-align: center
+    border-right: 1px solid #e0e0e0
+    width: 120px
+    font-size: 18px
+    color: #333
+    float: left
+    &.current
+      background: url(activity_hover.jpg) no-repeat
+      color: #fe7902
+
+/*活动列表头部样式结束
+
+/*活动列表页样式开始
+
+.main_activity a.pic img
+  width: 320px
+  height: 240px
+
+.main_activity_rt
+  width: 61%
+  p
+    font-size: 14px
+    line-height: 30px
+  h1
+    margin-bottom: 10px
+  h2
+    margin-top: 10px
+    color: #666
+    .btn
+      margin-right: 20px
+
+/*活动列表页样式结束
+/*---------------------------------------------------活动列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------业主保障页面样式开始---------------------------------------------------
+
+.securityBanner
+  width: 100%
+  height: 300px
+  background: url(securBabg.jpg) repeat-x
+  margin: 10px 0px
+  a
+    display: block
+    text-align: center
+    margin: 10px auto
+    background: url(btnBg.png) no-repeat
+    color: #663300
+    width: 270px
+    height: 60px
+    line-height: 60px
+    border-radius: 5px
+    font-size: 18px
+
+.zb_security h1
+  font-size: 24px
+  font-weight: bold
+  margin-bottom: 10px
+
+.zb_security_intro
+  padding: 60px 0px 0px
+  background: url(seruIntroBg.jpg) no-repeat
+  height: 150px
+  ul li
+    float: left
+    width: 250px
+    padding-left: 65px
+    margin-right: 85px
+    font-size: 14px
+
+.zb_secu_sixb
+  background: #f5f5f5
+  padding: 20px
+  font-size: 14px
+  ul li
+    border-bottom: 1px solid #ccc
+    padding: 20px 0px
+    &:last-child
+      border-bottom: none
+  h2
+    color: #ff4400
+    font-weight: bold
+
+.zb_secu_sixb_lt, .zb_secu_sixb_rt
+  width: 480px
+
+.zb_secu_sixb_lt
+  span.shuzi
+    font-weight: bold
+    font-size: 90px
+    color: #bbb
+    display: inline-block
+    line-height: 90px
+    margin-right: 10px
+  div.lt
+    width: 400px
+
+span.seruIco
+  display: inline-block
+  width: 50px
+  height: 50px
+  background: url(seruIco.png) no-repeat
+  vertical-align: middle
+  margin-right: 10px
+  margin-top: 10px
+
+.zb_secu_sixb_rt div.lt
+  width: 400px
+
+.zb_ser_list ul li
+  float: left
+  margin-right: 10px
+  background: #ff6600
+  border: 5px solid #ddd
+  line-height: 26px
+  font-size: 14px
+  color: #fff
+  width: 200px
+  padding: 10px 20px
+  text-align: center
+  p.title
+    font-size: 18px
+    font-weight: bold
+
+.zb_ser_bobtn
+  border-top: 2px solid #ff6600
+  padding: 20px 0px
+  background: url(serBg.png) center top no-repeat
+  text-align: center
+  a
+    display: block
+    text-align: center
+    margin: 10px auto
+    background: url(btnBg.png) no-repeat
+    color: #663300
+    width: 270px
+    height: 60px
+    line-height: 60px
+    border-radius: 5px
+    font-size: 18px
+  p
+    font-size: 28px
+    color: #F60
+
+span
+  &.seruIco1
+    background-position: 0px 0px
+  &.seruIco2
+    background-position: -62px 0px
+  &.seruIco3
+    background-position: -124px 0px
+  &.seruIco4
+    background-position: -186px 0px
+  &.seruIco5
+    background-position: -248px 0px
+  &.seruIco6
+    background-position: -310px 0px
+
+/*---------------------------------------------------业主保障页面样式结束---------------------------------------------------
+
+/*怎样装修样式
+
+.mainwd_bz
+  width: 1200px
+  margin: 0px auto
+
+.mt55
+  margin-top: 55px
+
+.mainwd_bz h1
+  font-size: 24px
+  font-weight: bold
+  margin-bottom: 10px
+
+.how_zx
+  width: 100%
+  background: #f8f8f8
+  border-top: 2px solid #ff4100
+  border-bottom: 2px solid #ccc
+  height: 260px
+  margin-bottom: 60px
+
+.how_zx_main
+  position: relative
+  ul
+    width: 850px
+    height: 240px
+    padding: 10px 20px
+    li
+      float: left
+      padding: 20px 10px
+      img
+        float: left
+        margin-right: 10px
+
+.how_box
+  width: 320px
+  float: left
+  p.tit
+    font-size: 18px
+    color: #333
+
+.tiyan_box
+  position: absolute
+  width: 240px
+  height: 360px
+  background: #fff
+  border: 3px solid #dfdfdf
+  right: 0px
+  top: -60px
+  padding: 10px 20px
+  table
+    width: 100%
+    td
+      height: 40px
+      &.title
+        font-size: 20px
+        font-weight: bold
+        text-align: center
+      input.full, select.full
+        width: 97%
+      input.short
+        width: 85%
+        margin-right: 5px
+      font.pm
+        font-size: 18px
+      input.green_button
+        width: 100%
+        background: #30b302
+        font-size: 16px
+        cursor: pointer
+        height: 34px
+        line-height: 34px
+        color: #fff
+        font-weight: bold
+      textarea
+        width: 225px
+        height: 50px
+        padding-top: 5px
+      select
+        &.text
+          height: 32px
+          line-height: 32px
+        &.short
+          width: 75px
+          overflow: hidden
+
+/*怎样装修样式
+
+/*---------------------------------------------------优惠活动列表页面样式开始---------------------------------------------------
+
+ul.main_youhui li
+  margin: 0px 0px 15px 18px
+  float: left
+  width: 290px
+  position: relative
+  img
+    width: 290px
+    height: 200px
+  &.first
+    margin-left: 0px
+  h3
+    margin-bottom: 10px
+    a
+      font-weight: bold
+      color: #333
+  p.colorbg
+    overflow: hidden
+    padding: 5px 2px
+    span.tit
+      font-size: 12px
+      b
+        font-size: 20px
+
+.youhui_time
+  width: 20px
+  height: 20px
+  background-position: -30px -37px
+
+.youhui_over_btn
+  background: #626262
+  width: 80px
+  line-height: 26px
+  border: 1px solid #4f4f4f
+  font-size: 14px
+
+ul.main_youhui li
+  .be_paint
+    position: absolute
+    top: 0px
+    left: 5px
+    width: 30px
+    height: 74px
+    background-position: -240px 0px
+  .over_paint
+    position: absolute
+    top: 0px
+    left: 5px
+    width: 30px
+    height: 75px
+    background-position: -271px 0px
+
+/*---------------------------------------------------优惠活动列表页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修案例列表模式样式开始---------------------------------------------------
+
+.sort_list span.rt a
+  width: 32px
+  border-left: 1px solid #e0e0e0
+  text-align: center
+  padding: 0px
+  vertical-align: top
+  float: left
+  &.on
+    background: #fff
+  font
+    width: 14px
+    height: 14px
+    vertical-align: middle
+    &.li_on
+      background-position: -107px -45px
+    &.block_over
+      background-position: -122px -45px
+    &.li_over
+      background-position: -92px -45px
+    &.block_on
+      background-position: -137px -45px
+
+.case_aterfall_li
+  float: left
+  margin: 0px 6px 10px 6px
+  overflow: hidden
+  padding: 3px
+  border: 1px solid #e0e0e0
+  width: 220px
+  background: #f8f8f8
+  box-shadow: 0px 1px 2px #ddd
+  a img
+    width: 220px
+    height: auto
+  p
+    line-height: 34px
+    &.tit
+      border-bottom: 1px solid #e0e0e0
+    span
+      margin-right: 10px
+
+.person_ico
+  width: 14px
+  height: 14px
+  background-position: 0px -49px
+
+.case_aterfall_li .opacity_img span
+  position: absolute
+  width: 100px
+  height: 26px
+  line-height: 26px
+  text-align: center
+  right: 0px
+  bottom: 10px
+  display: none
+  &.bg
+    background: #ff4400
+    opacity: 0.8
+  &.text a
+    color: #fff
+    font-size: 14px
+
+/*---------------------------------------------------装修案例列表模式样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修案例专辑模式样式开始---------------------------------------------------
+
+ul.case_zhuanji li
+  width: 232px
+  background: #f8f8f8
+  float: left
+  margin: 0px 0px 15px 15px
+  &.first
+    margin-left: 0px
+  p
+    line-height: 35px
+
+.zhuanji_top_img
+  width: 232px
+  height: 145px
+  overflow: hidden
+  margin-bottom: 2px
+  img
+    width: 232px
+    height: auto
+
+.zhuanji_bottom_img
+  height: 76px
+  a
+    margin-left: 2px
+    float: left
+    img
+      width: 76px
+      height: 76px
+    &.first
+      margin-left: 0px
+
+.zhuanji_ico
+  width: 15px
+  height: 15px
+  background-position: 0px -105px
+
+/*---------------------------------------------------装修案例专辑模式样式结束---------------------------------------------------
+
+/*---------------------------------------------------优惠活动详情页面样式开始---------------------------------------------------
+/*左侧详情介绍样式开始
+
+.sub_activity_lt
+  width: 730px
+
+.sub_activity
+  h2.title
+    margin-bottom: 10px
+    a
+      color: #333
+  a.pic img
+    width: 300px
+    height: 200px
+
+.sub_activity_rt
+  width: 55%
+  p
+    &.title
+      font-size: 20px
+      margin-bottom: 10px
+    line-height: 30px
+    font-size: 14px
+  h2
+    a
+      margin: 10px 20px 0px 0px
+    span
+      color: #666
+
+.sub_youhui_time
+  width: 21px
+  height: 21px
+  background-position: -30px -57px
+
+.sub_over_time_ico
+  width: 21px
+  height: 21px
+  background-position: -147px -120px
+
+/*左侧详情介绍样式结束
+
+/*右侧商家介绍样式开始
+
+.sub_activity_sj
+  padding: 10px 35px
+  a.pic img
+    width: 160px
+    height: 80px
+    border: 1px solid #e0e0e0
+
+/*右侧商家介绍样式结束
+
+/*右侧更多优惠活动样式开始
+
+.sub_activity_qita
+  h3 a.rt
+    font-size: 12px
+    margin-top: 2px
+    height: 20px
+  ul li
+    margin: 8px 0px
+    border-bottom: 1px solid #e0e0e0
+    img
+      width: 230px
+      height: 150px
+
+/*右侧更多优惠活动样式结束
+/*---------------------------------------------------优惠活动详情页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------在建工地详情页面样式开始---------------------------------------------------
+
+.sub_topnav
+  line-height: 35px
+
+/*左侧头部详情介绍样式开始
+
+.sub_site_top
+  h1
+    .btn
+      font-size: 14px
+      margin-top: 5px
+    overflow: hidden
+    border-bottom: 1px dashed #e0e0e0
+    padding-bottom: 5px
+  p.colorbg
+    margin: 10px 0px
+    padding: 5px
+    span
+      margin-right: 50px
+      display: inline-block
+
+/*左侧头部介绍样式结束
+
+/*左侧底部详情介绍样式开始
+
+.sub_site_content
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+  img
+    text-align: center
+    margin: 5px
+
+/*左侧底部介绍样式结束
+/*---------------------------------------------------在建工地详情页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------找工人详情页面样式开始---------------------------------------------------
+/*左侧详情介绍样式开始
+
+.sub_worder_top_rt
+  width: 78%
+  h3
+    overflow: hidden
+    padding: 3px 5px
+    span.rt
+      color: #666
+      font-size: 14px
+  p
+    line-height: 30px
+    span
+      width: 30%
+      display: inline-block
+
+.sub_worder_top a img.pic
+  width: 140px
+  height: 140px
+
+.worder_tel
+  width: 20px
+  height: 19px
+  background-position: -30px -79px
+
+.sub_worker_tit
+  border-bottom: 1px solid #e0e0e0
+  background: #f8f8f8
+  line-height: 34px
+  b
+    height: 36px
+    background: #fff
+    display: inline-block
+    margin-bottom: -1px
+    border-top: 2px solid #02B980
+    padding: 0px 10px
+    border-right: 1px solid #e0e0e0
+
+.sub_worker_content img
+  text-align: center
+  margin: 5px
+
+/*左侧详情介绍样式结束
+
+/*右侧排行样式开始
+
+.sub_worker_rt li a
+  text-decoration: none
+
+/*右侧排行样式结束
+/*---------------------------------------------------找工人详情页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修案例详情页样式开始---------------------------------------------------
+/*左侧案例展示样式开始
+
+.sub_case_top h3 label
+  font-size: 12px
+  margin-left: 10px
+
+.case_pic_top
+  background: #f8f8f8
+  position: relative
+  width: 688px
+  height: 490px
+  overflow: hidden
+  li
+    width: 688px
+    height: 500px
+    text-align: center
+  img
+    max-width: 688px
+    max-height: 490px
+  a
+    &.change_a
+      width: 40px
+      height: 50px
+      position: absolute
+      top: 225px
+      background: url(sp-slide.png) no-repeat
+    &.prev_a
+      left: 10px
+      background-position: 0px 0px
+    &.next_a
+      right: 10px
+      background-position: -40px 0px
+
+.case_pic_bottom
+  li
+    float: left
+    margin: 0px 6px
+  a
+    &.img_a img
+      width: 100px
+      height: 75px
+    &.bottom_a
+      display: inline-block
+      width: 18px
+      height: 79px
+      background: url(cs_slide.png) no-repeat
+      float: left
+    &.next_a
+      background-position: -18px 0px
+
+.photo_main_l_c
+  width: 715px
+  margin: 0 auto
+  position: relative
+  a
+    display: block
+    &:hover
+      text-decoration: none
+
+.l_ico2
+  width: 28px
+  height: 63px
+  border: 1px solid #D5D5D5
+  line-height: 63px
+  text-align: center
+  color: #DDD
+  font-size: 35px
+  position: absolute
+  left: 0
+  top: 205px
+  border-radius: 3px
+
+.r_ico2
+  width: 28px
+  height: 63px
+  border: 1px solid #D5D5D5
+  line-height: 63px
+  text-align: center
+  color: #DDD
+  font-size: 35px
+  position: absolute
+  top: 205px
+  right: 0
+  border-radius: 3px
+
+.c_img
+  width: 640px
+  min-height: 400px
+  background: #F5F5F5
+  margin: 0 35px 0 35px
+  p
+    font-size: 16px
+    color: #666
+    padding: 10px 0 0 10px
+    font-weight: bold
+  .img_detail
+    text-align: center
+  img
+    margin: 10px auto
+    max-width: 600px
+
+.photo_zhuanshu
+  width: 640px
+  height: 30px
+  margin: 0 auto
+  line-height: 30px
+  p
+    float: left
+    fint-size: 14px
+    &.p1
+      width: 223px
+      height: 20px
+      margin-top: 10px
+      float: right
+
+.photo_small
+  width: 640px
+  margin: 10px auto
+  height: 67px
+  a
+    display: block
+  ul
+    float: left
+    li
+      float: left
+      width: 70px
+      a
+        width: 64px
+        height: 64px
+        border: 1px solid #FFF
+        &:hover
+          border: 1px solid #DB0005 !important
+
+.current8
+  border: 1px solid #DB0005 !important
+
+/*左侧案例展示样式结束
+
+/*左侧评论样式开始
+
+.sub_case_lt
+  width: 730px
+
+form.pinglun
+  img.pic
+    width: 42px
+    height: 42px
+  div.rt
+    width: 790px
+  textarea
+    width: 99%
+    height: 100px
+  .pinglun_btn
+    margin: 10px 0px
+    background: #eee
+    width: 80px
+    line-height: 22px
+    font-size: 14px
+    height: 30px
+    border: 1px solid #bbb
+
+.pinglun_btn:hover
+  color: #333
+
+.new_pinglun
+  p.tit
+    border-bottom: 1px solid #e0e0e0
+    font-size: 16px
+  ul li
+    margin: 10px 0px
+    border-bottom: 1px solid #e0e0e0
+    padding: 5px 0px
+    overflow: hidden
+  div.lt
+    width: 42px
+    img
+      width: 42px
+      height: 42px
+  ul li
+    div.rt
+      width: 93%
+    p
+      overflow: hidden
+      span.name
+        color: #2c67b0
+        font-size: 14px
+      font.pointcl
+        margin-left: 20px
+        text-decoration: underline
+        &:hover
+          opacity: 0.8
+
+/*左侧评论样式结束
+
+/*右侧内容样式开始
+
+.case_linian
+  border-bottom: 1px dashed #e0e0e0
+  border-top: 1px dashed #e0e0e0
+
+.sub_case_yuyue
+  a img
+    padding: 2px
+    border: 1px solid #e0e0e0
+    width: 60px
+    height: 60px
+  div.lt
+    margin-left: 10px
+  p
+    line-height: 35px
+
+.sub_case_rtpic a
+  margin: 5px
+  display: inline-block
+  img
+    width: 65px
+    height: 65px
+
+/*右侧内容样式结束
+/*---------------------------------------------------装修案例详情页样式结束---------------------------------------------------
+
+/*---------------------------------------------------关于我们样式开始---------------------------------------------------
+
+.about_lt
+  width: 200px
+  border: 1px solid #e0e0e0
+  background: #f5f5f5
+  margin-right: -1px
+  min-height: 500px
+  ul li
+    text-align: center
+    line-height: 40px
+    border-bottom: 1px solid #e0e0e0
+    a
+      font-size: 16px
+      border-left: 4px solid #f5f5f5
+      display: block
+      &.current
+        background: #fff
+        border-left: 4px solid #fe7902
+        color: #fe7902
+      &:hover
+        text-decoration: none
+        color: #fe7902
+
+.about_rt
+  width: 797px
+  border: 1px solid #e0e0e0
+  background: #fbfbfb
+  min-height: 500px
+  h2
+    font-weight: bold
+    color: #666
+    border-bottom: 1px solid #e0e0e0
+    line-height: 40px
+  p
+    font-size: 14px
+    text-indent: 2em
+
+/*---------------------------------------------------关于我们样式结束---------------------------------------------------
+
+/*---------------------------------------------------帮助中心样式开始---------------------------------------------------
+
+.help_lt
+  width: 200px
+  background: #fff
+  border: 1px solid #e0e0e0
+
+.help_rt
+  width: 780px
+  border: 1px solid #e0e0e0
+  min-height: 500px
+  p
+    font-size: 14px
+    text-indent: 2em
+
+.help_lt h2
+  color: #fff
+  background: #fe7902
+  font-weight: bold
+  padding-left: 10px
+
+ul.help_list li
+  padding-left: 28px
+  &.title
+    padding-left: 10px
+    border-top: 1px solid #e0e0e0
+    border-bottom: 1px solid #e0e0e0
+    line-height: 32px
+    color: #333
+    font-size: 16px
+    background: #f8f8f8
+    span
+      margin-right: 5px
+  a
+    &.current, &:hover
+      color: #fe7902
+      text-decoration: none
+
+.help_list_ico
+  width: 10px
+  height: 10px
+  background-position: -152px -46px
+
+/*---------------------------------------------------帮助中心样式结束---------------------------------------------------
+
+/*---------------------------------------------------登录页面样式开始---------------------------------------------------
+
+.login_box
+  margin: 100px 0px
+  border: 1px solid #e0e0e0
+  box-shadow: 0px 0px 2px #ccc
+  padding: 35px
+
+.login_lt
+  border-right: 1px solid #e0e0e0
+  padding-right: 30px
+  width: 620px
+
+.login_box
+  h2
+    border-bottom: 1px solid #e0e0e0
+    overflow: hidden
+    line-height: 40px
+    margin-bottom: 30px
+  a:hover
+    color: #fe7902
+
+.login_rt
+  width: 250px
+
+.login_lt table td
+  &.title1
+    font-size: 14px
+    text-align: right
+    width: 60px
+    padding-right: 10px
+  &.middle
+    width: 280px
+  height: 50px
+  p
+    &.input
+      line-height: 34px
+      border: 1px solid #e0e0e0
+      height: 34px
+      width: 280px
+      padding: 0px
+    &.short
+      width: 150px
+    input
+      border: none
+      &.text
+        width: 230px
+      &.short
+        width: 90px
+  span
+    &.ico_list
+      width: 42px
+      height: 34px
+      border-right: 1px solid #e0e0e0
+      margin-left: 0px
+      vertical-align: top
+    &.username_ico
+      background-position: -51px -82px
+    &.password_ico
+      background-position: -94px -82px
+    &.yanzheng_ico
+      background-position: -137px -82px
+  .btn
+    width: 150px
+    height: 35px
+    background: #063f98
+    border: none
+    font-size: 16px
+
+.login_rt
+  h3
+    border-top: 1px solid #e0e0e0
+    margin-top: 20px
+    overflow: hidden
+    line-height: 40px
+  a
+    &.ico_list
+      width: 140px
+      height: 32px
+      margin: 5px 0px
+    &.weibo_login
+      background-position: -301px 0px
+    &.qq_login
+      background-position: -301px -32px
+
+/*---------------------------------------------------登录页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------注册类型页面样式开始---------------------------------------------------
+
+.register_one
+  width: 930px
+  height: 36px
+  background-position: 0px -45px
+  margin-bottom: 20px
+
+.register_two
+  width: 930px
+  height: 36px
+  background-position: 0px -82px
+  margin-bottom: 20px
+
+ul.register_list
+  overflow: hidden
+  li
+    float: left
+    margin: 0px 0px 15px 15px
+    padding: 10px
+    border: 1px solid #e0e0e0
+    width: 277px
+    p.tit
+      font-size: 16px
+      margin-bottom: 5px
+    a.btn
+      margin-top: 5px
+      line-height: 30px
+      &:hover
+        color: #fff
+    &.first
+      margin-left: 0px
+    a.shangjia_btn
+      background: #41b5ff
+
+/*---------------------------------------------------注册类型页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------注册页面样式开始---------------------------------------------------
+
+.register_rt p
+  &.title1
+    font-size: 16px
+    line-height: 35px
+  &.lei
+    font-size: 16px
+    a
+      color: #3572b1
+      font-size: 12px
+      margin-left: 20px
+
+.register_form table td p input
+  &.text
+    width: 270px
+  &.short
+    width: 190px
+
+/*---------------------------------------------------注册页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------设计师详情页样式开始---------------------------------------------------
+/*头部样式开始
+
+.sub_designer_top
+  border-bottom: 2px solid #dddbdb
+  padding-bottom: 10px
+  img.pic
+    border: 4px solid #d7cfcf
+    width: 130px
+    height: 130px
+
+.sub_designer_top_lt
+  margin-left: 10px
+  font-size: 14px
+  h1 span
+    font-size: 14px
+    margin-left: 20px
+  p
+    margin-bottom: 5px
+    &.list span
+      margin-right: 20px
+    a
+      margin-right: 20px
+      &.btn
+        width: 65px
+        height: 26px
+        background: #fe7902
+        border-radius: 0px
+        line-height: 26px
+        font-size: 12px
+
+.sub_designer_top_rt
+  background: #f8f8f8
+  border: 2px solid #ebebeb
+  padding: 5px 10px
+  margin-top: 20px
+  p
+    &.title
+      text-align: center
+      font-size: 14px
+      font-weight: bold
+    line-height: 20px
+
+/*头部样式结束
+
+/*下面详情介绍样式开始
+
+.sub_designer_lt
+  width: 780px
+
+.sub_designer_rt
+  width: 200px
+
+.designer_nav li
+  float: left
+  margin-right: 10px
+  a
+    margin-bottom: -1px
+    background: #f8f8f8
+    display: inline-block
+    line-height: 34px
+    height: 34px
+    width: 90px
+    text-align: center
+    font-size: 16px
+    font-weight: bold
+    border: 1px solid #e0e0e0
+    &.current
+      border-bottom: 1px solid #fff
+      background: #fff
+
+.sub_designer
+  p.title
+    border-bottom: 1px solid #e0e0e0
+    overflow: hidden
+    margin-bottom: 10px
+    font-size: 16px
+    color: #333
+    a
+      font-size: 12px
+  span.de_list
+    width: 7px
+    height: 10px
+    background-position: -15px -105px
+
+.designer_inrto p span
+  width: 50%
+  display: inline-block
+
+ul
+  &.designer_case
+    overflow: hidden
+    li
+      .case_aterfall_li
+        margin: 0px 0px 10px 20px
+        width: 230px
+        box-shadow: none
+      &.first .case_aterfall_li
+        margin-left: 0px
+      a.pic img
+        width: 230px
+        height: 172px
+  &.news li
+    overflow: hidden
+    border-bottom: 1px dashed #e0e0e0
+    line-height: 35px
+    a
+      font-size: 14px
+    span.rt
+      color: #999
+
+.news_ico
+  width: 4px
+  height: 4px
+  background-position: -30px -105px
+  margin-right: 5px
+
+/*.disigner_pinglun ul li p{ width:700px;}
+
+.pingjia_box
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+  h3
+    border-bottom: 1px solid #e0e0e0
+  span.pf
+    width: 30%
+    display: inline-block
+    margin: 10px 0px
+
+.de_news_tit
+  text-align: center
+
+/*下面详情介绍样式结束
+/*---------------------------------------------------设计师详情页样式结束---------------------------------------------------
+
+/*---------------------------------------------------找工长详情页样式开始---------------------------------------------------
+
+.foreman_site span
+  display: inline-block
+  width: 19.9%
+  text-align: center
+  line-height: 35px
+
+.foreman_site_tit span
+  background: #ddd
+  border-bottom: 3px solid #eee
+
+.foreman_site_box ul li
+  border-bottom: 1px dashed #e0e0e0
+  &:hover
+    background: #f8f8f8
+  a:hover
+    color: #fe7902
+    text-decoration: underline
+
+.foreman_rz
+  width: 16px
+  height: 20px
+  background-position: -180px -75px
+
+.foreman_bz
+  width: 16px
+  height: 20px
+  background-position: -197px -75px
+
+.sub_designer_top_lt span.fr_span
+  color: #666
+  font-size: 12px
+  margin-left: 10px
+
+/*---------------------------------------------------找工长详情页样式结束---------------------------------------------------
+
+/*---------------------------------------------------活动专题页样式开始---------------------------------------------------
+
+.aczt_banner
+  height: 350px
+  margin: 0px auto 2px auto
+  text-align: center
+  overflow: hidden
+
+.aczt_nav
+  width: 998px
+  z-index: 100
+  background: url(acti_navbg.jpg) repeat-x
+  height: 38px
+  border: 1px solid #cd6909
+  overflow: hidden
+  ul li
+    float: left
+    a
+      display: inline-block
+      padding: 0px 20px
+      line-height: 38px
+      color: #fff
+      font-size: 16px
+
+.aczt_top a.pic img
+  width: 320px
+  height: 240px
+  border: 1px solid #e0e0e0
+
+.aczt_list_rt
+  width: 64%
+  border: 1px solid #e0e0e0
+  height: 225px
+  p
+    font-size: 14px
+    line-height: 30px
+
+.aczt_box h2
+  background: #fe8b24
+  color: #fff
+  padding-left: 10px
+  a
+    color: #fff
+
+.btn_over_tuan
+  width: 130px
+  line-height: 36px
+  background: #aaa
+  font-size: 18px
+  border: 1px solid #bbb
+
+.aczt_box_ct
+  border: 2px solid #fe8b24
+  border-top-color: #cf6302
+
+.aczt_list_box
+  border: 1px solid #e0e0e0
+  float: left
+  margin-right: 15px
+  height: 240px
+
+.aczt_left_box
+  background: #f6e9cf
+  border: 3px solid #925a03
+  height: 236px
+  padding: 0px 10px
+  width: 296px
+
+.aczt_right_box
+  margin: 0px
+  float: right
+
+.aczt_left_box
+  h1
+    color: #6a4000
+    margin-bottom: 5px
+  table
+    width: 100%
+    input.text
+      width: 95%
+      text-align: left
+    tr
+      line-height: 45px
+      #pass-verify
+        margin-top: 6px
+        height: 32px
+    td.title
+      font-size: 14px
+      width: 80px
+    input
+      &.btn
+        width: 120px
+        height: 36px
+        border: none
+        background: #fe9705
+        font-size: 16px
+        border-radius: 0px
+        margin-top: 5px
+      &.gray_btn
+        background: #aaa
+        color: #fff
+
+.aczt_middle_box
+  background: #f8f8f8
+  width: 325px
+  h2
+    padding-left: 10px
+  p.tit
+    background: #e7e5e5
+    span
+      display: inline-block
+      width: 33%
+      text-align: center
+      line-height: 35px
+
+.aczt_table
+  height: 170px
+  overflow: hidden
+  ul li span
+    display: inline-block
+    width: 33%
+    text-align: center
+    line-height: 32px
+
+/*---------------------------------------------------活动专题页页样式结束---------------------------------------------------
+
+/*---------------------------------------------------学装修样式开始---------------------------------------------------
+
+.xue_lunz
+  width: 280px
+  height: 340px
+  overflow: hidden
+
+.content_top
+  margin-left: 20px
+  width: 610px
+
+.xue_ad
+  width: 250px
+  height: 340px
+  overflow: hidden
+
+.content_top_list
+  height: 160px
+  overflow: hidden
+  ul li
+    width: 300px
+    float: left
+    margin-right: 5px
+
+ul.content_top_t
+  height: 180px
+
+.content_liucheng li
+  padding: 5px 10px
+  background: #f8f8f8
+  width: 260px
+  height: 110px
+  border-bottom: 1px solid #e0e0e0
+  border-right: 1px solid #e0e0e0
+  &.last
+    border-bottom: none
+
+.article_list a
+  line-height: 24px
+  text-align: center
+  display: inline-block
+  background: #fff
+  border: 1px solid #e0e0e0
+  float: left
+  &:hover, &.current
+    color: #fff
+    background: #fe7902
+    text-decoration: none
+    border: 1px solid #d86100
+
+.content_liucheng a
+  width: 48px
+  margin: 8px 15px 0px 0px
+
+.content_liuc_list
+  padding: 10px
+  float: left
+
+.study_list_img
+  width: 200px
+  height: 150px
+  img
+    width: 200px
+    height: 150px
+
+.content_liuc_list .opacity_img
+  margin-right: 8px
+
+.content_liuc_title
+  float: left
+  width: 230px
+  overflow: hidden
+  p.title
+    border-bottom: 1px solid #e0e0e0
+    span
+      display: inline-block
+      background: #999
+      color: #fff
+      padding: 0px 5px
+
+/*---------------------------------------------------学装修样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修学堂样式开始---------------------------------------------------
+
+.cont_item_rt
+  background: #f8f8f8
+  ul li
+    overflow: hidden
+    a
+      padding: 0px 8px
+      margin: 5px 15px 5px 0px
+
+.shu_ico
+  width: 4px
+  height: 16px
+  background-position: -180px -97px
+  margin-right: 5px
+
+.cont_item_title
+  a
+    padding: 0px 8px
+    margin: 5px 15px 5px 0px
+  p
+    overflow: hidden
+    padding: 5px
+  .cont_item_ico
+    width: 11px
+    height: 15px
+    background-position: -185px -95px
+    margin: 0px 5px
+
+.cont_item_ul
+  margin: 10px 0px
+  li
+    margin: 10px 0px
+    border-bottom: 1px dashed #e0e0e0
+    overflow: hidden
+    padding-bottom: 10px
+    img
+      width: 160px
+      height: 120px
+    h2 a:hover
+      color: #fe7902
+
+.cont_item_text
+  width: 80%
+
+/*---------------------------------------------------装修学堂样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修学堂详情页样式开始---------------------------------------------------
+
+.article_box
+  h1
+    text-align: center
+  p.tp
+    margin: 10px 0px
+  .daoyu
+    padding: 10px
+    font-size: 14px
+
+.article_box_text
+  width: 100%
+  margin-top: 10px
+  font-size: 14px
+  text-indent: 2em
+
+p.img
+  text-align: center
+  margin: 10px auto
+
+.article_box_bottom
+  overflow: hidden
+  p.tp
+    overflow: hidden
+    border-bottom: 2px solid #e0e0e0
+    a:hover
+      color: #02B980
+
+.ari_xg_tui
+  width: 100%
+  li
+    float: left
+    width: 50%
+    line-height: 30px
+    height: 30px
+    overflow: hidden
+
+/*---------------------------------------------------装修学堂详情页样式结束---------------------------------------------------
+
+/*---------------------------------------------------知识问答样式开始---------------------------------------------------
+/*左边样式开始
+
+.question_box
+  background: #fc9130
+  padding: 15px 20px
+  color: #fff
+  font-size: 14px
+  h2
+    color: #fff
+  textarea
+    width: 99%
+    height: 100px
+    &.qu_tit
+      height: 30px
+    &.buc
+      margin: 0px
+  .btn
+    border: 1px solid #ddd
+    background: #f0f0f0
+    width: 110px
+    height: 34px
+    font-size: 16px
+    color: #333
+    &:hover
+      opacity: 1
+
+.question_fenlei
+  h3
+    color: #fc9130
+  a
+    margin: 5px 10px 0px 0px
+
+.question_show
+  width: 660px
+
+.question_list li
+  border-bottom: 1px dashed #e0e0e0
+  overflow: hidden
+  line-height: 34px
+  a
+    font-size: 14px
+
+.over_qe
+  width: 15px
+  height: 15px
+  background-position: -245px -75px
+
+.no_qe
+  width: 12px
+  height: 16px
+  background-position: -260px -75px
+
+/*左边样式结束
+
+/*右边样式开始
+
+.qu_choose
+  border: 1px solid #e0e0e0
+  background: #f2f2f2
+  padding: 14px 50px
+  a
+    width: 100%
+    line-height: 38px
+    margin: 8px 0px
+    font-size: 16px
+    &.huida
+      background: #02B980
+    &.tiwen
+      background: #fe7902
+  p
+    padding: 0px 10px
+  span.ico_list
+    width: 30px
+    height: 30px
+    background-position: -215px -75px
+    margin: 10px 5px 0px 0px
+
+/*右边样式结束
+/*---------------------------------------------------知识问答样式结束---------------------------------------------------
+
+/*---------------------------------------------------知识问答-我要提问页面样式开始---------------------------------------------------
+
+.question_box_zhu
+  margin-bottom: 100px
+  p.add_tu
+    background: #f8f8f8
+    width: 99.7%
+    line-height: 32px
+    a
+      padding: 0px 5px
+      border-right: 1px solid #e0e0e0
+      display: inline-block
+      height: 32px
+
+.add_pic
+  width: 16px
+  height: 15px
+  background-position: -273px -75px
+
+/*---------------------------------------------------知识问答-我要提问页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------知识问答-我要回答页面样式开始---------------------------------------------------
+
+.nd_answer a
+  font-size: 16px
+  font-weight: bold
+  margin-right: 30px
+  &.current
+    color: #fe7902
+
+.nd_answer_list a
+  margin: 5px 10px 5px 0px
+  padding: 0px 8px
+
+.qe_fenlei
+  overflow: hidden
+  li
+    float: left
+    margin-right: 10px
+    a
+      display: inline-block
+      width: 100px
+      height: 35px
+      line-height: 35px
+      font-size: 16px
+      background: #eeeeee
+      text-align: center
+      &.current
+        background: #fe7902
+        color: #fff
+
+.question_list p.rt span
+  min-width: 0px
+  display: inline-block
+
+/*---------------------------------------------------知识问答-我要回答页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------知识问答-待回答问题页面样式开始---------------------------------------------------
+
+.qita_question
+  border-bottom: 1px solid #e0e0e0
+
+.huida_box
+  background: #f3f3f3
+  h2
+    color: #333
+  .btn
+    background: #eee
+    border: 1px solid #ddd
+
+.color_qu
+  width: 15px
+  height: 28px
+  background-position: -290px -75px
+
+.over_qu
+  width: 25px
+  height: 25px
+  background-position: -180px -120px
+
+.question_top
+  padding: 10px 20px
+  p
+    line-height: 30px
+  label
+    margin-right: 30px
+  p.buc_tit
+    font-size: 16px
+    color: #333
+    span.rt
+      font-size: 12px
+      color: #999
+
+.qu_buchong
+  background: #fef9ca
+  h2
+    color: #fe7902
+  .btn
+    color: #fff
+    background: #fe8920
+    border: 1px solid #fd7903
+
+/*---------------------------------------------------知识问答-待回答问题页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------知识问答-已回答问题页面样式开始---------------------------------------------------
+
+.knows_box
+  position: relative
+  padding: 10px 20px
+
+.caina_ico
+  width: 36px
+  height: 51px
+  background-position: -308px -69px
+  position: absolute
+  left: 20px
+  top: 0px
+
+.knows_box
+  h2
+    margin-left: 45px
+    span.rt
+      font-size: 12px
+  p.tit
+    margin-top: 10px
+    border-top: 1px solid #e0e0e0
+    padding-top: 10px
+    span
+      margin-left: 10px
+      color: #2c67b0
+
+/*---------------------------------------------------知识问答-已回答问题页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修日记页面样式开始---------------------------------------------------
+
+.main_diary_rt
+  width: 75%
+
+.main_diary_sub_rt
+  width: 90%
+
+.main_diary_rt p
+  line-height: 30px
+  &.title
+    line-height: 30px
+    a, font.tit
+      font-size: 16px
+      color: #333
+
+.main_diary_sub_rt p.title font.tit
+  font-size: 16px
+  color: #333
+
+.main_diary_rt p.title
+  a:hover
+    color: #fe7902
+  label
+    min-width: 80px
+    display: inline-block
+    vertical-align: right
+
+.main_diary_sub_rt p.sp_list span
+  width: 25%
+  display: inline-block
+
+.main_diary_rt p.sp_list span
+  width: 49%
+  display: inline-block
+
+.dy_liulan
+  width: 12px
+  height: 10px
+  background-position: -245px -97px
+
+.dy_pinglun
+  width: 12px
+  height: 12px
+  background-position: -261px -97px
+
+.main_diary_sub div.lt a img
+  width: 65px
+  height: 65px
+
+.main_diary div.lt
+  margin-top: 8px
+  p
+    text-align: center
+  img
+    width: 210px
+    height: 140px
+
+.diary_btn
+  text-align: center
+  line-height: 34px
+  background: #fe7902
+  a
+    display: block
+    font-size: 18px
+
+.write_ico
+  width: 21px
+  height: 22px
+  background-position: -30px 0px
+
+/*---------------------------------------------------装修日记页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------小区楼盘详情页面样式开始---------------------------------------------------
+/*头部导航样式开始
+
+.home_top span
+  &.lt font
+    margin-left: 20px
+    font-size: 14px
+    color: #666
+  &.rt
+    font-size: 18px
+
+.home_nav
+  background: #f8f8f8
+  border-top: 3px solid #02B980
+  height: 35px
+  line-height: 35px
+  border-bottom: 1px solid #e0e0e0
+  a
+    display: inline-block
+    padding: 0px 20px
+    font-size: 16px
+    margin-right: 2px
+    &.current, &:hover
+      background: #02B980
+      color: #fff
+
+/*头部导航样式结束
+
+/*左边详情样式开始
+
+.sub_home_lt
+  width: 730px
+
+.home_index_top
+  .pic
+    width: 300px
+    height: 225px
+  div.rt
+    width: 55%
+    p
+      font-size: 14px
+      line-height: 30px
+
+.home_box
+  border-top: 2px solid #02B980
+
+.home_title a
+  font-size: 12px
+  height: 20px
+  margin-top: 5px
+
+ul.home_design
+  a.pic img
+    width: 250px
+    height: 180px
+  li
+    border-bottom: 1px solid #e0e0e0
+  div.rt
+    width: 62%
+    line-height: 30px
+    h3
+      a
+        color: #333
+      span.rt
+        font-size: 12px
+    p.bottom a.fontcl1
+      text-decoration: underline
+      margin-right: 20px
+  a
+    &.fontcl1:hover
+      color: #02B980
+      opacity: 0.7
+    &.fontcl2:hover
+      color: #fe7902
+
+.home_pic_list li
+  img
+    width: 220px
+    height: 165px
+  .opacity_img
+    width: 220px
+    height: 165px
+    p.text
+      text-align: center
+  float: left
+  margin: 0px 8px 10px 8px
+
+/*左边详情样式结束
+
+/*其它小区楼盘详情页样式开始
+
+.home_site
+  width: 68%
+  p
+    line-height: 28px
+    &.bottom
+      font-size: 14px
+      font.colorbg
+        display: inline-block
+        padding: 0px 5px
+
+.home_company
+  div.rt
+    width: 76%
+    font-size: 14px
+    .btn
+      margin-left: 5px
+  a.pic img
+    width: 150px
+    height: 75px
+    border: 1px solid #e0e0e0
+  h2
+    margin-bottom: 10px
+
+.home_design_fl a
+  font-size: 14px
+  color: #02B980
+  margin: 0px 15px
+
+/*其它小区楼盘详情页样式结束
+/*---------------------------------------------------小区楼盘详情页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------家居商城首页页面样式开始---------------------------------------------------
+/*头部样式开始
+
+.mall_top
+  width: 200px
+  border: 1px solid #e0e0e0
+  border-top: 2px solid #02B980
+  z-index: 9
+  ul li
+    border-bottom: 1px solid #e0e0e0
+    z-index: 20
+    position: relative
+    &.last
+      border-bottom: none
+    a
+      margin-right: 20px
+      display: inline-block
+
+.mall_top_show
+  width: 177px
+  height: 56px
+  z-index: 11
+  border: 1px solid #f8f8f8
+  border-left-width: 2px
+  border-right: none
+  background: #f8f8f8
+  &.current
+    background: #fff
+    border-color: #fe7902
+    width: 179px
+
+.mall_top_hidden
+  display: none
+  position: absolute
+  left: 200px
+  top: 0px
+  width: 500px
+  background: #fff
+  z-index: -1
+  border: 1px solid #fe7902
+  td
+    vertical-align: top
+    border-bottom: 1px solid #e0e0e0
+    padding: 10px 0px
+    &.tit
+      width: 80px
+
+.mall_banner
+  width: 980px
+
+.mall_banner_top
+  width: 980px
+  height: 250px
+  overflow: hidden
+  margin-bottom: 5px
+
+.mall_banner_bt_rt
+  background: #f8f8f8
+  border: 1px solid #e0e0e0
+  width: 175px
+  padding: 15px 10px
+  p
+    text-align: center
+  .btn
+    margin: 8px 0px
+
+.mall_banner_bt_lt
+  position: relative
+  a
+    &.prev, &.next
+      position: absolute
+      top: 40px
+      display: none
+      width: 40px
+      height: 50px
+      background: url(sp-slide.png) no-repeat
+    &.prev
+      left: 0px
+      background-position: 0px 0px
+    &.next
+      right: 3px
+      background-position: -40px 0px
+
+.mall_banner_bt_lt_ul
+  position: relative
+  width: 778px
+  overflow: hidden
+  height: 140px
+  ul
+    position: absolute
+    top: 0px
+    width: 2000px
+    left: 0px
+    li
+      float: left
+      margin-right: 5px
+
+/*头部样式结束
+
+/*分类列表样式开始
+
+.mall_list h2 a
+  font-size: 12px
+  margin-top: 5px
+  height: 20px
+
+.mall_box
+  border-top: 2px solid #02B980
+  height: 540px
+  overflow: hidden
+
+.mall_ad
+  width: 200px
+  img
+    width: 200px
+    height: 270px
+
+.mall_ul
+  a.pic img
+    width: 230px
+    height: 175px
+  width: 998px
+  li
+    margin: 0px 0px 10px 10px
+    float: left
+    height: 253px
+    overflow: hidden
+    width: 230px
+    p
+      &.sp
+        height: 52px
+        overflow: hidden
+      &.price
+        b.fontcl2
+          font-size: 14px
+          margin-right: 10px
+        span
+          text-decoration: line-through
+
+/*分类列表样式结束
+/*---------------------------------------------------家居商城首页页面样式结束---------------------------------------------------
+
+/*---------------------------------------------------家居商城-商家列表样式开始---------------------------------------------------
+
+.side_mall_ul
+  width: auto
+  li
+    float: none
+    margin: 0px 0px 10px 0px
+    border-bottom: 1px solid #e0e0e0
+
+.mall_option
+  padding: 5px 10px
+  background: #f8f8f8
+  a
+    display: inline-block
+    padding: 0px 10px
+    margin: 0px 10px
+    color: #333
+    font-size: 14px
+    &.current
+      border: 1px solid #fe7902
+      color: #fe7902
+      background: #fff
+
+.sort_list span.rt a font
+  &.sj_on
+    background-position: -345px -75px
+  &.sj_over
+    background-position: -360px -75px
+
+.main_mall a.pic img
+  width: 200px
+  height: 100px
+  border: 1px solid #e0e0e0
+
+.main_mall_rt
+  width: 75%
+  h3 span.rt
+    font-size: 12px
+    line-height: 20px
+    margin-top: 10px
+  div
+    &.lt p
+      line-height: 26px
+      span
+        margin-right: 10px
+    &.rt .btn
+      margin-top: 40px
+
+.side_shop_ul li
+  height: auto
+  width: 180px
+
+/*---------------------------------------------------家居商城-商家列表样式结束---------------------------------------------------
+
+/*---------------------------------------------------家居商城-商品列表样式开始---------------------------------------------------
+
+.mall_sub_fl
+  background: #f8f8f8
+  margin: 5px 0px 10px 0px
+  padding: 0px 10px
+  border: 1px dashed #e0e0e0
+
+.mall_sub_ul li
+  float: left
+  margin: 10px 7px
+  width: 210px
+  a.pic img
+    width: 210px
+    height: 150px
+  p.price
+    b.fontcl2
+      font-size: 14px
+      margin-right: 10px
+    span
+      text-decoration: line-through
+
+/*---------------------------------------------------家居商城-商品列表样式结束---------------------------------------------------
+
+/*---------------------------------------------------手机端样式开始---------------------------------------------------
+
+.app_banner
+  background: url(phone_banner.jpg) center top no-repeat
+  height: 500px
+
+.app_banner_btn
+  padding: 248px 0px 0px 630px
+
+.app_btn
+  background: url(app_btn.png) no-repeat
+  width: 304px
+  height: 85px
+
+.app_banner_btn
+  img
+    width: 80px
+    height: 80px
+    margin-left: 25px
+  p.tp
+    margin-bottom: 25px
+
+.app_andr
+  background-position: 0px -85px
+
+.app_content
+  padding: 50px 200px
+  div
+    &.lt img
+      width: 255px
+      height: 255px
+    &.rt
+      width: 60%
+      font-size: 16px
+      p.pointcl
+        margin-bottom: 10px
+
+/*---------------------------------------------------手机端样式结束---------------------------------------------------
+
+/*---------------------------------------------------切换城市样式开始---------------------------------------------------
+
+.city_content
+  margin-top: 20px
+
+.city_top
+  background: #f8f8f8
+  text-align: center
+  padding: 10px
+  .btn
+    width: 260px
+    height: 48px
+    line-height: 48px
+    font-size: 20px
+    background: #02B980
+    border-radius: 25px
+
+.city_ico
+  width: 13px
+  height: 15px
+  background-position: -380px -75px
+  margin-right: 10px
+
+.city_chose p
+  font-size: 14px
+  margin: 10px 0px
+  span.title
+    font-size: 16px
+    color: #333
+
+p.hot_city a
+  color: #fe7902
+  font-size: 14px
+  margin: 0px 15px
+
+.city_chose select.text
+  width: 100px
+
+.pinyin_px
+  background: #f8f8f8
+  border-top: 1px solid #e0e0e0
+  border-bottom: 1px solid #e0e0e0
+  span.lt
+    font-size: 18px
+    color: #333
+  p.rt a
+    display: inline-block
+    margin: 0px 5px
+    font-size: 14px
+    height: 20px
+    line-height: 20px
+    padding: 0px 5px
+    &.current, &:hover
+      color: #fff
+      background: #02B980
+
+.city_liebiao table
+  td.tit
+    width: 60px
+    vertical-align: top
+    font-weight: bold
+  a
+    margin-right: 25px
+    display: inline-block
+    float: left
+    overflow: hidden
+    &.current
+      color: #fe7902
+      font-weight: bold
+
+/*---------------------------------------------------切换城市样式结束---------------------------------------------------
+
+/*---------------------------------------------------装修宝样式开始---------------------------------------------------
+/*装修宝banner样式开始
+
+.grid
+  width: 1100px
+  margin: 0px auto
+
+.fuwubao-banner-wrap
+  position: relative
+  height: 518px
+  .banner-item
+    position: absolute
+    font-size: 18px
+    color: #ebebeb
+    width: 350px
+    .shadow
+      float: left
+    .dot
+      display: inline-block
+      width: 17px
+      height: 17px
+      border-radius: 20px
+      background: #b7f8cc
+      margin-right: 10px
+    .list
+      list-style: none
+      margin: 0
+      font-size: 12px
+      color: #fff
+      position: relative
+      font-weight: normal
+      em
+        width: 5px
+        height: 5px
+        background: #f9d905
+        border-radius: 5px
+        display: inline-block
+        margin-right: 6px
+  .banner-font
+    padding-left: 50px
+    cursor: pointer
+  .banner-item-01
+    left: 498px
+    top: 70px
+  .banner-item-01-hover
+    left: 488px
+    top: 61px
+  .banner-item-02
+    left: 586px
+    top: 154px
+  .banner-item-02-hover
+    left: 576px
+    top: 146px
+  .banner-item-hover
+    font-size: 22px
+    font-weight: bold
+    .shadow
+      display: inline-block
+      width: 39px
+      height: 39px
+      line-height: 39px
+      background: rgba(249, 217, 5, 0.54)
+      border-radius: 20px
+      text-align: center
+      margin-right: 10px
+      i
+        width: 29px
+        height: 29px
+        background: #f9d905
+        left: 5px
+        top: 5px
+        position: absolute
+    .text
+      position: relative
+  .banner-item-03
+    left: 610px
+    top: 259px
+  .banner-item-03-hover
+    left: 598px
+    top: 250px
+  .banner-item-04
+    left: 578px
+    top: 349px
+  .banner-item-04-hover
+    left: 569px
+    top: 339px
+  .banner-item-05
+    left: 489px
+    top: 427px
+  .banner-item-05-hover
+    left: 477px
+    top: 419px
+
+.fwb
+  font-family: "微软雅黑"
+  min-width: 1100px
+
+.circle
+  position: absolute
+  display: inline-block
+  width: 394px
+  height: 394px
+  left: 246px
+  top: 61px
+  background: url(circle.png) no-repeat
+  -moz-transform-origin: 45% 50%
+  -webkit-transform-origin: 45% 50%
+  -ms-transform-origin: 45% 50%
+  -webkit-transition-property: -webkit-transform
+  -moz-transition-property: -moz-transform
+  -webkit-animation: rotate 4s linear infinite
+  -moz-animation: rotate 4s linear infinite
+  -o-animation: rotate 4s linear infinite
+  animation: rotate 4s linear infinite
+
+/*装修宝banner样式结束
+
+.bao_banner
+  width: 100%
+  height: 520px
+  background: #23a361 url(bao_banner.jpg) top center no-repeat
+
+.bao_bg
+  background: #eef3f6
+
+h1.bao_title
+  color: #0da54f
+  font-weight: bold
+  text-align: center
+
+.bao_part1_top
+  padding: 10px 20px
+
+.bao_part1_top_lt
+  width: 45%
+  padding-right: 5%
+  border-right: 1px solid #e0e0e0
+  font-size: 14px
+
+.bao_part1_top_rt
+  width: 45%
+  h2
+    margin: 13px 0px
+    overflow: hidden
+  b.rt
+    color: #0da54f
+
+p.bao_fg
+  padding: 5px 0px
+  text-align: center
+
+.bao_part1_ul
+  li
+    padding: 20px 1%
+    width: 30%
+    float: left
+  span
+    &.bao_part1_ico
+      display: inline-block
+      width: 97px
+      height: 97px
+      background: url(bao_pic1.jpg) no-repeat
+    &.ico2
+      background-position: -98px 0px
+    &.ico3
+      background-position: -196px 0px
+  p
+    &.tit
+      font-size: 16px
+      margin: 20px 0px 0px 10px
+    margin-left: 10px
+    font-weight: bold
+
+.bao_floor
+  background: url(bao_ico.jpg) left center no-repeat
+  height: 60px
+  padding-left: 20px
+
+.bao_part2_top
+  padding: 20px 0px
+  ul li
+    width: 330px
+    margin-right: 105px
+    float: left
+    &.last
+      margin-right: 0px
+      float: right
+
+.bao_xieyi
+  li
+    float: left
+    padding: 20px 0px
+    width: 400px
+  div
+    &.lt p
+      font-size: 50px
+      line-height: 50px
+      color: #dddddd
+    &.rt
+      padding-left: 20px
+      border-left: 1px solid #e0e0e0
+      width: 85%
+
+.bao_part3
+  padding: 30px 0px
+  ul
+    margin-left: 130px
+    li
+      float: left
+      width: 200px
+      text-align: center
+      p
+        width: 150px
+
+.bao_part4_list li
+  width: 190px
+  padding: 10px 100px
+  margin: 20px 0px
+  border-right: 1px solid #e0e0e0
+  text-align: center
+  font-size: 14px
+  float: left
+  &.last
+    border: none
+  p.tp
+    background: url(bao_titbg.jpg) no-repeat
+    height: 55px
+    font-size: 18px
+    color: #0da54f
+    line-height: 40px
+  .pt4_ico
+    background: url(bao_ico1.jpg) no-repeat
+    width: 60px
+    height: 60px
+    text-align: center
+    margin: 5px auto
+  .ico2
+    background-position: -61px 0px
+  .ico3
+    background-position: -122px 0px
+
+.bao_bfb
+  padding: 30px 0px
+  overflow: hidden
+  li
+    float: left
+    width: 200px
+    padding: 0px 100px
+    text-align: center
+    h2
+      background: #0da54f
+      border-radius: 5px
+      color: #fff
+      font-size: 26px
+      margin-top: 10px
+      font-weight: bold
+      height: 50px
+      line-height: 50px
+
+.bao_youshi
+  padding: 30px 0px
+  p.ct
+    text-align: center
+    padding: 20px 0px
+  ul
+    width: 49%
+    font-size: 14px
+    li
+      line-height: 40px
+    font
+      font-size: 18px
+    &.lt
+      text-align: right
+      padding-right: 1%
+      border-right: 3px dashed #ccc
+    &.rt
+      text-align: left
+      p
+        color: #999
+      font
+        color: #666
+
+.bao_bottom
+  width: 100%
+  background: url(bao_bottom_bg.png) repeat-x
+  height: 420px
+
+.bao_bottom_sq
+  width: 630px
+  margin: 0px auto
+  form
+    width: 400px
+    margin: 0px auto
+    .text
+      width: 98%
+      margin: 6px 0px
+      border: 1px solid #bab9b9
+    textarea
+      height: 100px
+    .short
+      width: 65%
+    img
+      margin-top: 5px
+    .btn
+      color: #fff
+      background: #333333
+      line-height: 40px
+      font-size: 18px
+      border: none
+      width: 100%
+      margin: 10px 0px
+      border-radius: 0px
+
+/*悬浮层样式开始
+
+.bao_xuanfu
+  width: 100%
+  height: 70px
+  background: #444
+  position: fixed
+  left: 0px
+  top: 0px
+  z-index: 100
+  display: none
+
+.xuanfu_nav li
+  float: left
+  margin-right: 1px
+  a
+    display: inline-block
+    height: 70px
+    line-height: 70px
+    padding: 0px 25px
+    font-size: 18px
+    color: #fff
+    &.current, &:hover
+      background: #333
+  &.last
+    float: right
+    border-left: 1px solid #666
+
+.bao_sq
+  width: 33px
+  height: 33px
+  background-position: -392px -73px
+  margin-right: 10px
+
+/*悬浮层样式结束
+/*---------------------------------------------------装修宝样式结束---------------------------------------------------
+
+/*---------------------------------------------------购物车样式开始---------------------------------------------------
+
+.shop_liuch
+  margin: 30px 0px
+  p
+    &.sp_liuch
+      width: 1000px
+      height: 30px
+      background: url(shop_liucheng.png) no-repeat
+    &.shop1
+      background-position: 0px 0px
+    &.shop2
+      background-position: 0px -30px
+    &.shop3
+      background-position: 0px -60px
+    &.shop4
+      background-position: 0px -90px
+    &.shop5
+      background-position: 0px -120px
+    &.shop6
+      background-position: 0px -150px
+    &.liuch_intro span
+      display: inline-block
+      width: 190px
+      text-align: center
+      font-size: 14px
+      margin-bottom: 5px
+      &.first, &.last
+        width: 120px
+      &.first
+        text-align: left
+      &.last
+        text-align: right
+
+table.shop_car
+  width: 100%
+  tr
+    td
+      border-bottom: 1px solid #e0e0e0
+      width: 14%
+      text-align: center
+      &.first
+        width: 30%
+    &.title td
+      background: #f8f8f8
+      font-size: 14px
+      &.first
+        text-align: center
+    td
+      &.first
+        text-align: left
+        padding: 5px
+        img
+          width: 60px
+          height: 60px
+        p.rt
+          width: 75%
+      &.two
+        border-left: 1px solid #e0e0e0
+        font-size: 14px
+        vertical-align: top
+
+p.buy_count
+  margin-left: 30px
+  a
+    display: inline-block
+    float: left
+    width: 22px
+    height: 22px
+    line-height: 20px
+    text-align: center
+    color: #888
+    text-decoration: none
+    font-size: 18px
+    background: #efefef
+    border: 1px solid #e0e0e0
+    &:hover
+      opacity: 0.8
+    &.jian
+      line-height: 4px
+
+.buy_count_text
+  float: left
+  width: 36px
+  height: 22px
+  border: 1px solid #e0e0e0
+  line-height: 20px
+  text-align: center
+  font-size: 12px
+
+.goods_intro p .btn
+  margin-top: 10px
+
+table.shop_car tr.last td
+  padding: 10px
+  font-size: 14px
+  p.rt span
+    margin-right: 30px
+
+.gray_btn
+  background: url(gray_btn.png) repeat-x
+  width: 110px
+  border: 1px solid #e0e0e0
+  height: 36px
+  font-size: 16px
+  color: #666
+  line-height: 36px
+  &:hover
+    color: #333
+
+.receiv_infor
+  border: 1px solid #fe7902
+  table
+    width: 100%
+    td
+      padding: 5px 0px
+      font-size: 14px
+      &.title
+        width: 100px
+        text-align: right
+        padding-right: 10px
+        vertical-align: top
+      .all
+        width: 98%
+      .half
+        width: 50%
+    textarea
+      height: 80px
+
+.shop_order_su
+  border: 1px solid #fdf195
+  background: #fffdee
+  padding: 100px 120px
+  font-size: 14px
+  margin: 50px 0px
+
+.order_list
+  width: 40px
+  height: 40px
+  background-position: 0px -120px
+  margin-right: 10px
+
+.shop_order_su
+  p
+    margin: 20px 0px
+  h1 font
+    font-size: 16px
+    color: #666
+    a:hover
+      color: #fe7902
+  a.btn
+    margin-right: 20px
+
+.pay_list
+  width: 40px
+  height: 40px
+  background-position: -40px -120px
+
+.order_xiqing
+  font-size: 14px
+  line-height: 30px
+
+.order_apply
+  width: 32px
+  height: 40px
+  background-position: -80px -120px
+  margin-right: 10px
+
+.order_xiqing p.side_tit
+  text-align: center
+  padding: 5px 0px
+  font-size: 18px
+
+.shop_apply_top
+  margin: 50px 0px
+  border-top: 3px solid #80c15c
+  background: #eeffe5
+  p
+    width: 100%
+    font-size: 14px
+    font-weight: bold
+    line-height: 35px
+
+.shop_apply_bottom
+  margin: 50px 0px
+  border-top: 3px solid #54647f
+  background: #f8f8f8
+  padding: 40px 10px
+
+.shop_apply_bt_cont
+  border: 2px solid #b0c2e1
+  background: #fff
+  h2
+    border-bottom: 1px solid #e0e0e0
+
+.shop_apply_bottom p.bt
+  text-align: right
+  font-size: 14px
+
+.shop_apply_bt_cont
+  img
+    width: 135px
+    height: 45px
+    border: 1px solid #e0e0e0
+    &.current
+      border: 1px solid #fe7902
+  label
+    margin: 15px 10px
+    overflow: hidden
+    display: inline-block
+  input
+    margin-top: 20px
+    margin-right: 5px
+
+.shop_apply_bottom p b
+  margin-right: 20px
+
+/*---------------------------------------------------装修宝样式结束---------------------------------------------------
+
+/*---------------------------------------------------工具箱样式开始---------------------------------------------------
+
+.counter
+  padding: 10px 0px
+  input.text
+    width: 200px
+    margin: 4px 3px 4px 25px
+  select.text
+    width: 206px
+    margin: 4px 3px 4px 25px
+    height: 34px
+
+.counter_btn
+  margin: 10px auto
+  font-size: 16px
+  color: #333
+  background: #f8f8f8
+  border: 1px solid #f0f0f0
+  padding: 10px
+
+.again_btn
+  background: #eee
+  width: 80px
+  line-height: 22px
+  font-size: 14px
+  height: 28px
+  border: 1px solid #bbb
+  color: #666
+  &:hover
+    color: #666
+
+.counter_btn .btn
+  margin-left: 20px
+
+.counter_jieguo
+  margin-left: 50px
+  font-size: 14px
+  display: inline-block
+  input.text
+    margin-left: 0px
+    width: 100px
+
+.counter_btn span.jieguo
+  vertical-align: middle
+  width: 200px
+  display: inline-block
+  line-height: 30px
+  height: 30px
+  border: 1px solid #feb0b0
+  background: #fff
+  padding: 0px 5px
+
+.counter_menu li
+  margin: 8px 0px
+  span
+    display: inline-block
+    width: 32%
+  select.text
+    width: 112px
+    height: 34px
+
+.denge_bottom
+  label
+    width: 48%
+    display: inline-block
+    margin: 5px 0px
+    color: #666
+    input
+      width: 200px
+  p.ct
+    text-align: center
+
+.denge_form
+  p
+    text-indent: 0em
+    margin: 5px 0px
+    &.third
+      span
+        width: 30%
+        display: inline-block
+      input.text, select.text
+        width: 150px
+  input.text
+    width: 200px
+  select.text
+    width: 200px
+    height: 34px
+
+/*---------------------------------------------------工具箱样式结束---------------------------------------------------
+
+/*---------------------------------------------------招标详情样式开始---------------------------------------------------
+
+.tenters_detail_top
+  border-bottom: 1px solid #e0e0e0
+
+.tenters_de_top_lt
+  width: 72px
+  height: 58px
+  background-position: -370px -120px
+  text-align: center
+  p
+    color: #fff
+    font-size: 14px
+  span
+    color: #666
+    font-size: 16px
+  b
+    font-size: 18px
+
+.tenters_detail_top div.rt
+  width: 85%
+  padding-left: 2%
+  border-left: 1px dashed #bbb
+
+.tenters_de_intro
+  font-size: 14px
+  line-height: 30px
+
+.tenters_detail_top div.rt h2 span
+  font-size: 12px
+  color: #fff
+  text-align: center
+  width: 55px
+  height: 20px
+  line-height: 18px
+
+.tender_over
+  background-position: -205px -120px
+
+.tender_ing
+  background-position: -264px -120px
+
+.tenters_detail_top div.rt p span
+  margin-right: 30px
+
+.tender_tit a
+  height: 26px
+
+.tender_menu li
+  margin-top: 10px
+  background: #f8f8f8
+  border-top: 1px solid #e0e0e0
+  border-bottom: 1px solid #e0e0e0
+  position: relative
+
+.tender_de_com
+  border-bottom: 1px solid #e0e0e0
+  img.pic
+    border: 3px solid #ccc
+    width: 120px
+    height: 120px
+    vertical-align: top
+
+.tender_de_com_lt
+  padding: 10px 16px
+  width: 126px
+  text-align: center
+  border-right: 1px solid #ccc
+  margin-right: -1px
+  p.tit
+    font-weight: bold
+    color: #333
+
+.tender_de_com_rt
+  width: 78%
+  border-left: 1px solid #ccc
+  .liuyan
+    font-size: 14px
+  p
+    span
+      margin-right: 30px
+      display: inline-block
+    &.line
+      border-bottom: 1px solid #ccc
+      padding: 5px 10px
+
+.tender_suspend
+  position: absolute
+  top: 50px
+  right: 180px
+
+.sub_tender p.tit
+  background: #eee
+  span
+    display: inline-block
+    width: 33%
+    text-align: center
+    line-height: 35px
+
+.sub_tender_menu
+  height: 250px
+  overflow: hidden
+  ul li
+    border-bottom: 1px dashed #e0e0e0
+    span
+      display: inline-block
+      width: 33%
+      text-align: center
+      line-height: 32px
+    &:hover
+      background: #f8f8f8
+
+/*---------------------------------------------------招标详情样式结束---------------------------------------------------
+
+/*---------------------------------------------------楼盘地图样式开始---------------------------------------------------
+
+.main
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+.map_nav
+  border-bottom: 2px solid #fd7700
+  height: 35px
+  margin-top: 15px
+  li
+    float: left
+    margin: 0px 5px
+    a
+      display: inline-block
+      padding: 0px 25px
+      height: 34px
+      line-height: 34px
+      border-radius: 2px
+      background: url(map_bg1.png) repeat-x
+      font-size: 14px
+      font-weight: bold
+      border: 1px solid #e0e0e0
+      border-bottom: none
+      &.current
+        background: url(map_bg2.png) repeat-x
+        color: #fff
+        border: 1px solid #ff912e
+
+.map_search
+  margin: 3px 0px 0px 10px
+  border: 1px solid #e0e0e0
+  height: 26px
+  input
+    &.text
+      height: 18px
+      line-height: 18px
+      border: none
+      width: 200px
+    &.btn
+      width: 60px
+      height: 26px
+      background: url(map_btn.png) no-repeat
+      border: none
+      border-radius: 0px
+
+.map_side
+  width: 370px
+  position: absolute
+  left: 0px
+  top: 0px
+
+.map
+  position: relative
+  margin-left: 370px
+
+.map_side_sort select
+  float: left
+  width: 115px
+  margin: 0px
+  height: 32px
+  &:hover
+    background: #f8f8f8
+
+.map_side .side_tit
+  border-top: 2px solid #999
+  font-size: 14px
+
+.map_side_menu li
+  padding: 10px
+  border-bottom: 1px solid #e0e0e0
+  b
+    font-size: 16px
+
+.map_position
+  position: relative
+  background: #1974e2
+  border: 1px solid #1763c1
+  display: inline-block
+  padding: 2px 3px
+  color: #fff
+  cursor: pointer
+  height: 18px
+  line-height: 18px
+  border-radius: 2px
+  a
+    color: #fff
+    &:hover
+      text-decoration: none
+  &:hover
+    background: #ef7e1a
+    border: 1px solid #dd6903
+
+.map_positionjs
+  background: #ef7e1a
+  border: 1px solid #dd6903
+
+.map_position
+  .map_pos_bt
+    position: absolute
+    width: 8px
+    height: 8px
+    background: url(map_ico.png) no-repeat
+    left: 10px
+    top: 21px
+  .map_mouseover
+    background-position: 0px -9px
+
+.map_tip
+  background: #fff
+  width: 460px
+  height: 185px
+  box-shadow: 1px 2px 3px #aaa
+
+.map_tip_top
+  width: 100%
+
+.map_tip_intro
+  img.pic
+    width: 200px
+    height: 155px
+  div.rt
+    width: 55%
+    a
+      color: #004499
+  b.fontcl2
+    font-size: 16px
+
+/*---------------------------------------------------楼盘地图样式结束---------------------------------------------------
+
+/*---------------------------------------------------小区团装详情页样式开始---------------------------------------------------
+
+.tuanzh_detail_top
+  background: #f8f8f8
+  border-bottom: 1px solid #e0e0e0
+  height: 60px
+  line-height: 60px
+  text-align: center
+  box-sizing: border-box
+  span
+    display: inline-block
+    width: 32%
+    font-size: 18px
+    font
+      font-size: 24px
+
+.tuanzh_detail_tpmu ul li
+  float: left
+  border-right: 1px solid #e0e0e0
+  width: 33%
+  text-align: center
+  margin: 10px 0px
+  font-size: 14px
+  p.tit
+    font-size: 16px
+    color: #333
+  &.last
+    border: none
+
+.tuanzh_pic_rt p.price
+  font-size: 18px
+  line-height: 40px
+  margin-bottom: 8px
+  font
+    font-size: 30px
+
+.tuanzh_detail_intro a.pic img
+  width: 280px
+  height: 210px
+
+.tuanzh_taocan
+  width: 100%
+  tr
+    th
+      background: #f3f3f3
+      line-height: 30px
+      font-size: 16px
+      border-bottom: 1px solid #e0e0e0
+    td
+      text-align: center
+      line-height: 50px
+      font-size: 14px
+      border-bottom: 1px solid #e0e0e0
+      margin-bottom: -1px
+
+.tuanzh_side_menu li
+  &.title
+    background: #999
+    color: #fff
+    border-bottom: none
+    &:hover
+      background: #999
+  border-bottom: 1px dashed #e0e0e0
+  span
+    display: inline-block
+    width: 33%
+    text-align: center
+    line-height: 35px
+  &:hover
+    background: #f8f8f8
+  &.last
+    border-bottom: none
+
+/*---------------------------------------------------小区团装详情页样式结束---------------------------------------------------
+
+/*预约框修改样式
+
+.ui-dialog .ui-dialog-content
+  padding: 10px 10px 20px 10px
+
+.ui-hack-widget-dialog
+  .ui-dialog-title
+    font-size: 20px
+    color: #333
+  .ui-dialog-titlebar
+    padding: 8px 5px
+    background: #fff
+    margin: 0px
+    border: none
+    border-bottom: 1px solid #e0e0e0
+    font-weight: normal
+  border: none
+  padding: 15px 25px
+  box-shadow: 0px 0px 10px #333
+
+.ui-widget-content h2
+  font-size: 14px
+  margin-bottom: 4px
+  color: #666
+  margin: 0px
+
+.yuyBook
+  dt, dd
+    float: left
+    height: 35px
+    line-height: 35px
+    display: inline-block
+    border: 1px solid #ddd
+  dt
+    background: url(dlkBg.png) no-repeat
+    width: 70px
+    padding-left: 30px
+    border-right: none
+  dd
+    border-left: none
+    width: 70%
+    &.short
+      width: 40%
+    input
+      &.text
+        border: none
+        width: 90%
+        padding-top: 0px
+      &.short
+        width: 50%
+  dl
+    overflow: hidden
+    margin: 15px 0px 0px
+  dt
+    &.name
+      background-position: 0px 0px
+    &.tel
+      background-position: 0px -40px
+    &.yzm
+      background-position: 0px -80px
+  .yuyue_tel
+    color: #555
+    margin-left: 10px
+    font-size: 14px
+
+.yuyue_bottom
+  margin-top: 15px
+  .btn
+    font-size: 16px
+    width: 150px
+
+/*预约框修改样式
+
+/*404页面样式开始
+
+.error_box
+  width: 800px
+  height: 400px
+  background: #f5f5f5
+  border: 1px solid #ccc
+  margin: 65px auto
+  border-radius: 10px
+
+.error_cont
+  padding: 50px 30px
+  text-align: center
+  h1
+    font-size: 80px
+    line-height: 120px
+    color: #000
+  p
+    font-size: 30px
+    line-height: 60px
+  a
+    display: inline-block
+    width: 150px
+    height: 40px
+    line-height: 40px
+    color: #fff
+    background: #ff6600
+    text-align: center
+    margin: 25px
+    font-size: 20px
+
+/*404页面样式结束
+
+/*本地新闻页面样式开始
+
+.bd_news_list li
+  border-bottom: 1px dashed #ccc
+  h2 a
+    color: #000
+  p.indent
+    max-height: 50px
+    line-height: 25px
+    overflow: hidden
+
+.hot_news a
+  margin-left: 5px
+  font-size: 14px
+
+/*本地新闻页面样式结束
+
+/*找回密码样式开始
+
+.passport_for
+  margin-bottom: 80px
+  .passport_for_liuc
+    width: 620px
+    background: url(forgotPic.png) no-repeat
+    height: 42px
+  .liuc1
+    background-position: 0px 0px
+  .liuc2
+    background-position: 0px -42px
+  .liuc3
+    background-position: 0px -84px
+  .for_liuc li
+    float: left
+    margin: 0px 20px
+    &.current
+      color: #fe7902
+    &:first-child
+      margin-left: 25px
+      margin-right: 180px
+    &:last-child
+      float: right
+
+.pass_for_form
+  margin-left: 160px
+  input.text
+    width: 260px
+    height: 30px
+    border: 1px solid #ccc
+  tr.zh td
+    height: 30px
+  input.btn
+    margin-top: 15px
+
+.pass_for_sucss
+  margin: 0px 20px
+  h1
+    padding-bottom: 10px
+  p
+    line-height: 35px
+    &.suor
+      font-size: 14px
+    &.ct
+      text-align: center
+  a.csbtn
+    background: #fe9602
+    padding: 0px 20px
+    height: 40px
+    line-height: 40px
+    font-size: 16px
+    margin: 5px 0px
+    &:hover
+      color: #fff
+
+/*找回密码样式结束
+/*********************新增招标样式*************************
+
+.index_tender
+  float: left
+  width: 240px
+  border: 1px solid #e0e0e0
+  border-top: 3px solid #02B980
+  padding: 5px 20px
+  text-align: center
+  height: 286px
+  h2
+    font-size: 20px
+  form
+    input, select
+      margin-top: 7px
+      *margin-top: 6px
+    input.full
+      width: 233px
+      height: 30px
+      line-height: 30px
+    select.full
+      width: 240px
+      height: 38px
+      *line-height: 38px
+      line-height: 38px
+    input.short
+      width: 45%
+    select
+      &.short
+        width: 77px
+        height: 38px
+        *width: 76px
+        *line-height: 38px
+        float: left
+        margin-right: 4px
+      &:last-child
+        margin-right: 0px
+        float: right
+    img.yz_pic
+      margin-top: 10px
+
+.btn_sub_apply1
+  width: 100%
+  line-height: 32px
+  height: 36px
+  background: #02B980
+  font-size: 18px
+  border: 1px solid #02B980
+
+.ten_top
+  overflow: hidden
+
+.menu_list_ok_top
+  width: auto
+  background: #fef7e7
+  border-radius: 10px
+  padding: 10px 5px
+  margin: 10px auto
+  height: 180px
+  overflow: hidden
+  border: 1px solid #fee3a8
+  h1
+    text-align: center
+  p
+    margin-left: 0px
+
+.menu_ok_link
+  margin-top: 10px
+  li
+    overflow: hidden
+    text-align: left
+    margin-bottom: 5px
+    p.title
+      line-height: 34px
+      height: 34px
+    .link_ico
+      display: inline-block
+      background: url(red_ico2.jpg) no-repeat
+      width: 32px
+      height: 32px
+      vertical-align: middle
+      margin: 2px 5px
+    .link_ico1
+      background-position: 0px 0px
+    .link_ico2
+      background-position: 0px -33px
+
+/*.index_nwod_box{ height:331px;}
+
+.clearfix
+  width: 898px
+  border: 1px solid #e0e0e0
+  height: 192px
+  overflow: hidden
+  ul li
+    float: left
+    border-right: 1px solid #e0e0e0
+    width: 223px
+    text-align: center
+    padding-top: 10px
+    height: 180px
+    &:last-child
+      border-right: none
+    a
+      display: block
+      .index_ico
+        height: 112px
+      .fix_ico1
+        width: 117px
+        background-position: -10px -247px
+      .fix_ico2
+        width: 87px
+        background-position: -139px -247px
+      .fix_ico3
+        width: 82px
+        background-position: -8px -363px
+      .fix_ico4
+        width: 96px
+        background-position: -116px -363px
+
+.sec_topr_list
+  width: 260px
+  border: 1px solid #e0e0e0
+  border-top: none
+  padding: 10px
+  height: 173px
+  overflow: hidden
+  ul li
+    float: left
+    border-color: #e0e0e0
+    border-width: 0px 1px 1px 0px
+    border-style: dotted
+    width: 85px
+    text-align: center
+    &.bt
+      border-bottom: none
+    &.third
+      border-width: 0px 0px 1px 0px
+    a
+      display: block
+      &:hover
+        color: #01af63
+      .index_ico
+        height: 38px
+        width: 40px
+        margin: 15px 0px 5px 0px
+      .sec_ico1
+        background-position: -7px -210px
+      .sec_ico2
+        background-position: -211px -210px
+      .sec_ico3
+        background-position: -87px -210px
+      .sec_ico4
+        background-position: -125px -210px
+      .sec_ico5
+        background-position: -47px -210px
+      .sec_ico6
+        background-position: -169px -210px
+
+.foot_zhaobiao_bar
+  height: 74px
+  bottom: 0
+  width: 100%
+  z-index: 1000
+  font-family: "微软雅黑"
+  overflow: hidden
+
+.foot_zhaobiao_bg
+  width: 100%
+  background: #000
+  filter: alpha(opacity = 80)
+  -moz-opacity: 0.8
+  -khtml-opacity: 0.8
+  opacity: 0.8
+  z-index: 10003
+  height: 74px
+  position: absolute
+  top: 0
+  left: 0
+
+.footBg
+  width: 1180px
+  margin: 0px auto 0px auto
+  height: 74px
+  z-index: 9999
+  z-index: 10001
+
+.foot_fixed
+  position: fixed
+  _position: absolute
+  _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
+
+.foot_mode
+  position: relative
+  z-index: 10001
+  height: 74px
+  z-index: 99999
+  width: 100%
+
+.foot_zhaobiao
+  width: 1180px
+  height: 74px
+  z-index: 10002
+  margin: 0px auto
+  position: absolute
+  z-index: 10004
+
+.footBg, .foot_zhaobiao
+  position: absolute
+  left: 50%
+  margin-left: -590px
+  top: 0px
+
+.foot_zhaobiao_text
+  float: left
+  width: 291px
+  height: 44px
+  background: url('/themes/default/static/images/foot-text.png') no-repeat
+  _background: none
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/themes/default/static/images/foot-text.png',sizingMethod='crop')
+  margin-top: 15px
+
+.foot_zhaobiao
+  dl
+    padding: 23px 0px 0px 60px
+    overflow: hidden
+    width: 475px
+    float: left
+    dt
+      background: #fff
+      color: #000
+      float: left
+      padding: 5px
+      margin: 0px 10px 0px 0px
+      line-height: 24px
+      display: inline
+      width: 135px
+      height: 24px
+      overflow: hidden
+      border-radius: 5px
+      label
+        float: left
+        width: 30px
+        color: #9a9a9a
+      input
+        border: 0
+        height: 24px
+        line-height: 24px
+        float: left
+        color: #333
+        vertical-align: middle
+        width: 105px
+    dd
+      float: left
+      height: 35px
+      font-size: 18px
+      input
+        background: #fc567a
+        color: #fff
+        width: 130px
+        height: 34px
+        line-height: 34px
+        border: 0
+        font-size: 18px
+        cursor: pointer
+        font-family: "微软雅黑"
+        border-radius: 5px
+  .foot_pic
+    float: left
+    margin: 9px 0px 0px 0px
+  a.foot_zhaobiao_close
+    width: 16px
+    height: 16px
+    margin: 0px
+    position: absolute
+    top: 6px
+    right: 0px
+    background: url('/themes/default/static/images/foot_zhaobiao_close.gif') no-repeat
+    z-index: 99
+
+.foot_price
+  width: 165px
+  height: 78px
+  overflow: hidden
+  color: #fff
+  padding: 15px 0px 0px
+  float: left
+  strong
+    display: block
+    font-size: 18px
+  p
+    line-height: 20px
+    font-size: 16px
+    span
+      color: #fc567a
+
+.foot_weixin
+  float: left
+  padding: 25px 70px 0px 20px
+  height: 60px
+  background: url('/themes/default/static/images/weixin_foot.png') no-repeat right 5px
+  width: 64px
+  color: #fff
+  line-height: 18px
+
+/*********************新增招标样式结束************************
+
+.rfm1
+  th, td
+    line-height: 24px
+    vertical-align: top
+
+.px
+  border: 1px solid #e3e3e3
+  color: #555
+  font-size: 12px
+  height: 26px
+  line-height: 26px
+  outline: medium none
+  padding: 3px 0 3px 5px
+  background: none
+
+.rfm
+  border-bottom: none
+  th
+    font-size: 14px
+    padding-right: 10px
+    text-align: right
+    width: 70px
+    line-height: 33px
+    padding: 0px 2px
+    vertical-align: top
+  td
+    line-height: 33px
+    padding: 0px 2px
+    vertical-align: top
+  .px:focus
+    border-color: #e3e3e3
+
+.flb em
+  color: #fe7902
+  float: left
+  font-size: 15px
+  font-weight: 700

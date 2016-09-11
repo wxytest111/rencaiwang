@@ -7,7 +7,10 @@
           %li= msg
 
   .field
-    = f.label :title
+    = f.label '标题'
     = f.text_field :title
+  .field
+    = f.label '状态'
+    = select_tag 'category[status]', options_for_select(show_status, @category.status)
   .actions
     = f.submit 'Save'

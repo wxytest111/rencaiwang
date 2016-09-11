@@ -1,0 +1,79 @@
+.subwd
+  / 主体内容开始
+  .login_box
+    .login_lt.lt
+      %h2 会员登录
+      #ct
+        #main_succeed.nfl{:style => "display: none"}
+          .f_c.altw
+            .alert_right
+              %p#succeedmessage
+              %p#succeedlocation.alert_btnleft
+              %p.alert_btnleft
+                %a#succeedmessage_href 如果您的浏览器没有自动跳转，请点击此链接
+        #main_message
+          %div
+            #main_messaqge_LBrRJ
+              #layer_login_LBrRJ
+                = form_for(resource, as: resource_name, url: session_path(resource_name), html: {:id=>'loginform_LBrRJ', :class=>'cl'}) do |f|
+                  -#%form#loginform_LBrRJ.cl{:action => user_session_path, :autocomplete => "off", :method => "post", :name => "login"}
+                  .c.cl
+                    .rfm
+                      %table
+                        %tbody
+                          %tr
+                            %th
+                              用户名:
+                            %td
+                              = f.text_field :email, autofocus: true, class: 'px p_fre', size: 30
+                              -#%input#username_LBrRJ.px.p_fre{:autocomplete => "off", :name => "user[email]", :size => "30", :tabindex => "1", :type => "text", :value => ""}/
+                            -#%td.tipcol
+                              %a{:href => "member.php?mod=register"} 立即注册
+                    .rfm
+                      %table
+                        %tbody
+                          %tr
+                            %th
+                              %label{:for => "password3_LBrRJ"} 密码:
+                            %td
+                              = f.password_field :password, autocomplete: "off", class: 'px p_fre', size: 30
+                              -#%input#password3_LBrRJ.px.p_fre{:name => "user[password]", :onfocus => "clearpwd()", :size => "30", :tabindex => "1", :type => "password"}/
+                            -#%td.tipcol
+                              %a{:href => "javascript:;", :onclick => "display('layer_login_LBrRJ');display('layer_lostpw_LBrRJ');", :title => "找回密码"} 找回密码
+                    - if devise_mapping.rememberable?
+                      .rfm
+                        %table
+                          %tbody
+                            %tr
+                              %th
+                              %td
+                                %label{:for => "cookietime_LBrRJ"}
+                                  = f.check_box :remember_me
+                                  下次自动登陆
+                    .rfm.mbw.bw0
+                      %table
+                        %tbody
+                          %tr
+                            %th  
+                            %td
+                              %button.btn{:name => "loginsubmit", :tabindex => "1", :type => "submit", :value => "true"}
+                                %strong 立即登录
+                            -#%td
+                              %a.y{:href => "javascript:;", :onclick => "ajaxget('member.php?mod=clearcookies&formhash=de4a1bc6', 'returnmessage_LBrRJ', 'returnmessage_LBrRJ');return false;", :title => "清除痕迹"} 清除痕迹
+            #layer_message_LBrRJ.f_c.blr.nfl{:style => "display: none;"}
+              %h3#layer_header_LBrRJ.flb
+              .c
+                .alert_right
+                  #messageleft_LBrRJ
+                  %p#messageright_LBrRJ.alert_btnleft
+    .login_rt.rt
+      %h2
+        没有账号？
+        = link_to '立即注册', new_user_registration_path, class: 'fontcl2'
+      =image_tag 'templates/login_img.jpg'
+      %h3 第三方账号登录：
+      %p
+        %a.ico_list.weibo_login{:href => "#"}
+      %p
+        %a.ico_list.qq_login{:href => "#"}
+    .cl

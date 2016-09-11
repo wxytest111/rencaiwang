@@ -3,7 +3,8 @@
 %table
   %thead
     %tr
-      %th Title
+      %th 标题
+      %th 状态
       %th
       %th
       %th
@@ -12,6 +13,7 @@
     - @categories.each do |category|
       %tr
         %td= category.title
+        %td= category_status category.status
         - if can? :read, Category
           %td= link_to 'Show', category
         - if can? :update, Category
