@@ -3,26 +3,26 @@
     .tebieniubi_nav
       %ul
         %li
-          = link_to '网站首页', root_path
-        %li
-          %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
-            新闻中心
-        %li
-          %a{:hidefocus => "true", :href => "fenlei/"} 领导讲话
-        %li
-          %a{:hidefocus => "true", :href => "/news/"} 宏观指导
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 政策文件
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 体制机制
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 院士工作
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 科技企业家
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 产学研人才
-        %li
-          %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 区域人才
+          = link_to '网站首页', root_path, hidefocus: true
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php", :title => "BBS"}
+        -#    新闻中心
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "fenlei/"} 领导讲话
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "/news/"} 宏观指导
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=40"} 政策文件
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=42"} 体制机制
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=43"} 院士工作
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=41"} 科技企业家
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=44"} 产学研人才
+        -#%li
+        -#  %a{:hidefocus => "true", :href => "forum.php?mod=forumdisplay&fid=46"} 区域人才
       .nav_r
         -if can? :create, Article
           = link_to '发表新文章', new_article_path, class:'caigou'

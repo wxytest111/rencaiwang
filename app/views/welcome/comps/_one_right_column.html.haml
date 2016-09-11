@@ -1,0 +1,72 @@
+.tebieniubi_oneright.y
+  %p#login14
+    - if current_user
+      = link_to current_user.email, '#'
+      = link_to '退出', destroy_user_session_path
+    - else
+      = link_to '登陆', new_user_session_path
+      = link_to '注册', new_user_registration_path
+    -#%a{:href => "member.php?mod=logging&action=login", :rel => "nofollow", :target => "_blank", :title => "登录"} 登录
+    -#%a{:href => "member.php?mod=register", :rel => "nofollow", :target => "_blank", :title => "注册"} 注册
+    -#%a.last{:href => "#", :rel => "nofollow", :target => "_blank", :title => "立即签到"} 立即签到
+  .helpnew
+    #diy11.area
+      #frameQh6JSG.frame.move-span.cl.frame-1
+        #frameQh6JSG_left.column.frame-1-c
+          #frameQh6JSG_left_temp.move-span.temp
+          #portal_block_57.block.move-span
+            #portal_block_57_content.dxb_bc
+              .portal_block_summary
+                %p.joinbg
+                  %a{:href => "#", :rel => "nofollow", :target => "_blank"} TBNB是一个专门致力于人才信息服务的团队，有需求可以随时联系我们
+          #portal_block_58.block.move-span
+            #portal_block_58_content.dxb_bc
+              .portal_block_summary
+                = image_tag 'templates/2016join.png', height: 160, width: '100%'
+          #portal_block_59.block.move-span
+            #portal_block_59_content.dxb_bc
+              .portal_block_summary
+                = image_tag 'templates/2016company.png', height: 50, width: '100%'
+          #portal_block_60.block.move-span
+            #portal_block_60_content.dxb_bc
+              .portal_block_summary
+                %ul.kj_nav
+                  %li
+                    %a{:href=>'#', :rel => "nofollow", :target => "_blank"}
+                      = image_tag 'templates/index1.gif', height:32
+                    = link_to '最新情况', '#'
+                  %li
+                    %a{:href=>'#', :rel => "nofollow", :target => "_blank"}
+                      = image_tag 'templates/index2.gif', height:32
+                    = link_to '信息聚合', '#'
+                  %li
+                    %a{:href=>'#', :rel => "nofollow", :target => "_blank"}
+                      = image_tag 'templates/index3.gif', height:32
+                    = link_to '粉丝互动', '#'
+                  %li
+                    %a{:href=>'#', :rel => "nofollow", :target => "_blank"}
+                      = image_tag 'templates/index4.gif', height:32
+                    = link_to '文档管理', '#'
+  .tebieniubi_tworight.y
+    .tebieniubi_twotop
+      .hd
+        %h5 公告栏
+      #diy4.area
+        #frameZ5VVE3.frame.move-span.cl.frame-1
+          #frameZ5VVE3_left.column.frame-1-c
+            #frameZ5VVE3_left_temp.move-span.temp
+            #portal_block_5.block.move-span
+              #portal_block_5_content.dxb_bc
+                .bd
+                  .tempWrap{:style => "overflow:hidden; position:relative; height:96px"}
+                    %ul.infoList{:style => "top: 0px; position: relative; padding: 0px; margin: 0px;"}
+                      -#%li{:style => "height: 24px;"}
+                      -#  %span.date 03-27
+                      -#  %a{:href => "forum.php?mod=viewthread&tid=368", :target => "_blank"} 最有价值的投资居住小区
+    :javascript
+      jQuery(".tebieniubi_twotop").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,vis:4});
+
+  %script#bulletin-template{type:'text/template'}
+    %li
+      %span.date ${date}
+      %a{:href => "${url}", :target => "_blank"} ${title}

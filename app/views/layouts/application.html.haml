@@ -3,6 +3,7 @@
   = render :partial => 'layouts/header'
   %body#nv_portal.pg_index
     = render :partial => 'layouts/banner'
+    -#- if ['articles','welcome'].include? controller.controller_name
     = render :partial => 'layouts/horizontal_menu'
     = render :partial => 'layouts/content'
     = render :partial=> 'layouts/footer'

@@ -13,6 +13,9 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.all
     end
+    if @region
+      @articles = @articles.where(region: @region)
+    end
     @articles = @articles.order('updated_at desc')
     @articles = @articles - @bulletins
   end

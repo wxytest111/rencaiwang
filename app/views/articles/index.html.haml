@@ -42,6 +42,9 @@
               分类:
               %label
                 = link_to article.category.try(:title), "#{articles_path}?category_id=#{article.category.try(:id)}", class: 'xi2'
+              区域:
+              %label
+                = link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
               %span.xg1
                 = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
             %p
