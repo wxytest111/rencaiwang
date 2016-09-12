@@ -43,33 +43,12 @@
           {{/each}}
       .module.cl.ml.tebieniubi_tanchu
         %ul
+          {{each(i, article) pic_articles}}
+          {{if i<6}}
           %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
-              %img{:alt => "售24.88万起 新款荣威550 PLUG-IN上市", :height => "100", :src => "data/attachment/block/26/26cf47e5abea3fd7ee4b963e424c20e8.jpg", :width => "160"}/
+            %a{:href => "${url}", :target => "_blank"}
+              %img{:alt => "${title}", :height => "100", :src => "${tanchu_cover}", :width => "160"}/
             %p
-              %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "售24.88万起 新款荣威550 PLUG-IN上市"} 售24.88万起 新款荣威
-          %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank"}
-              %img{:alt => "青岛旅行社", :height => "100", :src => "data/attachment/block/5c/5cada02debc56d923c010ddac5a9d980.jpg", :width => "160"}/
-            %p
-              %a{:href => "forum.php?mod=viewthread&tid=366", :target => "_blank", :title => "青岛旅行社"} 青岛旅行社
-          %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank"}
-              %img{:alt => "公主坟万寿路翠微路玉渊潭南路翠微西里", :height => "100", :src => "data/attachment/block/44/4493d8734e5172b3f71853cbd3865257.jpg", :width => "160"}/
-            %p
-              %a{:href => "forum.php?mod=viewthread&tid=91", :target => "_blank", :title => "公主坟万寿路翠微路玉渊潭南路翠微西里"} 公主坟万寿路翠微路玉
-          %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank"}
-              %img{:alt => "百合公馆", :height => "100", :src => "data/attachment/block/02/0236986e5ef123a737a23668a697b680.jpg", :width => "160"}/
-            %p
-              %a{:href => "forum.php?mod=viewthread&tid=117", :target => "_blank", :title => "百合公馆"} 百合公馆
-          %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank"}
-              %img{:alt => "室内婚纱照也可以很美", :height => "100", :src => "data/attachment/block/ee/ee2238053c8254d4b7155b8f180d7260.jpg", :width => "160"}/
-            %p
-              %a{:href => "forum.php?mod=viewthread&tid=178", :target => "_blank", :title => "室内婚纱照也可以很美"} 室内婚纱照也可以很美
-          %li{:style => "width: 160px;"}
-            %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank"}
-              %img{:alt => "春夏季的浪漫婚纱照拍摄点", :height => "100", :src => "data/attachment/block/92/92dc582bd5303742ad7945c75460a61e.jpg", :width => "160"}/
-            %p
-              %a{:href => "forum.php?mod=viewthread&tid=167", :target => "_blank", :title => "春夏季的浪漫婚纱照拍摄点"} 春夏季的浪漫婚纱照拍
+              %a{:href => "${url}", :target => "_blank", :title => "${title}"} ${title}
+          {{/if}}
+          {{/each}}

@@ -32,16 +32,15 @@
               #portal_block_29_content.dxb_bc
                 .module.cl.ml
                   %ul
+                    {{each(i, article) pic_articles}}
+                    {{if i<2}}
                     %li{:style => "width: 183px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
-                        %img{:alt => "这里是测试文章", :height => "100", :src => "data/attachment/block/77/77638bc2f0849beb124a023ac9acc4bf.jpg", :width => "183"}/
+                      %a{:href => "${url}", :target => "_blank"}
+                        %img{:alt => "${title}", :height => "100", :src => "${cover}", :width => "183"}/
                       %p
-                        %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "这里是测试文章"} 这里是测试文章
-                    %li{:style => "width: 183px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank"}
-                        %img{:alt => "有一个测试文章", :height => "100", :src => "data/attachment/block/f9/f92c2631b306b05bf9ed370e0fc5606a.jpg", :width => "183"}/
-                      %p
-                        %a{:href => "forum.php?mod=viewthread&tid=24", :target => "_blank", :title => "有一个测试文章"} 有一个测试文章
+                        %a{:href => "${url}", :target => "_blank", :title => "${title}"} ${title}
+                    {{/if}}
+                    {{/each}}
           #frameOUQ8HU_center.column.frame-1-2-r
             #frameOUQ8HU_center_temp.move-span.temp
             #portal_block_30.block.move-span

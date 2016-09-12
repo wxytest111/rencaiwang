@@ -21,4 +21,20 @@ json.array!(@categoires) do |category|
       json.url article_url(article)
     end
   end
+
+  json.pic_articles do
+    articles = category.articles.where('cover_url is not null').order('updated_at desc').limit(6)
+    json.array!(articles) do |article|
+      json.extract! article, :id, :title, :cover_url, :is_picture, :updated_at
+      if article.cover_url.include?('ckeditor_assets')
+        json.cover article.cover_url.gsub('content', 'cover')
+        json.tanchu_cover article.cover_url.gsub('content', 'tanchu')
+      else
+        json.cover article.cover_url
+        json.tanchu_cover article.cover_url
+      end
+      json.date article.updated_at.strftime('%m-%d')
+      json.url article_url(article)
+    end
+  end
 end

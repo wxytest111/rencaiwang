@@ -1,0 +1,64 @@
+.tebieniubi_onecenter.z
+  #diy12.area
+    #frametU4opY.frame.move-span.cl.frame-1
+      #frametU4opY_left.column.frame-1-c
+        #frametU4opY_left_temp.move-span.temp
+        #portal_block_61.block.move-span
+          #portal_block_61_content.dxb_bc
+            #iFocus{:style => "margin:0 auto"}
+
+  #diy2.area
+    #framezB3dQU.frame.move-span.cl.frame-1
+      #framezB3dQU_left.column.frame-1-c
+        #framezB3dQU_left_temp.move-span.temp
+        #portal_block_52.tebieniubi_toutiao.block.move-span
+          #portal_block_52_content.dxb_bc
+            .bm.bw0
+              %hr.da/
+              %ul.xl.xl2.cl
+        #frame1181N7.tebieniubi_box.frame.move-span.cl.frame-1-1
+          #frame1181N7_left.column.frame-1-1-l
+            #frame1181N7_left_temp.move-span.temp
+            #portal_block_53.tebieniubi_box2.block.move-span
+              #portal_block_53_content.dxb_bc
+                .module.cl.xl.xl1
+                  %ul
+          #frame1181N7_center.column.frame-1-1-r
+            #frame1181N7_center_temp.move-span.temp
+            #portal_block_54.block.move-span
+              #portal_block_54_content.dxb_bc
+                .module.cl.xl.xl1
+                  %ul
+
+%script#simple-article-tmpl{type:'text/template'}
+  %li
+    %a{:href => "${url}", :target => "_blank", :title => "${title}"} ${title}
+
+%script#first-article-tmpl{type:'text/template'}
+  %dl.cl.xld
+    %dt
+      %a{:href => "${url}", :target => "_blank", :title => "${title}"} ${title}
+    %dd
+      ${category_name} ${summary}
+      %span
+        %a{:href => "${url}", :target => "_blank"}
+          详细>>
+          %span
+
+%script#i-focus-tmpl{type:'text/javascript'}
+  .tempWrap{:style => "overflow:hidden; position:relative; width:640px"}
+    %ul{:style => "width: 3200px; left: -2560px; position: relative; overflow: hidden; padding: 0px; margin: 0px;"}
+      {{each(i, article) pic_articles}}
+      {{if i<5}}
+      %li{:style => "float: left; width: 640px;"}
+        %a{:href => "${article.url}", :target => "_blank"}
+          %img{:height => "240", :src => "${article.slide}", :width => "640"}/
+      {{/if}}
+      {{/each}}
+  .btn
+    {{each(i, article) pic_articles}}
+    {{if i<5}}
+    %span
+      ${i+1}
+    {{/if}}
+    {{/each}}

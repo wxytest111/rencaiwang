@@ -21,4 +21,11 @@ class WelcomeController < ApplicationController
     @categoires = Category.includes([articles:[]]).where("status!=#{Category.statuses[:offline]}")
   end
 
+  def get_recommand_and_pic_articles
+    @pic_articles = Article.where(is_picture: 1).order('updated_at desc').limit(25)
+    @recommand_articles = Article.where(is_recommand: 1).order('updated_at desc').limit(21)
+    @first_article = @recommand_articles.first
+    @recommand_articles = @recommand_articles[1,@recommand_articles.length]
+  end
+
 end

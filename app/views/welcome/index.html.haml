@@ -2,76 +2,13 @@
   #diy1.area
 .wp.cl
   = render partial: 'welcome/comps/one_left_column'
-  .tebieniubi_onecenter.z
-    #diy12.area
-      #frametU4opY.frame.move-span.cl.frame-1
-        #frametU4opY_left.column.frame-1-c
-          #frametU4opY_left_temp.move-span.temp
-          #portal_block_61.block.move-span
-            #portal_block_61_content.dxb_bc
-              #iFocus{:style => "margin:0 auto"}
-                .tempWrap{:style => "overflow:hidden; position:relative; width:640px"}
-                  %ul{:style => "width: 3200px; left: -2560px; position: relative; overflow: hidden; padding: 0px; margin: 0px;"}
-                    %li{:style => "float: left; width: 640px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=161", :target => "_blank"}
-                        %img{:height => "240", :src => "data/attachment/portal/201508/09/163544y65rnca8rn1n9ea8.jpg", :width => "640"}/
-                    %li{:style => "float: left; width: 640px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=164", :target => "_blank"}
-                        %img{:height => "240", :src => "data/attachment/portal/201508/09/162409jeovgjy6zvavbag0.jpg", :width => "640"}/
-                    %li{:style => "float: left; width: 640px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=163", :target => "_blank"}
-                        %img{:height => "240", :src => "data/attachment/portal/201508/09/163308p5m2ca54k5a21223.jpg", :width => "640"}/
-                    %li{:style => "float: left; width: 640px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=162", :target => "_blank"}
-                        %img{:height => "240", :src => "data/attachment/portal/201508/09/163536hlecnll7l696kgk8.jpg", :width => "640"}/
-                    %li{:style => "float: left; width: 640px;"}
-                      %a{:href => "forum.php?mod=viewthread&tid=166", :target => "_blank"}
-                        %img{:height => "240", :src => "data/attachment/portal/201508/09/162145sgdlz05suj91dzld.jpg", :width => "640"}/
-                .btn
-                  %span 1
-                  %span 2
-                  %span 3
-                  %span 4
-                  %span.on 5
-    #diy2.area
-      #framezB3dQU.frame.move-span.cl.frame-1
-        #framezB3dQU_left.column.frame-1-c
-          #framezB3dQU_left_temp.move-span.temp
-          #portal_block_52.tebieniubi_toutiao.block.move-span
-            #portal_block_52_content.dxb_bc
-              .bm.bw0
-                %dl.cl.xld
-                  %dt
-                    %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank", :title => "文章5的标题"} 文章5的标题
-                  %dd
-                    　　[政策法规]  这里还是一个测试内容这里还是一个测试内容这里还是一个测试内容这里还是一个测试内容这里还是一个测试内容这里还是一个测试内容这里还是一个测试内容
-                    %span
-                      %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
-                        详细>>
-                        %span
-                  %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
-                %a{:href => "forum.php?mod=viewthread&tid=25", :target => "_blank"}
-                  %hr.da/
-                  %ul.xl.xl2.cl
-          #frame1181N7.tebieniubi_box.frame.move-span.cl.frame-1-1
-            #frame1181N7_left.column.frame-1-1-l
-              #frame1181N7_left_temp.move-span.temp
-              #portal_block_53.tebieniubi_box2.block.move-span
-                #portal_block_53_content.dxb_bc
-                  .module.cl.xl.xl1
-                    %ul
-            #frame1181N7_center.column.frame-1-1-r
-              #frame1181N7_center_temp.move-span.temp
-              #portal_block_54.block.move-span
-                #portal_block_54_content.dxb_bc
-                  .module.cl.xl.xl1
-                    %ul
+  = render partial: 'welcome/comps/one_center_column'
   = render partial:  'welcome/comps/one_right_column'
 #diy6.area
   #frameKKN5Qj.tebieniubi_box.frame.move-span.cl.frame-1
     .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
       %span.titletext{:style => "font-size:16px;"}
-        %a{:href => "#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 时政要闻
+        %a{:href => "#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 图片新闻
       -#%span.subtitle{:style => "float:right;"} 自定内容
       -#%span.subtitle{:style => "float:right;margin-right:10px;"} 自定内容
   #framel782wv.frame.move-span.cl.frame-1
@@ -91,7 +28,6 @@
                     %a.prev
 = render partial: 'welcome/comps/all_categories'
 .wp.cl
-  / [diy=diy10]
   #diy10.area
     #framez3XRhi.frame.move-span.cl.frame-1
       .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
@@ -111,13 +47,10 @@
       #frame69711W_left.column.frame-1-c
         #frame69711W_left_temp.move-span.temp
 
-%script#gundong-template{type:'text/template'}
+%script#pic-list-template{type:'text/template'}
   %li.clone{:style => "float: left; width: 138px;"}
-    %a{:href => "#", :target => "_blank"}
-      = image_tag 'templates/gundong.jpg'
-      %span 放置图片内容
+    %a{:href => "${url}", :target => "_blank"}
+      %img{:alt=>'${title}',:src=>"${pic_list_src}"}
+      %span ${title}
       %i
 
-%script#simple-article-tmpl{type:'text/template'}
-  %li
-    %a{:href => "${url}", :target => "_blank", :title => "${title}"} ${title}
