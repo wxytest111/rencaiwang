@@ -46,7 +46,7 @@ random = Random.new
   article = Article.new(
       {
           title: "陕西省青年人才座谈会第#{n}次会议",
-          content: '<p><img alt="" src="/ckeditor_assets/pictures/4/content._.png" style="width: 100px; height: 44px;" />&nbsp;</p>
+          content: '<p><img alt="" src="http://xiaochubang.oss-cn-qingdao.aliyuncs.com/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90.png" style="width: 100px; height: 44px;" />&nbsp;</p>
                     <p>陕西省青年人才座谈会</p>
                     <p>6位中青年人才畅谈创新创业的经验和体会&nbsp;</p>'
       }
