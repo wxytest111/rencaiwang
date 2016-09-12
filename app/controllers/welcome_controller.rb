@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def get_tebieniubi_nav
-    @nav_menu = Category.where(status: Category.statuses[:on_menu]).order('priority asc')
+    @nav_menu = Category.where(status: Category.statuses[:on_menu]).order('priority asc').limit(9)
   end
 
   def get_bulletins
