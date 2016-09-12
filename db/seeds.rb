@@ -7,20 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 categories = Category.create([
-                                 {title: '新闻中心', status: 'on_menu', on_left: 0},
-                                 {title: '领导讲话', status: 'on_menu', on_left: 0},
-                                 {title: '宏观指导', status: 'on_menu', on_left: 1},
-                                 {title: '政策文件', status: 'on_menu', on_left: 0},
-                                 {title: '体制机制', status: 'on_menu', on_left: 0},
-                                 {title: '院士工作', status: 'on_menu', on_left: 0},
-                                 {title: '科技企业家', status: 'on_menu', on_left: 0},
-                                 {title: '产学研人才', status: 'on_menu', on_left: 0},
-                                 {title: '区域人才', status: 'on_menu', on_left: 0},
-                                 {title: '人才计划', status: 'online', on_left: 1},
-                                 {title: '典型事迹', status: 'online', on_left: 1},
-                                 {title: '农村实用人才', status: 'online', on_left: 1},
-                                 {title: '评论报道', status: 'online', on_left: 1},
-                                 {title: '公告栏', status: 'online', on_left: 0}
+                                 {title: '新闻中心', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '领导讲话', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '宏观指导', status: 'on_menu', on_left: 1, priority: 1},
+                                 {title: '政策文件', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '体制机制', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '院士工作', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '科技企业家', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '产学研人才', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '区域人才', status: 'on_menu', on_left: 0, priority: 1},
+                                 {title: '人才计划', status: 'online', on_left: 1, priority: 1},
+                                 {title: '典型事迹', status: 'online', on_left: 1, priority: 1},
+                                 {title: '农村实用人才', status: 'online', on_left: 1, priority: 1},
+                                 {title: '评论报道', status: 'online', on_left: 1, priority: 1},
+                                 {title: '公告栏', status: 'online', on_left: 0, priority: 1},
+                                 {title: '课程案例', status: 'on_menu', on_left: 0, priority: 0},
                              ])
 
 regions = Region.create([

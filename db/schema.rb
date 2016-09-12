@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912012636) do
+ActiveRecord::Schema.define(version: 20160912071448) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160912012636) do
     t.datetime "updated_at",                         null: false
     t.integer  "status",     limit: 4,   default: 0, null: false
     t.integer  "on_left",    limit: 4,   default: 0, null: false
+    t.integer  "priority",   limit: 4,   default: 0, null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

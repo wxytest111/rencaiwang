@@ -15,5 +15,8 @@
   .field
     = f.check_box :on_left
     = f.label '是否在首页左侧导航显示'
+  .field
+    = f.label '优先级（越小越好）'
+    = f.number_field :priority
   .actions
     = f.submit 'Save'
