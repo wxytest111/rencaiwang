@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912071448) do
+ActiveRecord::Schema.define(version: 20161005071333) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -76,6 +76,16 @@ ActiveRecord::Schema.define(version: 20160912071448) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
+  create_table "user_categories", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.integer  "category_id", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "user_categories", ["category_id"], name: "index_user_categories_on_category_id", using: :btree
+  add_index "user_categories", ["user_id"], name: "index_user_categories_on_user_id", using: :btree
+
   create_table "user_regions", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "region_id",  limit: 4
@@ -115,6 +125,8 @@ ActiveRecord::Schema.define(version: 20160912071448) do
   add_foreign_key "articles", "categories"
   add_foreign_key "articles", "regions"
   add_foreign_key "articles", "users"
+  add_foreign_key "user_categories", "categories"
+  add_foreign_key "user_categories", "users"
   add_foreign_key "user_regions", "regions"
   add_foreign_key "user_regions", "users"
 end

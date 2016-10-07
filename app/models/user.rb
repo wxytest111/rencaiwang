@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
   has_and_belongs_to_many :regions, :join_table => :user_regions
+  has_and_belongs_to_many :categories, :join_table => :user_categories
 
   validates :email,
             # format:     { with: /\A1[3578]\d{9}\Z/, message: '手机号码格式不正确', multiline: true },

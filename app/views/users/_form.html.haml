@@ -19,14 +19,20 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :regions
+    = f.label :regions, '区域'
     - @regions.each do |region|
       = f.check_box :regions, {'name' => "regions[#{region.id}]", 'checked' => (@user.regions.include? region)}
       = f.label :regions, region.name
+  .field
+    = f.label :categories, '栏目'
+    - @categories.each do |category|
+      = f.check_box :categories, {'name' => "categories[#{category.id}]", 'checked' => (@user.categories.include? category)}
+      = f.label :category, category.title
   .field
     = f.label :roles, '权限'
     - regular_role_names.each do |key, value|
       = f.check_box :roles, {'name' => "roles[#{key}]", 'checked' => (@user.has_role? key)}
       = f.label :roles, value
+
   .actions
     = f.submit 'Save'

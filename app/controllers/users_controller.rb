@@ -23,6 +23,7 @@ class UsersController < RoleAuthenticationController
   # GET /users/1/edit
   def edit
     @regions = Region.all
+    @categories = Category.all
   end
 
   # POST /users
@@ -67,10 +68,12 @@ class UsersController < RoleAuthenticationController
   def user_new
     @user = User.new
     @regions = Region.all
+    @categories = Category.all
   end
 
   def user_create
     @regions = Region.all
+    @categories = Category.all
     respond_to do |format|
       if user_update_transaction('create')
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -101,10 +104,13 @@ class UsersController < RoleAuthenticationController
     params.require(:roles)
   end
 
+  def categories_param
+    params.require(:categories)
+  end
+
   def user_update_transaction type
     begin
       User.transaction do
-        # require 'byebug';byebug
         if type == 'create'
           @user = User.new(user_params)
           @user.save!
@@ -122,11 +128,18 @@ class UsersController < RoleAuthenticationController
         end
 
         region_params.each do |key, value|
-          pp "key=#{key}, value=#{value}"
           if value.to_i == 1
             UserRegion.create!(user_id:@user.id, region_id: key)
           end
         end
+
+        categories_param.each do |key ,value|
+          pp "key=#{key}, value=#{value}"
+          if value.to_i == 1
+            UserCategory.create!(user_id:@user.id, category_id: key)
+          end
+        end
+
       end
       true
     rescue Exception => e

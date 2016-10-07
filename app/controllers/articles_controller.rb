@@ -31,13 +31,13 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
-    @categories = Category.all
+    @categories = current_user.categories
     @regions = current_user.regions
   end
 
   # GET /articles/1/edit
   def edit
-    @categories = Category.all
+    @categories = current_user.categories
     @regions = current_user.regions
   end
 
