@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005071333) do
+ActiveRecord::Schema.define(version: 20161017060216) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20161005071333) do
     t.integer  "is_picture",   limit: 4,     default: 0, null: false
     t.string   "cover_url",    limit: 255
     t.integer  "is_recommand", limit: 4,     default: 0, null: false
+    t.integer  "status",       limit: 4,     default: 0, null: false
   end
 
   add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20161005071333) do
     t.integer  "status",     limit: 4,   default: 0, null: false
     t.integer  "on_left",    limit: 4,   default: 0, null: false
     t.integer  "priority",   limit: 4,   default: 0, null: false
+    t.integer  "parent_id",  limit: 4
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -57,6 +59,19 @@ ActiveRecord::Schema.define(version: 20161005071333) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "links", force: :cascade do |t|
+    t.string   "name",               limit: 255
+    t.string   "url",                limit: 255
+    t.integer  "priority",           limit: 4,   default: 0
+    t.integer  "status",             limit: 4,   default: 0, null: false
+    t.string   "cover_file_name",    limit: 255
+    t.string   "cover_content_type", limit: 255
+    t.integer  "cover_file_size",    limit: 4
+    t.datetime "cover_updated_at"
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
+  end
 
   create_table "regions", force: :cascade do |t|
     t.string   "name",       limit: 255

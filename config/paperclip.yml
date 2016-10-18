@@ -3,9 +3,9 @@ common: &common
     :styles:
       :thumb: "118x100#"
       :content: "800>"
-      :slide: "640x240#"
-      :cover: "183x100#"
-      :tanchu: "160x100#"
+      :slide: "1177x380#"
+      :baoming_link: "400x60#"
+      :friend_link: "200x40#"
     :url: "/ckeditor_assets/pictures/:id/:style._:filename"
     :path: ":rails_root/public/ckeditor_assets/pictures/:id/:style._:filename"
   :attachment_file:
@@ -23,9 +23,9 @@ production:
     :styles:
       :thumb: "118x100#"
       :content: "800>"
-      :slide: "640x240#"
-      :cover: "183x100#"
-      :tanchu: "160x100#"
+      :slide: "1177x380#"
+      :baoming_link: "400x60#"
+      :friend_link: "200x40#"
     :url: "/ckeditor_assets/pictures/:id/:style._:filename"
     :path: "/opt/works/ckeditor_assets/pictures/:id/:style._:filename"
   :attachment_file:

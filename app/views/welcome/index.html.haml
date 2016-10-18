@@ -1,51 +1,28 @@
-.wp
-  #diy1.area
-.wp.cl
-  = render partial: 'welcome/comps/one_left_column'
-  = render partial: 'welcome/comps/one_center_column'
-  = render partial:  'welcome/comps/one_right_column'
-#diy6.area
-  #frameKKN5Qj.tebieniubi_box.frame.move-span.cl.frame-1
-    .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
-      %span.titletext{:style => "font-size:16px;"}
-        %a{:href => "#", :style => "color:rgb(11, 66, 150) !important;", :target => "_blank"} 图片新闻
-      -#%span.subtitle{:style => "float:right;"} 自定内容
-      -#%span.subtitle{:style => "float:right;margin-right:10px;"} 自定内容
-  #framel782wv.frame.move-span.cl.frame-1
-    #framel782wv_left.column.frame-1-c
-      #framel782wv_left_temp.move-span.temp
-      #frame2R4t3F.frame.move-span.cl.frame-1
-        #frame2R4t3F_left.column.frame-1-c
-          #frame2R4t3F_left_temp.move-span.temp
-          #portal_block_28.block.move-span
-            #portal_block_28_content.dxb_bc
-              .portal_block_summary
-                .tebieniubi_left
-                  .bd.cl
-                    %a.next
-                    .tempWrap{:style => "overflow:hidden; position:relative; width:1078px"}
-                      %ul.picList{:style => "width: 2618px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -898px;"}
-                    %a.prev
-= render partial: 'welcome/comps/all_categories'
-.wp.cl
-  #diy10.area
-    #framez3XRhi.frame.move-span.cl.frame-1
-      .title.frame-title{:style => "background-image:none;background-repeat:repeat;background-color:transparent;"}
-        %span.titletext{:style => "font-size:16px;color:rgb(11, 66, 150);"} 友情链接
-      #framez3XRhi_left.column.frame-1-c
-        #framez3XRhi_left_temp.move-span.temp
-    #frameRFIULH.tebieniubi_link.frame.move-span.cl.frame-1
-      #frameRFIULH_left.column.frame-1-c
-        #frameRFIULH_left_temp.move-span.temp
-        #portal_block_50.block.move-span
-          #portal_block_50_content.dxb_bc
-            .x.cl
-              %ul.cl.mbm
-                %li
-                  %a{:href => "http://www.discuz.net", :target => "_blank"} 官方论坛
-    #frame69711W.frame.move-span.cl.frame-1
-      #frame69711W_left.column.frame-1-c
-        #frame69711W_left_temp.move-span.temp
+#baoming-area
+  #baoming-links
+    %span 报名链接
+    - @baoming_links.each do |baoming_link|
+      %div
+        %a{href:baoming_link.url}
+          = image_tag baoming_link.cover.url(:baoming_link)
+  #bulletins
+    - @show_categories.each do |cateogry|
+      %div
+        %span
+          =cateogry.title
+        %ul
+          - cateogry.articles.order('updated_at desc').limit(10).each do |bulletin|
+            %li
+              =link_to bulletin.title, "#{article_path(bulletin)}"
+
+#friend-area
+  #friend-header
+    %span 友情链接
+  #friend-links
+    - @friend_links.each do |friend_link|
+      %div
+        %a{href:friend_link.url}
+          = image_tag friend_link.cover.url(:friend_link)
 
 %script#pic-list-template{type:'text/template'}
   %li.clone{:style => "float: left; width: 138px;"}

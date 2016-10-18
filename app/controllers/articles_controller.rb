@@ -1,11 +1,14 @@
 class ArticlesController < ApplicationController
   load_and_authorize_resource
   before_action :set_bulletins, only: [:index, :show]
+  before_action :get_nav
   # GET /articles
   # GET /articles.json
   def index
+
     category_id = params[:category_id] || 0
     @category = Category.find_by_id(category_id)
+
     region_id = params[:region_id] || 0
     @region = Region.find_by_id(region_id)
     if @category
@@ -19,6 +22,7 @@ class ArticlesController < ApplicationController
     @articles = @articles.order('updated_at desc')
     @articles = @articles - @bulletins
   end
+
 
   # GET /articles/1
   # GET /articles/1.json
@@ -98,6 +102,6 @@ class ArticlesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def article_params
-    params.require(:article).permit(:title, :source, :content, :region_id, :user_id, :category_id, :is_picture, :is_recommand)
+    params.require(:article).permit(:title, :source, :content, :region_id, :user_id, :category_id, :is_picture, :is_recommand, :status)
   end
 end

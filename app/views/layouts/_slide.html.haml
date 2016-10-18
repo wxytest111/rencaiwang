@@ -1,0 +1,15 @@
+- if @recommand_articles
+  #slide-container
+    - if @recommand_articles.length>0
+      #slideBox.slideBox
+        .hd
+          %ul
+            - @recommand_articles.each_with_index do |v, index|
+              %li
+                =(index+1)
+        .bd
+          %ul
+            - @recommand_articles.each_with_index do |article|
+              %li{:style => "display: none;"}
+                %a{:href => "#{article_path(article)}", :target => "_blank"}
+                  =image_tag article.cover_url

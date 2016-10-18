@@ -1,0 +1,25 @@
+= form_for @link do |f|
+  - if @link.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@link.errors.count, "error")} prohibited this link from being saved:"
+      %ul
+        - @link.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label '优先级(越低越高)'
+    = f.number_field :priority
+  .field
+    = f.label '状态'
+    = f.select :status, options_for_select(status_for_select, @link.status)
+  .field
+    = f.label :cover, '图片'
+    = f.file_field :cover
+  .actions
+    = f.submit '保存'

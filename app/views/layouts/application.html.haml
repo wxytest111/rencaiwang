@@ -1,10 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 %html
   = render :partial => 'layouts/header'
-  %body#nv_portal.pg_index
-    = render :partial => 'layouts/banner'
-    -#- if ['articles','welcome'].include? controller.controller_name
-    = render :partial => 'layouts/horizontal_menu'
-    = render :partial => 'layouts/content'
-    = render :partial=> 'layouts/footer'
+  %body
+    #container
+      #top-1
+      #main
+        #big-banner
+        = render :partial => 'layouts/slide'
+        = render :partial => 'layouts/banner'
+        = render :partial => 'layouts/content'
+        #big-bottom
+        = render :partial=> 'layouts/footer'
   = render :partial => 'layouts/scripts'

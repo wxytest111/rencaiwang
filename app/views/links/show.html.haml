@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @link.name
+%p
+  %b Url:
+  = @link.url
+%p
+  %b Priority:
+  = @link.priority
+%p
+  %b Status:
+  = @link.status
+%p
+  %b 图片
+  =image_tag @link.cover.url(:thumb)
+
+= link_to 'Edit', edit_link_path(@link)
+\|
+= link_to 'Back', links_path
