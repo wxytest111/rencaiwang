@@ -66,7 +66,11 @@ random = Random.new
       {
           title: "陕西省青年人才座谈会第#{n}次会议",
           content: '<p><img alt="" src="http://xiaochubang.oss-cn-qingdao.aliyuncs.com/6.jpg" style="width: 877px; height: 292px;" />&nbsp;</p>
-                    <p>I have 8 controllers using will_paginate to paginate their index pages. Id like to override the defaults for Previous and Next on each without having to specify the same options 8 times. Is there a way to override the defaults only once (perhaps by subclassing will_paginate).</p>
+                    <p>新闻事件发生时，人们不再万人空巷地集中在电视屏幕前，而是迅速掏出手机打开社交网络，一秒钟评论、转发、扩散，甚至人人都能够手持麦克风面对手机摄像头来上一段现场直播……这是一个信息网络和数字技术裂变式发展的时代，并且这“裂变”的速度，已然超出想象。
+
+　　传统媒体正在被颠覆，新的媒体格局却尚未形成。变革的时代，对媒体行业来说，是最坏的时代，还是最好的时代？
+
+　　在这样风卷云涌的变革之下，多样的趋势迅疾的变化越来越汇聚出一个共同的特点：智能终端的发展普及和碎片化信息的海量铺展让低头族群体越来越庞大——360度包裹式的信息，让“浸媒体”这个新词汇呼之欲出。没错，浸媒体，这也是今年新浪未来媒体峰会锁定的</p>
                     <p>6位中青年人才畅谈创新创业的经验和体会&nbsp;</p>'
       }
   )
