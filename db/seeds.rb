@@ -46,12 +46,13 @@ regions = Region.create([
                             {name: '地市', priority: 3},
                             {name: '区县', priority: 4}
                         ])
-
-super_admin = User.new(name: '超级管理员', email: '30540047@qq.com', password: 'wangxinyu')
-super_admin.add_role :super_admin
-super_admin.regions = regions
-super_admin.categories = categories
-super_admin.save!
+[{name: '超级管理员', email: '30540047@qq.com', password: 'wangxinyu'}, {name: '张老师', email: '13609118917', password: '13609118917'}].each do |user_info|
+  super_admin = User.new(user_info)
+  super_admin.add_role :super_admin
+  super_admin.regions = regions
+  super_admin.categories = categories
+  super_admin.save!
+end
 
 content_admin = User.new(name: '内容管理员', email: '18601357901', password: '18601357901')
 content_admin.add_role :content_admin
@@ -69,7 +70,7 @@ random = Random.new
                     <p>6位中青年人才畅谈创新创业的经验和体会&nbsp;</p>'
       }
   )
-  article.user = super_admin
+  article.user = content_admin
   article.region = regions[random.rand(regions.length)]
   article.category = categories[random.rand(categories.length)]
   article.is_recommand = random.rand(2)
