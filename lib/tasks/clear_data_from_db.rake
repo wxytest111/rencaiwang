@@ -6,4 +6,5 @@ task clear_data_from_db: :environment do |_|
   User.delete_all
   Region.delete_all
   Category.delete_all
+  Link.delete_all
 end

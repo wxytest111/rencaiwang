@@ -50,11 +50,13 @@ regions = Region.create([
 super_admin = User.new(name: '超级管理员', email: '30540047@qq.com', password: 'wangxinyu')
 super_admin.add_role :super_admin
 super_admin.regions = regions
+super_admin.categories = categories
 super_admin.save!
 
 content_admin = User.new(name: '内容管理员', email: '18601357901', password: '18601357901')
 content_admin.add_role :content_admin
 content_admin.regions = regions
+content_admin.categories = categories
 content_admin.save!
 
 random = Random.new
@@ -62,8 +64,8 @@ random = Random.new
   article = Article.new(
       {
           title: "陕西省青年人才座谈会第#{n}次会议",
-          content: '<p><img alt="" src="http://xiaochubang.oss-cn-qingdao.aliyuncs.com/2009-12-31.png" style="width: 100px; height: 44px;" />&nbsp;</p>
-                    <p>陕西省青年人才座谈会</p>
+          content: '<p><img alt="" src="http://xiaochubang.oss-cn-qingdao.aliyuncs.com/6.jpg" style="width: 877px; height: 292px;" />&nbsp;</p>
+                    <p>I have 8 controllers using will_paginate to paginate their index pages. Id like to override the defaults for Previous and Next on each without having to specify the same options 8 times. Is there a way to override the defaults only once (perhaps by subclassing will_paginate).</p>
                     <p>6位中青年人才畅谈创新创业的经验和体会&nbsp;</p>'
       }
   )

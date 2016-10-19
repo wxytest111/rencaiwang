@@ -39,5 +39,7 @@ module Rencaiwang
     config.to_prepare do
       Devise::SessionsController.layout 'sessions'
     end
+
+    config.i18n.default_locale = :cn
   end
 end

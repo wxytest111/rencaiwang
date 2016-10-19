@@ -6,12 +6,12 @@ module CategoriesHelper
       when 'online'
         text = '在线上'
       when 'on_menu'
-        text ='在导航拦上'
+        text ='可以在首页或二级分类页显示出来'
     end
     text
   end
 
   def show_status
-    [['下线','offline'],['在线','online'], ['在导航栏上','on_menu']]
+    [['下线','offline'],['在线','online'], ['可以在首页或二级分类页显示出来','on_menu']]
   end
 end

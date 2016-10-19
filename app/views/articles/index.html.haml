@@ -1,42 +1,36 @@
-#pt.bm.cl
-  .z
-    =link_to '首页', root_path, class: 'nvhm'
-    %em >
-    新闻列表
-#ct.ct2.wp.cl
-  .mn
-    #listcontenttop.area
-    .bm
-      .bm_h.cl.tebieniubi_xs2
-        %h2.xs2
-          %i.news
-          = @category.try(:title) || '全部新闻'
-      .bm_c.bbda
-        区域|分类:
-        - if @region
-          =@region.try(:name)
-        - else
-          全部
-        %span.pipe
-          |
-        - if @category
-          =@category.try(:title)
-        - else
-          全部
+#content.linear
+  #sub-nav
+    - @grand_parent_category.children_categories.each do |category|
+      - if @category && category == @category
+        .on
+          =link_to category.title, "#{articles_path}?category_id=#{category.id}"
+      - else
+        %div
+          =link_to category.title, "#{articles_path}?category_id=#{category.id}"
+  #article-content
+    %ol.breadcrumb
+      当前位置:
+      - if @grand_parent_category
+        %li
+          =link_to @grand_parent_category.title, "#{articles_path}?category_id=#{@grand_parent_category.id}"
+      - if @category!= @grand_parent_category
+        %li
+          =link_to @category.title, "#{articles_path}?category_id=#{@category.id}"
+    #article-list
+      = will_paginate @articles
       - @articles.each do |article|
-        - nokog_html = Nokogiri::HTML(article.content)
-        .tebieniubi_news
-          .tebieniubi_newspic
-            %a{href:"/article/#{article.id}"}
-              - if nokog_html.css('img').length < 1
-                = image_tag 'templates/zanwutupian.png', class: 'tn'
+        .one-list
+          .one-img
+            %a{href:article_path(article)}
+              - if article.cover_url!=''
+                = image_tag article.cover_url
               - else
-                = image_tag nokog_html.css('img').first.attr('src'), class: 'tn'
-          .tebieniubi_newsright
+                = image_tag 'templates/zanwutupian.png'
+          .one-info
             %h1
               =link_to article.title, article
             %p
-              = nokog_html.text.gsub(/\r\n/,'')[0,115]
+              =article.summary[0,150]
               \...
             %p
               分类:
@@ -44,7 +38,8 @@
                 = link_to article.category.try(:title), "#{articles_path}?category_id=#{article.category.try(:id)}", class: 'xi2'
               区域:
               %label
-                = link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
+                = article.region.try(:name)
+                -#= link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
               %span.xg1
                 = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
             %p
@@ -54,24 +49,77 @@
                 %span.pipe
                   |
                 = link_to '删除', article, :method => :delete, :data => { :confirm => "确定要删除【#{article.title}】吗？" }, class: 'xi2'
-
-  .sd.pph
-    .bm.tebieniubi_list
-      .bm_h
-        %h2
-          %i.zxdp
-          公告栏
-      .bm_c
-        .t2_n
-          #diypaopaokeji2.area
-            #frametbH44S.tebieniubi_gg.frame.move-span.cl.frame-1
-              #frametbH44S_left.column.frame-1-c
-                #portal_block_15.block.move-span
-                  #portal_block_15_content.dxb_bc
-                    .module.cl.xl.xl1
-                      %ul
-                        - @bulletins.each do |bulletin|
-                          %li
-                            %em
-                              = bulletin.updated_at.strftime('%m-%d')
-                            =link_to bulletin.title[0,18], bulletin, target: '_blank'
+      -#%table
+      -#  %thead
+      -#    %tr
+      -#      %th 标题
+      -#      %th 发表时间
+      -#      %th 状态
+      -#      %th
+      -#      %th
+      -#      %th
+      -#  %tbody
+      -#    - @articles.each do |article|
+      -#      %tr
+      -#        %td
+      -#          = article.title
+      -#        %td
+      -#          = article.created_at.strftime('%y-%m-%d %H:%M')
+      -#        %td
+      -#        %td
+      -#          - if (can? :update, Article)&& article.user == current_user
+      -#            = link_to '编辑', edit_article_path(article), class: 'xi2'
+      -#        %td
+      -#        %td
+      = will_paginate @articles
+-##ct.ct2.wp.cl
+-#  .mn
+-#    #listcontenttop.area
+-#    .bm
+-#      .bm_h.cl.tebieniubi_xs2
+-#        %h2.xs2
+-#          %i.news
+-#          = @category.try(:title) || '全部新闻'
+-#      .bm_c.bbda
+-#        区域|分类:
+-#        - if @region
+-#          =@region.try(:name)
+-#        - else
+-#          全部
+-#        %span.pipe
+-#          |
+-#        - if @category
+-#          =@category.try(:title)
+-#        - else
+-#          全部
+-#      - @articles.each do |article|
+-#        - nokog_html = Nokogiri::HTML(article.content)
+-#        .tebieniubi_news
+-#          .tebieniubi_newspic
+-#            %a{href:"/article/#{article.id}"}
+-#              - if nokog_html.css('img').length < 1
+-#                = image_tag 'templates/zanwutupian.png', class: 'tn'
+-#              - else
+-#                = image_tag nokog_html.css('img').first.attr('src'), class: 'tn'
+-#          .tebieniubi_newsright
+-#            %h1
+-#              =link_to article.title, article
+-#            %p
+-#              = nokog_html.text.gsub(/\r\n/,'')[0,115]
+-#              \...
+-#            %p
+-#              分类:
+-#              %label
+-#                = link_to article.category.try(:title), "#{articles_path}?category_id=#{article.category.try(:id)}", class: 'xi2'
+-#              区域:
+-#              %label
+-#                = link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
+-#              %span.xg1
+-#                = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
+-#            %p
+-#              - if (can? :update, Article)&& article.user == current_user
+-#                = link_to '编辑', edit_article_path(article), class: 'xi2'
+-#              - if (can? :destroy, Article) && article.user == current_user
+-#                %span.pipe
+-#                  |
+-#                = link_to '删除', article, :method => :delete, :data => { :confirm => "确定要删除【#{article.title}】吗？" }, class: 'xi2'

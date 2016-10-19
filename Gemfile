@@ -38,6 +38,8 @@ gem 'unicorn'
 gem 'ckeditor'
 gem 'paperclip'
 
+gem 'will_paginate'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

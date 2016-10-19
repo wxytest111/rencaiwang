@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20161017060216) do
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
     t.string   "source",       limit: 255
+    t.string   "summary",      limit: 255
     t.text     "content",      limit: 65535
     t.integer  "region_id",    limit: 4
     t.integer  "user_id",      limit: 4
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 20161017060216) do
   add_index "articles", ["user_id"], name: "index_articles_on_user_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
-    t.string   "title",      limit: 255
+    t.string   "title",      limit: 255,             null: false
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.integer  "status",     limit: 4,   default: 0, null: false

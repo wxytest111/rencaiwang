@@ -1,0 +1,4 @@
+cn:
+  will_paginate:
+    previous_label: "&#8592; 向前翻页"
+    next_label: "向后翻页 &#8594;"

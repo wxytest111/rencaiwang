@@ -1,26 +1,28 @@
 class ArticlesController < ApplicationController
   load_and_authorize_resource
-  before_action :set_bulletins, only: [:index, :show]
   before_action :get_nav
   # GET /articles
   # GET /articles.json
   def index
 
     category_id = params[:category_id] || 0
-    @category = Category.find_by_id(category_id)
-
+    @category = Category.find_by_id(category_id) || Category.parent_categories.first
+    set_sub_nav
     region_id = params[:region_id] || 0
     @region = Region.find_by_id(region_id)
     if @category
-      @articles = Article.where(category: @category)
+      if @category.parent_id.present?
+        @articles = Article.where(category: @category).paginate(page: params[:page], per_page: 50)
+      else
+        @articles = Article.where(category: @category.children_categories).paginate(page: params[:page], per_page: 50)
+      end
     else
-      @articles = Article.all
+      @articles = Article.all.paginate(page: params[:page], per_page: 50)
     end
     if @region
       @articles = @articles.where(region: @region)
     end
     @articles = @articles.order('updated_at desc')
-    @articles = @articles - @bulletins
   end
 
 
@@ -29,7 +31,8 @@ class ArticlesController < ApplicationController
   def show
     @article.number = @article.number+1
     @article.save!
-    set_bulletins
+    @category = @article.category
+    set_sub_nav
   end
 
   # GET /articles/new
@@ -91,13 +94,13 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def set_bulletins
-    bulletin_category = Category.find_by_title('公告栏')
-    if bulletin_category
-      @bulletins = Article.where(category: bulletin_category).order('updated_at desc').limit(30)
+  def set_sub_nav
+    if @category.parent_id
+      @grand_parent_category = Category.find_by_id(@category.parent_id)
     else
-      @bulletins = []
+      @grand_parent_category = @category
     end
+    @sibling_categories = @grand_parent_category.children_categories
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

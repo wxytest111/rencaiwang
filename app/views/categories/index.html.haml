@@ -5,7 +5,7 @@
     %tr
       %th 标题
       %th 状态
-      %th 是否显示在首页左侧导航
+      %th 父分类
       %th
       %th
       %th
@@ -15,7 +15,8 @@
       %tr
         %td= category.title
         %td= category_status category.status
-        %td= category.on_left
+        %td
+          = Category.find_by_id(category.parent_id).try(:title)
         - if can? :read, Category
           %td= link_to 'Show', category
         - if can? :update, Category

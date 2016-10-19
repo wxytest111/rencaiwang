@@ -6,9 +6,25 @@
       #top-1
       #main
         #big-banner
+          .banner-info
+            .root-link
+              =link_to '首页', root_path
+            .separate
+            .login-info
+              - if current_user
+                欢迎:
+                =current_user.name
+              - else
+                = link_to '系统登陆', new_user_session_path
+            - if current_user
+              .separate
+              .new-article
+                = link_to '发表文章', new_article_path
+              .separate
+              .logout
+                = link_to '安全退出', destroy_user_session_path
         = render :partial => 'layouts/slide'
         = render :partial => 'layouts/banner'
         = render :partial => 'layouts/content'
-        #big-bottom
         = render :partial=> 'layouts/footer'
   = render :partial => 'layouts/scripts'
