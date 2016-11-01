@@ -1,6 +1,7 @@
 class RegionsController < RoleAuthenticationController
   # before_action :set_region, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  before_action :get_nav
   # GET /regions
   # GET /regions.json
   def index

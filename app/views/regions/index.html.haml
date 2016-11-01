@@ -1,26 +1,30 @@
-%h1 Listing regions
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      所有区域列表
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th 优先级
-      %th
-      %th
-      %th
-
-  %tbody
-    - @regions.each do |region|
+  %table.table.table-striped
+    %thead
       %tr
-        %td= region.name
-        %td= region.priority
-        - if can? :read, Region
-          %td= link_to 'Show', region
-        - if can? :update, Region
-          %td= link_to 'Edit', edit_region_path(region)
-        - if can? :destroy, Region
-          %td= link_to 'Destroy', region, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th 名称
+        %th 优先级
+        %th 操作
+        %th 操作
+        %th 操作
 
-%br
+    %tbody
+      - @regions.each do |region|
+        %tr
+          %td= region.name
+          %td= region.priority
+          - if can? :read, Region
+            %td= link_to '查看', region, class: 'btn-sm btn-info'
+          - if can? :update, Region
+            %td= link_to '编辑', edit_region_path(region), class: 'btn-sm btn-primary'
+          - if can? :destroy, Region
+            %td= link_to '删除', region, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn-sm btn-danger'
 
-= link_to 'New Region', new_region_path
+  %br
+
+  = link_to '新增区域', new_region_path, class: 'btn btn-primary'

@@ -1,11 +1,24 @@
-%p#notice= notice
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      查看区域
+  -if notice
+    .alert.alert-info
+      = notice
 
-%p
-  %b Name:
-  = @region.name
-  %b 优先级
-  = @region.priority
-
-= link_to 'Edit', edit_region_path(@region)
-\|
-= link_to 'Back', regions_path
+  %form.form-horizontal
+    .form-group
+      %label.col-sm-2.control-label
+        名称
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @region.name}
+    .form-group
+      %label.col-sm-2.control-label
+        优先级(越低越好)
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @region.priority}
+    .form-group
+      .actions.col-sm-offset-5
+        = link_to '编辑', edit_region_path(@region), class: 'btn btn-default'
+        = link_to '返回', regions_path, class: 'btn btn-default second'
