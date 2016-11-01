@@ -2,7 +2,7 @@
 
 set -e
 
-ssh root@114.215.151.240 /bin/bash << EOF
+ssh root@115.28.9.176 /bin/bash << EOF
 cd /opt/works/rencaiwang
 git co .
 git pr

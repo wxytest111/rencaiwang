@@ -1,31 +1,30 @@
-.article-form
-  = form_for(@article,html:{class:'form-inline'}) do |f|
-    - if @article.errors.any?
-      #error_explanation
-        %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
-        %ul
-          - @article.errors.full_messages.each do |msg|
-            %li= msg
-    .form-group
-      = f.text_field :title, placeholder: '请输入标题', class: 'form-control', style:'width:25em'
-    .form-group.second
-      = f.text_field :source, placeholder: '文章来源', class: 'form-control'
-    .edt.simpleedt.mgt10
-      = f.cktext_area :content, ckeditor: { language: 'zh-CN', height: 500}
-    .form-group.mgt10
-      = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'选择所属区域', selected: (@article.region.id if @article.region)}, class:'form-control'
-    .form-group.mgt10.second
-      = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'选择投放栏目', selected: (@article.category.id if @article.category)}, class:'form-control'
-    .form-group.mgt10.second
-      %label.checkbox-inline
-        = f.check_box :is_recommand
-        推荐到首页滚动区显示
-    .post-btn.ov.mgt10
-      %button.btn.btn-primary{type:'submit'}
-        保存发表
-      %button.btn.second
-        %em
-          = link_to '取消编辑', :back
+= form_for(@article,html:{class:'form-inline'}) do |f|
+  - if @article.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.text_field :title, placeholder: '请输入标题', class: 'form-control', style:'width:25em'
+  .form-group.second
+    = f.text_field :source, placeholder: '文章来源', class: 'form-control'
+  .edt.simpleedt.mgt10
+    = f.cktext_area :content, ckeditor: { language: 'zh-CN', height: 500}
+  .form-group.mgt10
+    = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'选择所属区域', selected: (@article.region.id if @article.region)}, class:'form-control'
+  .form-group.mgt10.second
+    = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'选择投放栏目', selected: (@article.category.id if @article.category)}, class:'form-control'
+  .form-group.mgt10.second
+    %label.checkbox-inline
+      = f.check_box :is_recommand
+      推荐到首页滚动区显示
+  .post-btn.ov.mgt10
+    %button.btn.btn-primary{type:'submit'}
+      保存发表
+    %button.btn.second
+      %em
+        = link_to '取消编辑', :back
 
 
 
