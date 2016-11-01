@@ -1,29 +1,33 @@
-%h1 Listing categories
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      所有分类列表
 
-%table
-  %thead
-    %tr
-      %th 标题
-      %th 状态
-      %th 父分类
-      %th
-      %th
-      %th
-
-  %tbody
-    - @categories.each do |category|
+  %table.table.table-striped
+    %thead
       %tr
-        %td= category.title
-        %td= category_status category.status
-        %td
-          = Category.find_by_id(category.parent_id).try(:title)
-        - if can? :read, Category
-          %td= link_to 'Show', category
-        - if can? :update, Category
-          %td= link_to 'Edit', edit_category_path(category)
-        - if can? :destroy, Category
-          %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th 标题
+        %th 状态
+        %th 父分类
+        %th 操作
+        %th 操作
+        %th 操作
 
-%br
+    %tbody
+      - @categories.each do |category|
+        %tr
+          %td= category.title
+          %td= category_status category.status
+          %td
+            = Category.find_by_id(category.parent_id).try(:title)
+          - if can? :read, Category
+            %td= link_to '查看', category, class: 'btn-sm btn-info'
+          - if can? :update, Category
+            %td= link_to '编辑', edit_category_path(category), class: 'btn-sm btn-primary'
+          - if can? :destroy, Category
+            %td= link_to '删除', category, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn-sm btn-danger'
 
-= link_to 'New Category', new_category_path
+  %br
+
+  = link_to '新增分类', new_category_path, class: 'btn btn-primary'

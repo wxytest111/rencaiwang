@@ -1,13 +1,33 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @category.title
-  %b 状态
-  = category_status @category.status
-  %b 是否显示在首页左侧导航
-  = @category.on_left
-
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      查看分类
+  -if notice
+    .alert.alert-info
+      = notice
+  %form.form-horizontal
+    .form-group
+      %label.col-sm-2.control-label
+        标题
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @category.title}
+    .form-group
+      %label.col-sm-2.control-label
+        状态
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: category_status(@category.status)}
+    .form-group
+      %label.col-sm-2.control-label
+        父分类
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @category.parent.try(:title)}
+    .form-group
+      %label.col-sm-2.control-label
+        优先级
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @category.priority}
+    .form-group
+      .actions.col-sm-offset-5
+        = link_to '编辑', edit_category_path(@category), class: 'btn btn-default'
+        = link_to '返回', categories_path, class: 'btn btn-default second'

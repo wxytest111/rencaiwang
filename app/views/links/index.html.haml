@@ -1,27 +1,31 @@
-%h1 Listing links
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      所有链接列表
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Url
-      %th Priority
-      %th Status
-      %th
-      %th
-      %th
-
-  %tbody
-    - @links.each do |link|
+  %table.table.table-striped
+    %thead
       %tr
-        %td= link.name
-        %td= link.url
-        %td= link.priority
-        %td= link.status
-        %td= link_to 'Show', link
-        %td= link_to 'Edit', edit_link_path(link)
-        %td= link_to 'Destroy', link, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th 名称
+        %th 链接地址
+        %th 优先级
+        %th 状态
+        %th 操作
+        %th 操作
+        %th 操作
 
-%br
+    %tbody
+      - @links.each do |link|
+        %tr
+          %td= link.name
+          %td= link.url
+          %td= link.priority
+          %td= link_status link.status
+          %td= link_to '查看', link, class: 'btn-sm btn-info'
+          %td= link_to '编辑', edit_link_path(link), class: 'btn-sm btn-primary'
+          %td= link_to '删除', link, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn-sm btn-danger'
 
-= link_to 'New Link', new_link_path
+  %br
+
+  = link_to '新增报名链接或友情链接', new_link_path, class: 'btn btn-primary'

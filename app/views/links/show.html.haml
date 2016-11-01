@@ -1,21 +1,39 @@
-%p#notice= notice
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      查看分类
+  -if notice
+    .alert.alert-info
+      = notice
 
-%p
-  %b Name:
-  = @link.name
-%p
-  %b Url:
-  = @link.url
-%p
-  %b Priority:
-  = @link.priority
-%p
-  %b Status:
-  = @link.status
-%p
-  %b 图片
-  =image_tag @link.cover.url(:thumb)
-
-= link_to 'Edit', edit_link_path(@link)
-\|
-= link_to 'Back', links_path
+  %form.form-horizontal
+    .form-group
+      %label.col-sm-2.control-label
+        名称
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @link.name}
+    .form-group
+      %label.col-sm-2.control-label
+        链接地址
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @link.url}
+    .form-group
+      %label.col-sm-2.control-label
+        优先级
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @link.priority}
+    .form-group
+      %label.col-sm-2.control-label
+        状态
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: link_status(@link.status)}
+    .form-group
+      %label.col-sm-2.control-label
+        图片
+      .col-sm-9
+        =image_tag @link.cover.url(:thumb)
+    .form-group
+      .actions.col-sm-offset-5
+        = link_to '编辑', edit_link_path(@link), class: 'btn btn-default'
+        = link_to '返回', links_path, class: 'btn btn-default second'

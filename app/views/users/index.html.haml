@@ -1,23 +1,27 @@
-%h1 Listing users
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      所有用户
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Email
-      %th
-      %th
-      %th
-
-  %tbody
-    - @users.each do |user|
+  %table.table.table-striped
+    %thead
       %tr
-        %td= user.name
-        %td= user.email
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th 名字
+        %th 登陆名
+        %th 操作
+        %th 操作
+        %th 操作
 
-%br
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user.name
+          %td= user.email
+          %td= link_to '查看', user, class: 'btn-sm btn-info'
+          %td= link_to '编辑', edit_user_path(user), class: 'btn-sm btn-primary'
+          %td= link_to '删除', user, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn-sm btn-danger'
 
-= link_to 'New User', users_user_new_path
+  %br
+
+  = link_to '新增用户', users_user_new_path, class: 'btn btn-primary'

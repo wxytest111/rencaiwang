@@ -3,6 +3,7 @@ require 'pp'
 class UsersController < RoleAuthenticationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :get_nav
+  before_action :set_params, only: [:user_new, :edit, :user_create, :show]
   # GET /users
   # GET /users.json
   def index
@@ -22,8 +23,6 @@ class UsersController < RoleAuthenticationController
 
   # GET /users/1/edit
   def edit
-    @regions = Region.all
-    @categories = Category.child_categories
   end
 
   # POST /users
@@ -67,13 +66,9 @@ class UsersController < RoleAuthenticationController
 
   def user_new
     @user = User.new
-    @regions = Region.all
-    @categories = Category.child_categories
   end
 
   def user_create
-    @regions = Region.all
-    @categories = Category.child_categories
     respond_to do |format|
       if user_update_transaction('create')
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -86,6 +81,11 @@ class UsersController < RoleAuthenticationController
   end
 
   private
+    def set_params
+      @regions = Region.all
+      @categories = Category.child_categories
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

@@ -1,4 +1,4 @@
-= form_for(@user, :url => users_user_create_path) do |f|
+= form_for(@user, :url => users_user_create_path, html:{class:'form-horizontal'}) do |f|
   - if @user.errors.any?
     #error_explanation
       %h2= "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
@@ -6,32 +6,47 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :password, '密码'
-    = f.password_field :password, autocomplete: 'off', placeholder: '密码(最少8位)'
-  .field
-    = f.label :password_confirmation, '确认密码'
-    = f.password_field :password_confirmation, autocomplete: 'off', placeholder: '确认密码'
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :regions
-    - @regions.each do |region|
-      = f.check_box :regions, {'name' => "regions[#{region.id}]", 'checked' => (@user.regions.include? region)}
-      = f.label :regions, region.name
-  .field
-    = f.label :categories, '栏目'
-    - @categories.each do |category|
-      = f.check_box :categories, {'name' => "categories[#{category.id}]", 'checked' => (@user.categories.include? category)}
-      = f.label :category, category.title
-  .field
-    = f.label :roles, '权限'
-    - regular_role_names.each do |key, value|
-      = f.check_box :roles, {'name' => "roles[#{key}]", 'checked' => (@user.has_role? key)}
-      = f.label :roles, value
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.label '登陆名(请填写合法手机号)', class: 'col-sm-2 control-label'
+    .col-sm-9
+      = f.text_field :email, placeholder: '登陆名(请填写合法手机号)', class: 'form-control'
+  .form-group
+    = f.label :password, '密码', class: 'col-sm-2 control-label'
+    .col-sm-9
+      = f.password_field :password, autocomplete: 'off', placeholder: '密码(最少8位)', class: 'form-control'
+  .form-group
+    = f.label :password_confirmation, '确认密码', class: 'col-sm-2 control-label'
+    .col-sm-9
+      = f.password_field :password_confirmation, autocomplete: 'off', placeholder: '确认密码', class: 'form-control'
+  .form-group
+    = f.label '名称', class: 'col-sm-2 control-label'
+    .col-sm-9
+      = f.text_field :name, placeholder: '名称', class: 'form-control'
+  .form-group
+    = f.label '可操作区域', class: 'col-sm-2 control-label'
+    .col-sm-9
+      - @regions.each do |region|
+        .checkbox.f-left.mgl10
+          %label
+            = f.check_box '', {'name' => "regions[#{region.id}]", 'checked' => (@user.regions.include? region)}
+            = region.name
+  .form-group
+    = f.label '可操作栏目', class: 'col-sm-2 control-label'
+    .col-sm-9
+      - @categories.each do |category|
+        .checkbox.f-left.mgl10
+          %label
+            = f.check_box '', {'name' => "categories[#{category.id}]", 'checked' => (@user.categories.include? category)}
+            = category.title
+  .form-group
+    = f.label '权限', class: 'col-sm-2 control-label'
+    .col-sm-9
+      - regular_role_names.each do |key, value|
+        .checkbox.f-left.mgl10
+          %label
+            = f.check_box '', {'name' => "roles[#{key}]", 'checked' => (@user.has_role? key)}
+            = value
+  .form-group
+    .actions.col-sm-offset-5
+      = f.button '提交', class: 'btn btn-default'
+      = link_to '返回', :back, class: 'btn btn-default second'

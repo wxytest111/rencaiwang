@@ -1,9 +1,48 @@
-%p#notice= notice
+.form-content
+  %ol.breadcrumb
+    当前位置:
+    %li
+      查看用户
+  -if notice
+    .alert.alert-info
+      = notice
 
-%p
-  %b Name:
-  = @user.name
-
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+  %form.form-horizontal
+    .form-group
+      %label.col-sm-2.control-label
+        登陆名
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @user.email}
+    .form-group
+      %label.col-sm-2.control-label
+        名称
+      .col-sm-9
+        %input.form-control{type:'text', disabled:true,value: @user.name}
+    .form-group
+      %lable.col-sm-2.control-label 可操作区域
+      .col-sm-9
+        - @regions.each do |region|
+          .checkbox.f-left.mgl10
+            %label
+              %input{type:'checkbox', disabled:true, 'checked' => (@user.regions.include? region)}
+              = region.name
+    .form-group
+      %lable.col-sm-2.control-label 可操作栏目
+      .col-sm-9
+        - @categories.each do |category|
+          .checkbox.f-left.mgl10
+            %label
+              %input{type:'checkbox', disabled:true, 'checked' => (@user.categories.include? category)}
+              = category.title
+    .form-group
+      %lable.col-sm-2.control-label 权限
+      .col-sm-9
+        - regular_role_names.each do |key, value|
+          .checkbox.f-left.mgl10
+            %label
+              %input{type:'checkbox', disabled:true, 'checked' => (@user.has_role? key)}
+              = value
+    .form-group
+      .actions.col-sm-offset-5
+        = link_to '编辑', edit_user_path(@user), class: 'btn btn-default'
+        = link_to '返回', links_path, class: 'btn btn-default second'
