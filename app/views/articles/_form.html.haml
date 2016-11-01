@@ -1,4 +1,4 @@
-.postbox
+.article-form
   = form_for @article do |f|
     - if @article.errors.any?
       #error_explanation
@@ -6,30 +6,28 @@
         %ul
           - @article.errors.full_messages.each do |msg|
             %li= msg
-    .pbt.cl
-      .z
+    .title.ov
+      .one
         = f.text_field :title, placeholder: '请输入标题', style:'width:25em'
+      .second
         = f.text_field :source, placeholder: '文章来源'
     .edt.simpleedt
-      -#= f.label :content
       = f.cktext_area :content, ckeditor: { language: 'zh-CN', height: 500}
-    #post_extra.ptm.cl
-      .ftid
+    .post-extra.ov
+      .ftid.one
         = f.collection_select :region_id, @regions, :id, :name, {:prompt=>'选择所属区域', selected: (@article.region.id if @article.region)}
-      .ftid
+      .ftid.second
         = f.collection_select :category_id, @categories, :id, :title, {:prompt=>'选择投放栏目', selected: (@article.category.id if @article.category)}
-      #adddynamicspan
-        %label
-          = f.check_box :is_picture
-          是否为图片新闻
+      .adddynamicspan.second
         %label
           = f.check_box :is_recommand
-          是否推荐到首页滚动图显示
-    .mtm.mbm.pnpost
-      = f.submit ' 保存发表 ',class:'pn pnc'
-      %button.pn
+          推荐到首页滚动区显示
+    .post-btn.ov.mgt10
+      %button.btn.btn-primary{type:'submit'}
+        保存发表
+      %button.btn.second
         %em
-          = link_to '取消编辑',articles_path
+          = link_to '取消编辑', :back
 
 
 
