@@ -1,3 +1,5 @@
+=render partial: 'welcome/comps/search'
+
 #content.linear
   #sub-nav
     - @grand_parent_category.children_categories.each do |category|
@@ -17,46 +19,49 @@
         %li
           =link_to @category.title, "#{articles_path}?category_id=#{@category.id}"
     #article-list
-      = will_paginate @articles
-      - @articles.each do |article|
-        .one-list
-          .one-img
-            %a{href:article_path(article)}
-              - if article.cover_url!=''
-                = image_tag article.cover_url
-              - else
-                = image_tag 'templates/zanwutupian.png'
-          .one-info
-            %h1
-              =link_to article.title, article
-            %p
-              =article.summary[0,150]
-              \...
-            %p
-              分类:
-              %label
-                = link_to article.category.try(:title), "#{articles_path}?category_id=#{article.category.try(:id)}", class: 'xi2'
-              区域:
-              %label
-                = article.region.try(:name)
-                -#= link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
-              - if current_user
-                - if current_user.has_role?(:content_admin)
-                  状态:
-                  %label
-                    = article_status article
-                - elsif current_user.has_role?(:super_admin)
-                  状态:
-                  %label.change-status{data:{current:article.status, title: article.title, id: article.id}}
-                    = link_to article_status(article), "javascript:void(0)",class: 'xi2'
-              %span.xg1
-                = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
-            %p
-              - if (can? :update, Article)&& article.user == current_user
-                = link_to '编辑', edit_article_path(article), class: 'xi2'
-              - if (can? :destroy, Article) && article.user == current_user
-                %span.pipe
-                  |
-                = link_to '删除', article, :method => :delete, :data => { :confirm => "确定要删除【#{article.title}】吗？" }, class: 'xi2'
+      - if @articles.length > 0
+        = will_paginate @articles
+        - @articles.each do |article|
+          .one-list
+            .one-img
+              %a{href:article_path(article)}
+                - if article.cover_url!=''
+                  = image_tag article.cover_url
+                - else
+                  = image_tag 'templates/zanwutupian.png'
+            .one-info
+              %h1
+                =link_to article.title, article
+              %p
+                =article.summary[0,150]
+                \...
+              %p
+                分类:
+                %label
+                  = link_to article.category.try(:title), "#{articles_path}?category_id=#{article.category.try(:id)}", class: 'xi2'
+                区域:
+                %label
+                  = article.region.try(:name)
+                  -#= link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
+                - if current_user
+                  - if current_user.has_role?(:content_admin)
+                    状态:
+                    %label
+                      = article_status article
+                  - elsif current_user.has_role?(:super_admin)
+                    状态:
+                    %label.change-status{data:{current:article.status, title: article.title, id: article.id}}
+                      = link_to article_status(article), "javascript:void(0)",class: 'xi2'
+                %span.xg1
+                  = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
+              %p
+                - if (can? :update, Article)&& article.user == current_user
+                  = link_to '编辑', edit_article_path(article), class: 'xi2'
+                - if (can? :destroy, Article) && article.user == current_user
+                  %span.pipe
+                    |
+                  = link_to '删除', article, :method => :delete, :data => { :confirm => "确定要删除【#{article.title}】吗？" }, class: 'xi2'
 
-      = will_paginate @articles
+        = will_paginate @articles
+      - else
+        %p.no-content.center 无法找到相应内容

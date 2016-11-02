@@ -4,20 +4,25 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-
+    @keyword = params[:keyword] || ''
     category_id = params[:category_id] || 0
     @category = Category.find_by_id(category_id) || Category.parent_categories.first
     set_sub_nav
     region_id = params[:region_id] || 0
     @region = Region.find_by_id(region_id)
-    if @category
-      if @category.parent_id.present?
-        @articles = Article.where(category: @category).paginate(page: params[:page], per_page: 50)
-      else
-        @articles = Article.where(category: @category.children_categories).paginate(page: params[:page], per_page: 50)
-      end
+    if @keyword != ''
+      @articles = Article.where("title like '%#{@keyword}%'").paginate(page: params[:page], per_page: APP_CONFIG['page_size'])
     else
-      @articles = Article.all.paginate(page: params[:page], per_page: 50)
+
+      if @category
+        if @category.parent_id.present?
+          @articles = Article.where(category: @category).paginate(page: params[:page], per_page: APP_CONFIG['page_size'])
+        else
+          @articles = Article.where(category: @category.children_categories).paginate(page: params[:page], per_page: APP_CONFIG['page_size'])
+        end
+      else
+        @articles = Article.all.paginate(page: params[:page], per_page: APP_CONFIG['page_size'])
+      end
     end
     if @region
       @articles = @articles.where(region: @region)
