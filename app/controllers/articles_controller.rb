@@ -23,6 +23,12 @@ class ArticlesController < ApplicationController
       @articles = @articles.where(region: @region)
     end
     @articles = @articles.order('updated_at desc')
+
+    if current_user && current_user.has_any_role?(:super_admin,:content_admin)
+      #do nothing now
+    else
+      @articles = @articles.where(status: Article.statuses[:online])
+    end
   end
 
 
