@@ -3,9 +3,9 @@ module LinksHelper
     case status
       when 'offline'
         text = '已下线'
-      when 'online'
+      when 'baoming_link'
         text = '报名链接'
-      when 'on_menu'
+      when 'friend_link'
         text ='友情链接'
     end
     text
