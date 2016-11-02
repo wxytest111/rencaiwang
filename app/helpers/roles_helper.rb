@@ -18,7 +18,8 @@
 module RolesHelper
   ROLE_NAMES = {
     'super_admin'              => '超级管理员',
-    'content_admin' => '内容管理员'
+    'content_admin' => '内容管理员',
+    'link_admin' => '链接管理员'
   }
 
   def regular_role_names

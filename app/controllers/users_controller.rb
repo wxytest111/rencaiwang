@@ -1,6 +1,7 @@
 require 'pp'
 
 class UsersController < RoleAuthenticationController
+  load_and_authorize_resource
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :get_nav
   before_action :set_params, only: [:user_new, :edit, :user_create, :show]
