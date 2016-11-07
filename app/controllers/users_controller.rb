@@ -128,14 +128,15 @@ class UsersController < RoleAuthenticationController
           @user.remove_role(role_name) if checked == '0' && @user.has_role?(role_name)
         end
 
+        UserRegion.where(user_id:@user.id).delete_all
         region_params.each do |key, value|
           if value.to_i == 1
             UserRegion.create!(user_id:@user.id, region_id: key)
           end
         end
 
+        UserCategory.where(user_id:@user.id).delete_all
         categories_param.each do |key ,value|
-          pp "key=#{key}, value=#{value}"
           if value.to_i == 1
             UserCategory.create!(user_id:@user.id, category_id: key)
           end
