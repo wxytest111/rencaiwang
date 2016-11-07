@@ -33,7 +33,7 @@
               %h1
                 =link_to article.title, article
               %p
-                =article.summary[0,150]
+                =article.summary[0,90]
                 \...
               %p
                 分类:
@@ -44,14 +44,14 @@
                   = article.region.try(:name)
                   -#= link_to article.region.try(:name), "#{articles_path}?region_id=#{article.region.try(:id)}", class: 'xi2'
                 - if current_user
-                  - if current_user.has_role?(:content_admin)
-                    状态:
-                    %label
-                      = article_status article
-                  - elsif current_user.has_role?(:super_admin)
+                  - if current_user.has_role?(:super_admin)
                     状态:
                     %label.change-status{data:{current:article.status, title: article.title, id: article.id}}
                       = link_to article_status(article), "javascript:void(0)",class: 'xi2'
+                  - elsif current_user.has_role?(:content_admin)
+                    状态:
+                    %label
+                      = article_status article
                 %span.xg1
                   = article.updated_at.strftime('%Y-%m-%d %H:%M:%S')
               %p
