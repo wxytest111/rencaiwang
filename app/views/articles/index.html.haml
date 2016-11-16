@@ -25,10 +25,10 @@
           .one-list
             .one-img
               %a{href:article_path(article)}
-                - if article.cover_url!=''
+                - if article.cover_url && article.cover_url!=''
                   = image_tag article.cover_url
                 - else
-                  = image_tag 'templates/zanwutupian.png'
+                  %img{src:'http://img.sxrcfz.org/no_picture.png?x-oss-process=image/resize,m_fill,h_140,w_200', alt:''}
             .one-info
               %h1
                 =link_to article.title, article
