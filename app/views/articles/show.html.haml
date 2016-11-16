@@ -47,7 +47,7 @@
         %span.pipe
           |
         = link_to '删除', @article, :method => :delete, :data => { :confirm => "确定要删除【#{@article.title}】吗？" }, class: 'xi2'
-    .summary
+    -#.summary
       摘要:
       = @article.summary[0,70]
     .content
