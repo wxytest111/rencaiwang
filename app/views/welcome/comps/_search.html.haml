@@ -1,6 +1,10 @@
-%form.form-horizontal.mgt10.ov{action:articles_path, method: 'get'}
-  .col-sm-offset-3.col-sm-5
-    %input.form-control{type:'text', name:'keyword', value: @keyword}
-  .col-sm-1
-    %button.form-control
-      搜索
+-#%form.form-horizontal.mgt10.ov{action:articles_path, method: 'get'}
+-#  .col-sm-offset-3.col-sm-5
+-#    %input.form-control{type:'text', name:'keyword', value: @keyword}
+-#  .col-sm-1
+-#    %button.form-control
+-#      搜索
+
+%form.mgt10.ov.center.search-form{action:articles_path, method: 'get'}
+  %input{type:'text', name: 'keyword', value: @keyword, size: 60}
+  %button 搜索
